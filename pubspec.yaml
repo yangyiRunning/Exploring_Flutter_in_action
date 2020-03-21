@@ -73,3 +73,4 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/ic_launcher.png
+    - assets/ic_mario.png
