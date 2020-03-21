@@ -22,6 +22,21 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
+      //注册路由表
+      routes: {
+        "NewRoute": (context) => NewRoute(),
+        "ResultRoute": (context) => ResultRoute(),
+        "TipRoute": (context) => TipRoute()
+      },
+      //路由生成的钩子
+//      onGenerateRoute: (RouteSettings settings) {
+//        return MaterialPageRoute(builder: (context) {
+//          String routeName = settings.name;
+//          //如果访问的路由页面需要登录，而当前未登录，则直接返回登录页面的路由
+//          //引导用户的登录，其他情况则正常打开路由页面
+//
+//        });
+//      },
       //应用首页面
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -104,22 +119,24 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.display1,
             ),
             FlatButton(
-              child: Text("跳转至路由界面"),
+              child: Text("跳转至路由界面 NewRoute"),
               textColor: Colors.blue,
               onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) {
-                  return NewRoute();
-                }));
+//                Navigator.push(context,
+//                    new MaterialPageRoute(builder: (context) {
+//                  return NewRoute();
+//                }));
+                Navigator.pushNamed(context, "NewRoute");
               },
             ),
             FlatButton(
-              child: Text("携带参数跳转界面"),
+              child: Text("携带参数跳转界面 ResultRoute"),
               textColor: Colors.blue,
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return ResultRoute();
-                }));
+//                Navigator.push(context, MaterialPageRoute(builder: (context) {
+//                  return ResultRoute();
+//                }));
+                Navigator.pushNamed(context, "ResultRoute");
               },
             )
           ],
@@ -150,23 +167,23 @@ class NewRoute extends StatelessWidget {
 }
 
 class ResultRoute extends StatelessWidget {
-
-  String result;
+  var result;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-      ),
+      appBar: AppBar(),
       body: Center(
         child: RaisedButton(
           onPressed: () async {
-            result = await Navigator.push(context,
-                MaterialPageRoute(builder: (context) {
-                  return new TipRoute(text: "进入时传递的参数");
-                }));
-              print("路由返回值:"+result);
+//            result = await Navigator.push(context,
+//                MaterialPageRoute(builder: (context) {
+//              return new TipRoute(text: "进入时传递的参数");
+//            }));
+            result = await Navigator.pushNamed(context, "TipRoute",
+                arguments: "进入时传递的参数");
+            print("路由返回值:" + result);
           },
           child: Text("打开提示页面"),
         ),
@@ -176,16 +193,16 @@ class ResultRoute extends StatelessWidget {
 }
 
 class TipRoute extends StatelessWidget {
-  final String text;
-
-  TipRoute({Key key, @required this.text}) : super(key: key);
+  var text;
 
   @override
   Widget build(BuildContext context) {
+    text = ModalRoute.of(context).settings.arguments;
+
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("带参数的路由页面"),
+        title: Text("带参数的路由页面 TipRoute"),
       ),
       body: Padding(
         padding: EdgeInsets.all(18),
