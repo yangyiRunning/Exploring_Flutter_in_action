@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
 //        });
 //      },
       //应用首页面
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Home Page'),
     );
   }
 }
@@ -114,9 +114,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
@@ -146,6 +143,13 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.blue,
               onPressed: () {
                 Navigator.pushNamed(context, "RandomWord");
+              },
+            ),
+            FlatButton(
+              child: Text("Dump App"),
+              textColor: Colors.blue,
+              onPressed: () {
+                debugDumpApp();
               },
             )
           ],
