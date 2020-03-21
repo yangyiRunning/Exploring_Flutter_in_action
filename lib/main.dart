@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/random/RandomWord.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "NewRoute": (context) => NewRoute(),
         "ResultRoute": (context) => ResultRoute(),
-        "TipRoute": (context) => TipRoute()
+        "TipRoute": (context) => TipRoute(),
+        "RandomWord": (context) => RandomWord()
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -137,6 +139,13 @@ class _MyHomePageState extends State<MyHomePage> {
 //                  return ResultRoute();
 //                }));
                 Navigator.pushNamed(context, "ResultRoute");
+              },
+            ),
+            FlatButton(
+              child: Text("生成一串英文的随机字符串"),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, "RandomWord");
               },
             )
           ],
