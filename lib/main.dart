@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/random/RandomWord.dart';
+import 'package:flutter_app/widget/SnackBarWidget.dart';
 import 'package:flutter_app/widget/StateCounter.dart';
 
 void main() => runApp(MyApp());
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
         "ResultRoute": (context) => ResultRoute(),
         "TipRoute": (context) => TipRoute(),
         "RandomWord": (context) => RandomWord(),
-        "StateCounter": (context) => StateCounterWidget()
+        "StateCounter": (context) => StateCounterWidget(),
+        "SnackBarWidget": (context) => SnackBarWidget()
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -115,6 +117,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            FlatButton(
+              child: Text("子Widget树获取父级StatefulWidget的State对象"),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, "SnackBarWidget",
+                    arguments: "传个参证明我来过");
+              },
+            ),
             FlatButton(
               child: Text("跳转至带状态的计数器界面"),
               textColor: Colors.blue,
