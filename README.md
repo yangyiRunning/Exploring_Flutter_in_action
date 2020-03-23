@@ -13,3 +13,7 @@
 - 注意要在State中的body节点对应new一个Builder，且通过命名参数显式的传递一个上下文参数，否则就会报如上错误。
 
 - 具体写法可参照代码: [https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold](https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold)
+
+4. Failed assertion: line 25 pos 15: 'child != null': is not true.
+
+- 某个控件树下没有对应的设置child节点
