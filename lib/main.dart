@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/random/RandomWord.dart';
+import 'package:flutter_app/widget/CupertinoRoute.dart';
 import 'package:flutter_app/widget/SnackBarWidget.dart';
 import 'package:flutter_app/widget/StateCounter.dart';
 
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         "TipRoute": (context) => TipRoute(),
         "RandomWord": (context) => RandomWord(),
         "StateCounter": (context) => StateCounterWidget(),
-        "SnackBarWidget": (context) => SnackBarWidget()
+        "SnackBarWidget": (context) => SnackBarWidget(),
+        "CupertinoRoute": (context) => CupertinoRoute()
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -118,14 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             FlatButton(
-              child: Text("子Widget树获取父级StatefulWidget的State对象"),
-              textColor: Colors.blue,
-              onPressed: () {
-                Navigator.pushNamed(context, "SnackBarWidget",
-                    arguments: "传个参证明我来过");
-              },
-            ),
-            FlatButton(
               child: Text("跳转至带状态的计数器界面"),
               textColor: Colors.blue,
               onPressed: () {
@@ -165,6 +159,22 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.blue,
               onPressed: () {
                 debugDumpApp();
+              },
+            ),
+            FlatButton(
+              child: Text("子Widget树获取父级StatefulWidget的State对象"),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, "SnackBarWidget",
+                    arguments: "传个参证明我来过");
+              },
+            ),
+            FlatButton(
+              child: Text("跳转至一个苹果风格的界面"),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(
+                    context, "CupertinoRoute", arguments: "苹果风格的界面");
               },
             )
           ],
@@ -225,7 +235,10 @@ class TipRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    text = ModalRoute.of(context).settings.arguments;
+    text = ModalRoute
+        .of(context)
+        .settings
+        .arguments;
 
     // TODO: implement build
     return Scaffold(
