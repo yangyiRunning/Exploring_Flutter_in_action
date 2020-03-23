@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/random/RandomWord.dart';
+import 'package:flutter_app/widget/StateCounter.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         "NewRoute": (context) => NewRoute(),
         "ResultRoute": (context) => ResultRoute(),
         "TipRoute": (context) => TipRoute(),
-        "RandomWord": (context) => RandomWord()
+        "RandomWord": (context) => RandomWord(),
+        "StateCounter": (context) => StateCounterWidget()
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -113,9 +115,12 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+            FlatButton(
+              child: Text("跳转至带状态的计数器界面"),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, "StateCounter", arguments: "到此一游");
+              },
             ),
             FlatButton(
               child: Text("跳转至路由界面 NewRoute"),
