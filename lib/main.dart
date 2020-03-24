@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/random/RandomWord.dart';
-import 'package:flutter_app/widget/CupertinoRoute.dart';
-import 'package:flutter_app/widget/SnackBarWidget.dart';
-import 'package:flutter_app/widget/StateCounter.dart';
+import 'package:flutter_app/router/RouteManagerMain.dart';
+import 'package:flutter_app/state/StateManagerMain.dart';
+import 'package:flutter_app/widget/BaseWidgetMain.dart';
+import 'package:flutter_app/widget/RandomWordWidget.dart';
+import 'package:flutter_app/router/CupertinoRoute.dart';
+import 'package:flutter_app/router/NewRoute.dart';
+import 'package:flutter_app/router/ResultRoute.dart';
+import 'package:flutter_app/router/TipRoute.dart';
+import 'package:flutter_app/state/SnackBarWidget.dart';
+import 'package:flutter_app/router/StateCounterWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,9 +16,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final appName = "Flutter踩坑之旅";
     return MaterialApp(
       //应用名称
-      title: 'Flutter Demo',
+      title: "$appName",
       //应用主题
       theme: ThemeData(
         // This is the theme of your application.
@@ -34,7 +41,10 @@ class MyApp extends StatelessWidget {
         "RandomWord": (context) => RandomWord(),
         "StateCounter": (context) => StateCounterWidget(),
         "SnackBarWidget": (context) => SnackBarWidget(),
-        "CupertinoRoute": (context) => CupertinoRoute()
+        "CupertinoRoute": (context) => CupertinoRoute(),
+        "RouteManagerMain": (context) => RouteManagerMain(),
+        "StateManagerMain": (context) => StateManagerMain(),
+        "BaseWidgetMain": (context) => BaseWidgetMain()
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -46,7 +56,7 @@ class MyApp extends StatelessWidget {
 //        });
 //      },
       //应用首页面
-      home: MyHomePage(title: 'Home Page'),
+      home: MyHomePage(title: "$appName"),
     );
   }
 }
@@ -120,61 +130,27 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             FlatButton(
-              child: Text("跳转至带状态的计数器界面"),
+              child: Text("路由管理"),
               textColor: Colors.blue,
               onPressed: () {
-                Navigator.pushNamed(context, "StateCounter", arguments: "到此一游");
+                Navigator.pushNamed(context, "RouteManagerMain",
+                    arguments: "路由管理主界面");
               },
             ),
             FlatButton(
-              child: Text("跳转至路由界面 NewRoute"),
+              child: Text("状态管理"),
               textColor: Colors.blue,
               onPressed: () {
-//                Navigator.push(context,
-//                    new MaterialPageRoute(builder: (context) {
-//                  return NewRoute();
-//                }));
-                Navigator.pushNamed(context, "NewRoute");
+                Navigator.pushNamed(context, "StateManagerMain",
+                    arguments: "状态管理主界面");
               },
             ),
             FlatButton(
-              child: Text("携带参数跳转界面 ResultRoute"),
+              child: Text("基础控件"),
               textColor: Colors.blue,
               onPressed: () {
-//                Navigator.push(context, MaterialPageRoute(builder: (context) {
-//                  return ResultRoute();
-//                }));
-                Navigator.pushNamed(context, "ResultRoute");
-              },
-            ),
-            FlatButton(
-              child: Text("生成一串英文的随机字符串"),
-              textColor: Colors.blue,
-              onPressed: () {
-                Navigator.pushNamed(context, "RandomWord");
-              },
-            ),
-            FlatButton(
-              child: Text("Dump App"),
-              textColor: Colors.blue,
-              onPressed: () {
-                debugDumpApp();
-              },
-            ),
-            FlatButton(
-              child: Text("子Widget树获取父级StatefulWidget的State对象"),
-              textColor: Colors.blue,
-              onPressed: () {
-                Navigator.pushNamed(context, "SnackBarWidget",
-                    arguments: "传个参证明我来过");
-              },
-            ),
-            FlatButton(
-              child: Text("跳转至一个苹果风格的界面"),
-              textColor: Colors.blue,
-              onPressed: () {
-                Navigator.pushNamed(
-                    context, "CupertinoRoute", arguments: "苹果风格的界面");
+                Navigator.pushNamed(context, "BaseWidgetMain",
+                    arguments: "基础控件主界面");
               },
             )
           ],
@@ -185,80 +161,6 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
-
-class NewRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("这是一个路由界面"),
-      ),
-      body: new Center(
-        child: new Text("我把界面的内容放在中间"),
-      ),
-    );
-  }
-}
-
-class ResultRoute extends StatelessWidget {
-  var result;
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () async {
-//            result = await Navigator.push(context,
-//                MaterialPageRoute(builder: (context) {
-//              return new TipRoute(text: "进入时传递的参数");
-//            }));
-            result = await Navigator.pushNamed(context, "TipRoute",
-                arguments: "进入时传递的参数");
-            print("路由返回值:" + result);
-          },
-          child: Text("打开提示页面"),
-        ),
-      ),
-    );
-  }
-}
-
-class TipRoute extends StatelessWidget {
-  var text;
-
-  @override
-  Widget build(BuildContext context) {
-    text = ModalRoute
-        .of(context)
-        .settings
-        .arguments;
-
-    // TODO: implement build
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("带参数的路由页面 TipRoute"),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(18),
-        child: Column(
-          children: <Widget>[
-            Text(text),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pop(context, "结束页面时的返回值");
-              },
-              child: Text("返回"),
-            )
-          ],
-        ),
-      ),
     );
   }
 }

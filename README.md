@@ -1,6 +1,12 @@
 # Flutter学(cai)习(keng)之路
 
-坑の顺位: ↓
+## 主要get到的点
+
+- 路由管理
+- 状态管理
+- 基础控件
+
+## 坑の顺位: ↓
 
 1. Waiting for another flutter command to release the startup lock...
 
