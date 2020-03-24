@@ -20,6 +20,13 @@ class BaseWidgetMain extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, "RandomWord");
               },
+            ),
+            FlatButton(
+              child: Text("文本控件，字体样式"),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, "TextStyleWidget", arguments: "文本控件，字体样式");
+              },
             )
           ],
         ),

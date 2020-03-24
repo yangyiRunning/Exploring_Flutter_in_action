@@ -9,6 +9,7 @@ import 'package:flutter_app/router/ResultRoute.dart';
 import 'package:flutter_app/router/TipRoute.dart';
 import 'package:flutter_app/state/SnackBarWidget.dart';
 import 'package:flutter_app/router/StateCounterWidget.dart';
+import 'package:flutter_app/widget/TextStyleWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,7 +45,8 @@ class MyApp extends StatelessWidget {
         "CupertinoRoute": (context) => CupertinoRoute(),
         "RouteManagerMain": (context) => RouteManagerMain(),
         "StateManagerMain": (context) => StateManagerMain(),
-        "BaseWidgetMain": (context) => BaseWidgetMain()
+        "BaseWidgetMain": (context) => BaseWidgetMain(),
+        "TextStyleWidget": (context) => TextStyleWidget()
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

@@ -74,3 +74,9 @@ flutter:
   assets:
     - assets/ic_launcher.png
     - assets/ic_mario.png
+  fonts:
+    - family: HanyiSentySuciTablet
+      fonts:
+        - asset: assets/fonts/HanyiSentySuciTablet.ttf
+          weight: 500
+        - asset: assets/fonts/HYQinChuanManShuW.ttf
