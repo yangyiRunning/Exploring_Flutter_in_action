@@ -79,4 +79,3 @@ flutter:
       fonts:
         - asset: assets/fonts/HanyiSentySuciTablet.ttf
           weight: 500
-        - asset: assets/fonts/HYQinChuanManShuW.ttf
