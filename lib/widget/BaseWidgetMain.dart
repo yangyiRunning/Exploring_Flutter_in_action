@@ -25,7 +25,15 @@ class BaseWidgetMain extends StatelessWidget {
               child: Text("文本控件，字体样式"),
               textColor: Colors.blue,
               onPressed: () {
-                Navigator.pushNamed(context, "TextStyleWidget", arguments: "文本控件，字体样式");
+                Navigator.pushNamed(context, "TextStyleWidget",
+                    arguments: "文本控件，字体样式");
+              },
+            ),
+            FlatButton(
+              textColor: Colors.blue,
+              child: Text("按钮系列"),
+              onPressed: () {
+                Navigator.pushNamed(context, "ButtonWidget", arguments: "按钮系列");
               },
             )
           ],
