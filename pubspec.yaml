@@ -74,6 +74,7 @@ flutter:
   assets:
     - assets/ic_launcher.png
     - assets/ic_mario.png
+    - assets/images/conan.jpg
   fonts:
     - family: HanyiSentySuciTablet
       fonts:

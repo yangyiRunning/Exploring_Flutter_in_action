@@ -35,6 +35,13 @@ class BaseWidgetMain extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, "ButtonWidget", arguments: "按钮系列");
               },
+            ),
+            FlatButton(
+              textColor: Colors.blue,
+              child: Text("图片系列"),
+              onPressed: () {
+                Navigator.pushNamed(context, "IconWidget", arguments: "图片系列");
+              },
             )
           ],
         ),

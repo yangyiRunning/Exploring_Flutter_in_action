@@ -3,6 +3,7 @@ import 'package:flutter_app/router/RouteManagerMain.dart';
 import 'package:flutter_app/state/StateManagerMain.dart';
 import 'package:flutter_app/widget/BaseWidgetMain.dart';
 import 'package:flutter_app/widget/ButtonWidget.dart';
+import 'package:flutter_app/widget/IconWidget.dart';
 import 'package:flutter_app/widget/RandomWordWidget.dart';
 import 'package:flutter_app/router/CupertinoRoute.dart';
 import 'package:flutter_app/router/NewRoute.dart';
@@ -48,7 +49,8 @@ class MyApp extends StatelessWidget {
         "StateManagerMain": (context) => StateManagerMain(),
         "BaseWidgetMain": (context) => BaseWidgetMain(),
         "TextStyleWidget": (context) => TextStyleWidget(),
-        "ButtonWidget": (context) => ButtonWidget()
+        "ButtonWidget": (context) => ButtonWidget(),
+        "IconWidget": (context) => IconWidget()
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
