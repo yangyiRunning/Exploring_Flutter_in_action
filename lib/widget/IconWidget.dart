@@ -130,6 +130,21 @@ class IconWidget extends StatelessWidget {
                     height: imgWidth * 4.5,
                     repeat: ImageRepeat.repeatY)
               ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Text("显示字体图片"),
+                    Text("即一串谜一样的字符文本，对应一张图片", textScaleFactor: 0.6)
+                  ],
+                ),
+                Icon(Icons.settings,
+                    color: Colors.red,
+                    size: imgWidth,
+                    textDirection: TextDirection.ltr)
+              ],
             )
           ].map((f) {
             return Row(
