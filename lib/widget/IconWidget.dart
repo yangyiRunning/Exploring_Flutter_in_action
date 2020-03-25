@@ -8,26 +8,26 @@ class IconWidget extends StatelessWidget {
     final localImg = "assets/images/conan.jpg";
     final networkImg =
         "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585073276237&di=7e595c59519294214d1b1e1d83a78b18&imgtype=0&src=http%3A%2F%2Fwww.17qq.com%2Fimg_qqtouxiang%2F76699903.jpeg";
-    final double imgWidth = 60;
+    final double imgWidth = 80;
     return Scaffold(
       appBar: AppBar(
         title: Text("$arg"),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("从assets中加载图片"),
+                Text("从assets中加载图片: "),
                 Image.asset(localImg, width: imgWidth)
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("从网络加载图片"),
+                Text("从网络加载图片: "),
                 Image.network(
                   networkImg,
                   width: imgWidth,
@@ -37,14 +37,14 @@ class IconWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("原图"),
+                Text("原图: "),
                 Image.asset(localImg, width: imgWidth)
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("BoxFit.fill"),
+                Text("BoxFit.fill: "),
                 Image.asset(
                   localImg,
                   width: imgWidth,
@@ -55,7 +55,7 @@ class IconWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("BoxFit.cover"),
+                Text("BoxFit.cover: "),
                 Image.asset(
                   localImg,
                   width: imgWidth,
@@ -66,7 +66,7 @@ class IconWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("BoxFit.contain"),
+                Text("BoxFit.contain: "),
                 Image.asset(
                   localImg,
                   width: imgWidth,
@@ -78,7 +78,7 @@ class IconWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("BoxFit.fitWidth"),
+                Text("BoxFit.fitWidth: "),
                 Image.asset(
                   localImg,
                   width: imgWidth,
@@ -90,7 +90,7 @@ class IconWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("BoxFit.fitHeight"),
+                Text("BoxFit.fitHeight: "),
                 Image.asset(
                   localImg,
                   width: imgWidth,
@@ -102,7 +102,7 @@ class IconWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("BoxFit.none"),
+                Text("BoxFit.none: "),
                 Image.asset(
                   localImg,
                   width: imgWidth,
@@ -110,8 +110,41 @@ class IconWidget extends StatelessWidget {
                       .none, //图片没有适应策略，会在显示空间内显示图片，如果图片比显示空间大，则显示空间只会显示图片中间部分
                 )
               ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text("颜色混合处理: "),
+                Image.asset(localImg,
+                    width: imgWidth,
+                    color: Colors.blue,
+                    colorBlendMode: BlendMode.difference)
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text("repeat: "),
+                Image.asset(localImg,
+                    width: imgWidth,
+                    height: imgWidth * 4.5,
+                    repeat: ImageRepeat.repeatY)
+              ],
             )
-          ],
+          ].map((f) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: SizedBox(
+                    width: imgWidth * 3,
+                    child: f,
+                  ),
+                ),
+              ],
+            );
+          }).toList(),
         ),
       ),
     );
