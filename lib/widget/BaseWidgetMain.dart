@@ -42,6 +42,22 @@ class BaseWidgetMain extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, "IconWidget", arguments: "图片系列");
               },
+            ),
+            FlatButton(
+              textColor: Colors.blue,
+              child: Text("单选开关和复选框"),
+              onPressed: () {
+                Navigator.pushNamed(context, "SwitchCheckboxWidget",
+                    arguments: "单选开关和复选框");
+              },
+            ),
+            FlatButton(
+              textColor: Colors.blue,
+              child: Text("输入框和表单"),
+              onPressed: () {
+                Navigator.pushNamed(context, "EditTextFormWidget",
+                    arguments: "输入框和表单");
+              },
             )
           ],
         ),
