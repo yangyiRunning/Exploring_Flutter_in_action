@@ -92,12 +92,12 @@ class ButtonState extends State<ButtonWidget> {
                   child: Text("自定义圆角按钮"),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
-                  elevation: 2.0,
                   //正常状态下的阴影
-                  highlightElevation: 8.0,
+                  elevation: 2.0,
                   //按下时的阴影
-                  disabledElevation: 0.0,
+                  highlightElevation: 8.0,
                   // 禁用时的阴影
+                  disabledElevation: 0.0,
                   onPressed: () {
                     ScaffoldState scaffoldState =
                         context.findAncestorStateOfType<ScaffoldState>();

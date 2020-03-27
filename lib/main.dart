@@ -5,6 +5,7 @@ import 'package:flutter_app/widget/BaseWidgetMain.dart';
 import 'package:flutter_app/widget/ButtonWidget.dart';
 import 'package:flutter_app/widget/EditTextFormWidget.dart';
 import 'package:flutter_app/widget/IconWidget.dart';
+import 'package:flutter_app/widget/LoginFormWidget.dart';
 import 'package:flutter_app/widget/RandomWordWidget.dart';
 import 'package:flutter_app/router/CupertinoRoute.dart';
 import 'package:flutter_app/router/NewRoute.dart';
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
         "IconWidget": (context) => IconWidget(),
         "SwitchCheckboxWidget": (context) => SwitchCheckboxWidget(),
         "EditTextFormWidget": (context) => EditTextFormWidget(),
+        "LoginFormWidget": (context) => LoginFormWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

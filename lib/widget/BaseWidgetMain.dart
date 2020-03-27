@@ -58,6 +58,14 @@ class BaseWidgetMain extends StatelessWidget {
                 Navigator.pushNamed(context, "EditTextFormWidget",
                     arguments: "输入框和表单");
               },
+            ),
+            FlatButton(
+              textColor: Colors.blue,
+              child: Text("登录表单"),
+              onPressed: () {
+                Navigator.pushNamed(context, "LoginFormWidget",
+                    arguments: "登录表单");
+              },
             )
           ],
         ),
