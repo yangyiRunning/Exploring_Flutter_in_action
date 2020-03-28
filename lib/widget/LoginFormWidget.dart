@@ -12,6 +12,7 @@ class LoginFormWidget extends StatefulWidget {
 class LoginFormState extends State<LoginFormWidget> {
   TextEditingController usernameEditingController = new TextEditingController();
   TextEditingController passwordEditingController = new TextEditingController();
+  bool initCheckStatus = false;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,6 @@ class LoginFormState extends State<LoginFormWidget> {
                       borderSide: BorderSide(color: Colors.tealAccent)),
                   focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue))),
-              controller: usernameEditingController,
               maxLength: 10,
               maxLengthEnforced: false,
               validator: (v) {
@@ -55,7 +55,6 @@ class LoginFormState extends State<LoginFormWidget> {
                       borderSide: BorderSide(color: Colors.tealAccent)),
                   focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue))),
-              controller: passwordEditingController,
               maxLength: 10,
               maxLengthEnforced: false,
               validator: (v) {
@@ -65,6 +64,21 @@ class LoginFormState extends State<LoginFormWidget> {
                 print("保存密码 $v 成功");
               },
               obscureText: true,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Checkbox(
+                  value: initCheckStatus,
+                  activeColor: Colors.blue,
+                  onChanged: (v) {
+                    setState(() {
+                      initCheckStatus = v;
+                    });
+                  },
+                ),
+                Text("请勾选隐私协议")
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -90,13 +104,21 @@ class LoginFormState extends State<LoginFormWidget> {
                       //开启全表单验证
                       //FormState.validate()：调用此方法后，会调用Form子孙FormField的validate回调，如果有一个校验失败，则返回false，所有校验失败项都会返回用户返回的错误提示。
                       if (formState.validate()) {
-                        //FormState.save()：调用此方法后，会调用Form子孙FormField的save回调，用于保存表单内容
-                        formState.save();
-                        ScaffoldState scaffoldState =
-                            context.findAncestorStateOfType<ScaffoldState>();
-                        scaffoldState.showSnackBar(SnackBar(
-                          content: Text("表单保存成功"),
-                        ));
+                        if (initCheckStatus) {
+                          //FormState.save()：调用此方法后，会调用Form子孙FormField的save回调，用于保存表单内容
+                          formState.save();
+                          ScaffoldState scaffoldState =
+                              context.findAncestorStateOfType<ScaffoldState>();
+                          scaffoldState.showSnackBar(SnackBar(
+                            content: Text("表单保存成功"),
+                          ));
+                        } else {
+                          ScaffoldState scaffoldState =
+                              context.findAncestorStateOfType<ScaffoldState>();
+                          scaffoldState.showSnackBar(SnackBar(
+                            content: Text("请先勾选同意隐私协议"),
+                          ));
+                        }
                       }
                     },
                   );
@@ -122,6 +144,9 @@ class LoginFormState extends State<LoginFormWidget> {
                       FormState formState = Form.of(context);
                       //FormState.reset()：调用此方法后，会将子孙FormField的内容清空。
                       formState.reset();
+                      setState(() {
+                        initCheckStatus = false;
+                      });
                     },
                   );
                 })
