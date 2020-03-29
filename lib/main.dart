@@ -17,6 +17,8 @@ import 'package:flutter_app/router/StateCounterWidget.dart';
 import 'package:flutter_app/widget/SwitchCheckboxWidget.dart';
 import 'package:flutter_app/widget/TextStyleWidget.dart';
 
+import 'layout/LinearLayoutWidget.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -59,6 +61,7 @@ class MyApp extends StatelessWidget {
         "EditTextFormWidget": (context) => EditTextFormWidget(),
         "LoginFormWidget": (context) => LoginFormWidget(),
         "ProgressBarWidget": (context) => ProgressBarWidget(),
+        "LinearLayoutWidget": (context) => LinearLayoutWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -166,6 +169,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, "BaseWidgetMain",
                       arguments: "基础控件主界面");
+                },
+              ),
+              FlatButton(
+                child: Text("布局控件"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, "LinearLayoutWidget",
+                      arguments: "布局控件主界面");
                 },
               )
             ],
