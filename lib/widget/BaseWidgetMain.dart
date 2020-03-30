@@ -15,6 +15,9 @@ class BaseWidgetMain extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                SizedBox(
+                  height: 30,
+                ),
                 FlatButton(
                   child: Text("生成一串英文的随机字符串和加载一张图片"),
                   textColor: Colors.blue,
