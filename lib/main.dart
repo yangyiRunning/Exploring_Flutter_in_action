@@ -17,6 +17,7 @@ import 'package:flutter_app/router/StateCounterWidget.dart';
 import 'package:flutter_app/widget/SwitchCheckboxWidget.dart';
 import 'package:flutter_app/widget/TextStyleWidget.dart';
 
+import 'layout/FlexLayoutWidget.dart';
 import 'layout/LayoutManagerWidget.dart';
 import 'layout/LinearLayoutWidget.dart';
 
@@ -64,6 +65,7 @@ class MyApp extends StatelessWidget {
         "ProgressBarWidget": (context) => ProgressBarWidget(),
         "LayoutManagerWidget": (context) => LayoutManagerWidget(),
         "LinearLayoutWidget": (context) => LinearLayoutWidget(),
+        "FlexLayoutWidget": (context) => FlexLayoutWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
