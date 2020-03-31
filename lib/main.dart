@@ -18,6 +18,7 @@ import 'package:flutter_app/widget/SwitchCheckboxWidget.dart';
 import 'package:flutter_app/widget/TextStyleWidget.dart';
 
 import 'layout/FlexLayoutWidget.dart';
+import 'layout/WrapLayoutWidget.dart';
 import 'layout/LayoutManagerWidget.dart';
 import 'layout/LinearLayoutWidget.dart';
 
@@ -66,6 +67,7 @@ class MyApp extends StatelessWidget {
         "LayoutManagerWidget": (context) => LayoutManagerWidget(),
         "LinearLayoutWidget": (context) => LinearLayoutWidget(),
         "FlexLayoutWidget": (context) => FlexLayoutWidget(),
+        "WrapLayoutWidget": (context) => WrapLayoutWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -185,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.pushNamed(context, "LayoutManagerWidget",
                       arguments: "布局控件主界面");
                 },
-              )
+              ),
             ],
           ),
         ),

@@ -16,6 +16,7 @@
 - [x] 布局控件
   - [x] 线性布局
   - [x] 弹性布局(Flex/Expanded/Spacer)
+  - [x] 流式布局(Wrap/Flow)
 
 ## 坑の顺位: ↓
 
