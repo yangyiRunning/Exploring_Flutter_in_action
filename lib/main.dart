@@ -18,6 +18,7 @@ import 'package:flutter_app/widget/SwitchCheckboxWidget.dart';
 import 'package:flutter_app/widget/TextStyleWidget.dart';
 
 import 'layout/FlexLayoutWidget.dart';
+import 'layout/StackLayoutWidget.dart';
 import 'layout/WrapLayoutWidget.dart';
 import 'layout/LayoutManagerWidget.dart';
 import 'layout/LinearLayoutWidget.dart';
@@ -68,6 +69,7 @@ class MyApp extends StatelessWidget {
         "LinearLayoutWidget": (context) => LinearLayoutWidget(),
         "FlexLayoutWidget": (context) => FlexLayoutWidget(),
         "WrapLayoutWidget": (context) => WrapLayoutWidget(),
+        "StackLayoutWidget": (context) => StackLayoutWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

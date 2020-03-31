@@ -41,6 +41,14 @@ class LayoutManagerWidget extends StatelessWidget {
                       .pushNamed("WrapLayoutWidget", arguments: "流式布局");
                 },
               ),
+              FlatButton(
+                child: Text("层叠布局"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("StackLayoutWidget", arguments: "层叠布局");
+                },
+              ),
             ],
           ),
         ),
