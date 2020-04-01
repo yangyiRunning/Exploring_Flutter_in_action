@@ -1,6 +1,21 @@
 # Flutter学(cai)习(keng)之路(Flutter in Action)
 
-## 主要get到的点
+## 前面叨叨两句
+
+- 本人学(cai)习(keng)中的一些小体会(主观居多︿(￣︶￣)︿)
+  - 先说Dart
+    - Dart语言是基于Java、JavaScript的部分语法，还糅合了Kotlin的部分语法糖的一门语言，本身是融合的产物，估计Google的初衷是想"博采众长"
+    - Dart语言本身比Java更加简练，也加入了一些Java中没有的语法糖。比如async和await，本质其实还是个Future
+    - 对于已经习惯了Rx系列链式编程的人来说，Dart天然自带。如果觉得链式书写的"链"太长"影响市容"的话，还可以采用类似Kotlin中协程的写法非常舒服的书写异步任务，基本上在Dart语言中不会出现callback hell
+    - 对于掌握上述任何一种语言的人来说，近乎可以以极小成本上手Dart
+  - 再说Flutter
+    - Flutter本质上其实算一个UI框架，一套代码到处跑。UI框架+原生引擎渲染
+    - 一套优秀的Flutter代码，理论上可以在Android/iOS/Web/Fuchsia各种环境和操作系统上运行，并且保证UI界面的高度一致性
+    - Flutter的数据结构体系，本质上与其他技术栈对于UI层控件的处理类似，都是一颗多叉树，创建并渲染UI的过程本质上就是建树和走树的过程
+    - 在写Flutter的过程中，有时候甚至觉得自己不是在"写代码"，更像是在一棵"树"上画画
+    - 对于有任何一端移动开发经验的同学来说，Flutter的上手门槛是0
+
+## 主要Cover到的点
 
 - [x] 路由管理
 - [x] 状态管理
@@ -24,33 +39,33 @@
 
 1. Waiting for another flutter command to release the startup lock...
 
-   - 删除SDK中的flutter/bin/cache/lockfile文件
+  - 删除SDK中的flutter/bin/cache/lockfile文件
 
 2. [pubspec.yaml修改后点击packages get后长时间无反应，提示: Running "flutter pub get" in flutter_app](https://blog.csdn.net/unique_Even/article/details/104995111)
 
 3. XXX called with a context that does not contain a Scaffold...
 
-   - 注意要在State中的body节点对应new一个Builder，且通过命名参数显式的传递一个上下文参数，否则就会报如上错误
+  - 注意要在State中的body节点对应new一个Builder，且通过命名参数显式的传递一个上下文参数，否则就会报如上错误
 
-   - 具体写法可参照代码: [https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold](https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold)
+  - 具体写法可参照代码: [https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold](https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold)
 
 4. Failed assertion: line 25 pos 15: 'child != null': is not true...
 
-   - 某个控件树下没有对应的设置child节点
+  - 某个控件树下没有对应的设置child节点
 
 5. 修改应用名称和应用logo无效...
 
-   - 只修改main.dart文件中MaterialApp节点下的title是不行的，title不全等价于App在手机上的应用名。对应的还需要修改相应平台的名称: Android/iOS。
-   - 原生平台的应用名称修改分别在android/app/src/main/AndroidManifest.xml和ios/Runner/Info.plist下
-   - 同理，修改应用logo也遵循此原则
+  - 只修改main.dart文件中MaterialApp节点下的title是不行的，title不全等价于App在手机上的应用名。对应的还需要修改相应平台的名称: Android/iOS。
+  - 原生平台的应用名称修改分别在android/app/src/main/AndroidManifest.xml和ios/Runner/Info.plist下
+  - 同理，修改应用logo也遵循此原则
 
 6. The method 'showSnackBar' was called on null...
 
-   - 调用showSnackBar方法显示SnackBar时，往往是在与一个StatefulWidget对应的State类中调用
-   - 在State对应的子类的body节点中，**需要new一个Builder并传递一个上下文**，通过上下文find到父类中对应的ScaffoldState对象，进而调用showSnackBar显示SnackBar
-   - **否则，会出现没有对应的上下文对象所导致的NPL**
+  - 调用showSnackBar方法显示SnackBar时，往往是在与一个StatefulWidget对应的State类中调用
+  - 在State对应的子类的body节点中，**需要new一个Builder并传递一个上下文**，通过上下文find到父类中对应的ScaffoldState对象，进而调用showSnackBar显示SnackBar
+  - **否则，会出现没有对应的上下文对象所导致的NPL**
 
 7. Positioned宽度width和高度height的计算...
 
-   - width的计算会基于left和right进行， 当指定left和width后，right会自动算出(left+width)，如果同时指定width/left/right属性则会报错
-   - height的计算会基于top和bottom进行，当指定top和height后，bottom会自动算出(top+height)，如果同时指定height/top/bottom属性则会报错
+  - width的计算会基于left和right进行， 当指定left和width后，right会自动算出(left+width)，如果同时指定width/left/right属性则会报错
+  - height的计算会基于top和bottom进行，当指定top和height后，bottom会自动算出(top+height)，如果同时指定height/top/bottom属性则会报错
