@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'container/BoxContainerWidget.dart';
 import 'container/ContainerManagerWidget.dart';
 import 'container/PaddingContainerWidget.dart';
 import 'router/RouteManagerMain.dart';
@@ -76,6 +77,7 @@ class MyApp extends StatelessWidget {
         "AlignLayoutWidget": (context) => AlignLayoutWidget(),
         "ContainerManagerWidget": (context) => ContainerManagerWidget(),
         "PaddingContainerWidget": (context) => PaddingContainerWidget(),
+        "BoxContainerWidget": (context) => BoxContainerWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

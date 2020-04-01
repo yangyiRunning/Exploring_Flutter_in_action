@@ -36,6 +36,7 @@
   - [x] 对齐与相对定位(Align/Alignment/FractionalOffset/Center)
 - [x] 容器控件
   - [x] 填充(Padding/EdgeInsets)
+  - [x] 尺寸限制()
 
 ## 坑の顺位: ↓
 
