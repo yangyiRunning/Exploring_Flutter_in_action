@@ -29,7 +29,7 @@
 
 3. XXX called with a context that does not contain a Scaffold...
 
-   - 注意要在State中的body节点对应new一个Builder，且通过命名参数显式的传递一个上下文参数，否则就会报如上错误。
+   - 注意要在State中的body节点对应new一个Builder，且通过命名参数显式的传递一个上下文参数，否则就会报如上错误
 
    - 具体写法可参照代码: [https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold](https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold)
 
@@ -48,3 +48,8 @@
    - 调用showSnackBar方法显示SnackBar时，往往是在与一个StatefulWidget对应的State类中调用
    - 在State对应的子类的body节点中，**需要new一个Builder并传递一个上下文**，通过上下文find到父类中对应的ScaffoldState对象，进而调用showSnackBar显示SnackBar
    - **否则，会出现没有对应的上下文对象所导致的NPL**
+
+7. Positioned宽度width和高度height的计算...
+
+   - width的计算会基于left和right进行， 当指定left和width后，right会自动算出(left+width)，如果同时指定width/left/right属性则会报错
+   - height的计算会基于top和bottom进行，当指定top和height后，bottom会自动算出(top+height)，如果同时指定height/top/bottom属性则会报错
