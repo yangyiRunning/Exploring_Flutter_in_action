@@ -13,7 +13,7 @@
     - 一套优秀的Flutter代码，理论上可以在Android/iOS/Web/Fuchsia各种环境和操作系统上运行，并且保证UI界面的高度一致性
     - Flutter的数据结构体系，本质上与其他技术栈对于UI层控件的处理类似，都是一颗多叉树，创建并渲染UI的过程本质上就是建树和走树的过程
     - 在写Flutter的过程中，有时候甚至觉得自己不是在"写代码"，更像是在一棵"树"上画画
-    - 对于有任何一端移动开发经验的同学来说，Flutter的上手门槛是0
+    - 对于有任何一端移动开发经验尤其是Android开发经验的同学来说，Flutter的上手门槛是0
 
 ## 主要Cover到的点
 
@@ -34,6 +34,8 @@
   - [x] 流式布局(Wrap/Flow)
   - [x] 层叠布局(Stack/Positioned)
   - [x] 对齐与相对定位(Align/Alignment/FractionalOffset/Center)
+- [x] 容器控件
+  - [x] 填充(Padding/EdgeInsets)
 
 ## 坑の顺位: ↓
 

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'container/ContainerManagerWidget.dart';
+import 'container/PaddingContainerWidget.dart';
 import 'router/RouteManagerMain.dart';
 import 'state/StateManagerMain.dart';
 import 'widget/BaseWidgetMain.dart';
@@ -72,6 +74,8 @@ class MyApp extends StatelessWidget {
         "WrapLayoutWidget": (context) => WrapLayoutWidget(),
         "StackLayoutWidget": (context) => StackLayoutWidget(),
         "AlignLayoutWidget": (context) => AlignLayoutWidget(),
+        "ContainerManagerWidget": (context) => ContainerManagerWidget(),
+        "PaddingContainerWidget": (context) => PaddingContainerWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -190,6 +194,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, "LayoutManagerWidget",
                       arguments: "布局控件主界面");
+                },
+              ),
+              FlatButton(
+                child: Text("容器控件"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, "ContainerManagerWidget",
+                      arguments: "容器控件主界面");
                 },
               ),
             ],
