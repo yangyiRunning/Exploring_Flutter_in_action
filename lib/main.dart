@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/router/RouteManagerMain.dart';
-import 'package:flutter_app/state/StateManagerMain.dart';
-import 'package:flutter_app/widget/BaseWidgetMain.dart';
-import 'package:flutter_app/widget/ButtonWidget.dart';
-import 'package:flutter_app/widget/EditTextFormWidget.dart';
-import 'package:flutter_app/widget/IconWidget.dart';
-import 'package:flutter_app/widget/LoginFormWidget.dart';
-import 'package:flutter_app/widget/ProgressBarWidget.dart';
-import 'package:flutter_app/widget/RandomWordWidget.dart';
-import 'package:flutter_app/router/CupertinoRoute.dart';
-import 'package:flutter_app/router/NewRoute.dart';
-import 'package:flutter_app/router/ResultRoute.dart';
-import 'package:flutter_app/router/TipRoute.dart';
-import 'package:flutter_app/state/SnackBarWidget.dart';
-import 'package:flutter_app/router/StateCounterWidget.dart';
-import 'package:flutter_app/widget/SwitchCheckboxWidget.dart';
-import 'package:flutter_app/widget/TextStyleWidget.dart';
+import 'router/RouteManagerMain.dart';
+import 'state/StateManagerMain.dart';
+import 'widget/BaseWidgetMain.dart';
+import 'widget/ButtonWidget.dart';
+import 'widget/EditTextFormWidget.dart';
+import 'widget/IconWidget.dart';
+import 'widget/LoginFormWidget.dart';
+import 'widget/ProgressBarWidget.dart';
+import 'widget/RandomWordWidget.dart';
+import 'router/CupertinoRoute.dart';
+import 'router/NewRoute.dart';
+import 'router/ResultRoute.dart';
+import 'router/TipRoute.dart';
+import 'state/SnackBarWidget.dart';
+import 'router/StateCounterWidget.dart';
+import 'widget/SwitchCheckboxWidget.dart';
+import 'widget/TextStyleWidget.dart';
 
+import 'layout/AlignLayoutWidget.dart';
 import 'layout/FlexLayoutWidget.dart';
 import 'layout/StackLayoutWidget.dart';
 import 'layout/WrapLayoutWidget.dart';
@@ -70,6 +71,7 @@ class MyApp extends StatelessWidget {
         "FlexLayoutWidget": (context) => FlexLayoutWidget(),
         "WrapLayoutWidget": (context) => WrapLayoutWidget(),
         "StackLayoutWidget": (context) => StackLayoutWidget(),
+        "AlignLayoutWidget": (context) => AlignLayoutWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

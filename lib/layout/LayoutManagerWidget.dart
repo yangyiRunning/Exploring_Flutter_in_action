@@ -49,6 +49,14 @@ class LayoutManagerWidget extends StatelessWidget {
                       .pushNamed("StackLayoutWidget", arguments: "层叠布局");
                 },
               ),
+              FlatButton(
+                child: Text("对齐与相对定位"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("AlignLayoutWidget", arguments: "对齐与相对定位");
+                },
+              ),
             ],
           ),
         ),

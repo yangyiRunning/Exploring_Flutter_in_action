@@ -18,6 +18,7 @@
   - [x] 弹性布局(Flex/Expanded/Spacer)
   - [x] 流式布局(Wrap/Flow)
   - [x] 层叠布局(Stack/Positioned)
+  - [x] 对齐与相对定位(Align/Alignment/FractionalOffset/Center)
 
 ## 坑の顺位: ↓
 
