@@ -41,6 +41,14 @@ class ContainerManagerWidget extends StatelessWidget{
                       .pushNamed("DecoratedBoxWidget", arguments: "装饰");
                 },
               ),
+              FlatButton(
+                child: Text("变换"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("TransformWidget", arguments: "变换");
+                },
+              ),
             ],
           ),
         ),
