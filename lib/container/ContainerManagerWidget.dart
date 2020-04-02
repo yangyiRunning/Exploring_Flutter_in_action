@@ -33,6 +33,14 @@ class ContainerManagerWidget extends StatelessWidget{
                       .pushNamed("BoxContainerWidget", arguments: "尺寸限制");
                 },
               ),
+              FlatButton(
+                child: Text("装饰"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("DecoratedBoxWidget", arguments: "装饰");
+                },
+              ),
             ],
           ),
         ),

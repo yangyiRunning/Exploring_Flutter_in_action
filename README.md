@@ -39,6 +39,7 @@
 - [x] 容器控件
   - [x] 填充(Padding/EdgeInsets)
   - [x] 尺寸限制(ConstrainedBox/BoxConstraints/SizedBox/UnconstrainedBox)
+  - [x] 装饰(DecoratedBox)
 
 ## 坑の顺位: ↓
 
