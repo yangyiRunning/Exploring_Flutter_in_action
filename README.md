@@ -1,6 +1,6 @@
 # Flutter学(cai)习(keng)之路(Flutter in Action)
 
-## 前面叨叨两句
+## 正片前叨叨两句
 
 - 本人学(cai)习(keng)中的一些小体会(主观居多︿(￣︶￣)︿)
   - 先说Dart
@@ -14,6 +14,8 @@
     - Flutter的数据结构体系，本质上与其他技术栈对于UI层控件的处理类似，都是一颗多叉树，创建并渲染UI的过程本质上就是建树和走树的过程
     - 在写Flutter的过程中，有时候甚至觉得自己不是在"写代码"，更像是在一棵"树"上画画
     - 对于有任何一端移动开发经验尤其是Android开发经验的同学来说，Flutter的上手门槛是0
+    
+---
 
 ## 主要Cover到的点
 
@@ -36,7 +38,7 @@
   - [x] 对齐与相对定位(Align/Alignment/FractionalOffset/Center)
 - [x] 容器控件
   - [x] 填充(Padding/EdgeInsets)
-  - [x] 尺寸限制()
+  - [x] 尺寸限制(ConstrainedBox/BoxConstraints/SizedBox/UnconstrainedBox)
 
 ## 坑の顺位: ↓
 

@@ -25,9 +25,6 @@ class ContainerManagerWidget extends StatelessWidget{
                       .pushNamed("PaddingContainerWidget", arguments: "填充");
                 },
               ),
-              SizedBox(
-                height: 30,
-              ),
               FlatButton(
                 child: Text("尺寸限制"),
                 textColor: Colors.blue,
