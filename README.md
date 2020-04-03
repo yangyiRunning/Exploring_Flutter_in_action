@@ -41,6 +41,7 @@
   - [x] 尺寸限制(ConstrainedBox/BoxConstraints/SizedBox/UnconstrainedBox)
   - [x] 装饰(DecoratedBox)
   - [x] 变换(Transform/Matrix4(作用于绘制阶段)/RotatedBox(作用于布局阶段))
+  - [x] 容器(Container/Padding/Margin)
 
 ## 坑の顺位: ↓
 

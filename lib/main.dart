@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'container/BoxContainerWidget.dart';
 import 'container/ContainerManagerWidget.dart';
+import 'container/ContainerWidget.dart';
 import 'container/DecoratedBoxWidget.dart';
 import 'container/PaddingContainerWidget.dart';
 import 'container/TransformWidget.dart';
@@ -82,6 +83,7 @@ class MyApp extends StatelessWidget {
         "BoxContainerWidget": (context) => BoxContainerWidget(),
         "DecoratedBoxWidget": (context) => DecoratedBoxWidget(),
         "TransformWidget": (context) => TransformWidget(),
+        "ContainerWidget": (context) => ContainerWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
