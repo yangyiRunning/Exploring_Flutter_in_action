@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'container/BoxContainerWidget.dart';
 import 'container/ClipWidget.dart';
 import 'container/ContainerManagerWidget.dart';
@@ -32,7 +33,11 @@ import 'layout/WrapLayoutWidget.dart';
 import 'layout/LayoutManagerWidget.dart';
 import 'layout/LinearLayoutWidget.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  //是否开启布局边界
+//  debugPaintSizeEnabled = true;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
