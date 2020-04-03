@@ -79,3 +79,7 @@
 
   - width的计算会基于left和right进行， 当指定left和width后，right会自动算出(left+width)，如果同时指定width/left/right属性则会报错
   - height的计算会基于top和bottom进行，当指定top和height后，bottom会自动算出(top+height)，如果同时指定height/top/bottom属性则会报错
+  
+---
+
+巨人的肩膀: [Flutter官方示例](https://github.com/flutter/flutter)、[Flutter中文网](https://flutterchina.club)
