@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'container/BoxContainerWidget.dart';
+import 'container/ClipWidget.dart';
 import 'container/ContainerManagerWidget.dart';
 import 'container/ContainerWidget.dart';
 import 'container/DecoratedBoxWidget.dart';
@@ -84,6 +85,7 @@ class MyApp extends StatelessWidget {
         "DecoratedBoxWidget": (context) => DecoratedBoxWidget(),
         "TransformWidget": (context) => TransformWidget(),
         "ContainerWidget": (context) => ContainerWidget(),
+        "ClipWidget": (context) => ClipWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

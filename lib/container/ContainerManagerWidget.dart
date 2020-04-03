@@ -57,6 +57,14 @@ class ContainerManagerWidget extends StatelessWidget{
                       .pushNamed("ContainerWidget", arguments: "容器");
                 },
               ),
+              FlatButton(
+                child: Text("裁减"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("ClipWidget", arguments: "裁减");
+                },
+              ),
             ],
           ),
         ),
