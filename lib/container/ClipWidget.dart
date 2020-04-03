@@ -40,7 +40,7 @@ class ClipWidget extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 30),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(25),
                   child: img,
                 ),
               ),

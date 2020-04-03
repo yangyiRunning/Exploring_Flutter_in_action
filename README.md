@@ -43,7 +43,7 @@
   - [x] 变换(Transform/Matrix4(作用于绘制阶段)/RotatedBox(作用于布局阶段))
   - [x] 容器(Container(多种装饰和填充等组件的组合)/Padding/Margin)
   - [x] 裁减(Clip/CustomClipper(裁减动作的作用时期与Transform相同，都作用于绘制阶段))
-  - [x] 导航(Scaffold/AppBar/TabBar/TabBarView/Drawer/FloatingActionButton)
+  - [x] 通用类导航主界面(Scaffold/AppBar/TabBar/TabBarView/Drawer/FloatingActionButton)
 
 ## 坑の顺位: ↓
 

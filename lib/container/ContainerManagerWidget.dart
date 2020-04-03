@@ -65,6 +65,14 @@ class ContainerManagerWidget extends StatelessWidget{
                       .pushNamed("ClipWidget", arguments: "裁减");
                 },
               ),
+              FlatButton(
+                child: Text("通用新闻类的导航主界面"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("TabBarViewWidget", arguments: "新闻类导航主界面");
+                },
+              ),
             ],
           ),
         ),
