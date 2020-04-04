@@ -8,6 +8,7 @@ import 'container/DecoratedBoxWidget.dart';
 import 'container/PaddingContainerWidget.dart';
 import 'container/TabBarViewWidget.dart';
 import 'container/TransformWidget.dart';
+import 'list/ListManagerWidget.dart';
 import 'router/RouteManagerMain.dart';
 import 'state/StateManagerMain.dart';
 import 'widget/BaseWidgetMain.dart';
@@ -93,6 +94,7 @@ class MyApp extends StatelessWidget {
         "ContainerWidget": (context) => ContainerWidget(),
         "ClipWidget": (context) => ClipWidget(),
         "TabBarViewWidget": (context) => TabBarViewWidget(),
+        "ListManagerWidget": (context) => ListManagerWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -219,6 +221,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, "ContainerManagerWidget",
                       arguments: "容器控件主界面");
+                },
+              ),
+              FlatButton(
+                child: Text("列表控件"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, "ListManagerWidget",
+                      arguments: "列表控件主界面");
                 },
               ),
             ],
