@@ -19,8 +19,8 @@
 
 ## 主要Cover到的点
 
-- [x] 路由管理
-- [x] 状态管理
+- [x] 路由界面
+- [x] 状态传递
 - [x] 基础控件
   - [x] 随机字符串
   - [x] 文本控件，字体样式
@@ -44,6 +44,9 @@
   - [x] 容器(Container(多种装饰和填充等组件的组合)/Padding/Margin)
   - [x] 裁减(Clip/CustomClipper(裁减动作的作用时期与Transform相同，都作用于绘制阶段))
   - [x] 通用类导航主界面(Scaffold/AppBar/TabBar/TabBarView/Drawer/FloatingActionButton)
+- [x] 列表控件
+  - [x] 单child滚动控件(SingleChildScrollView/Scrollbar)
+  - [x] ListView
 
 ## 坑の顺位: ↓
 
