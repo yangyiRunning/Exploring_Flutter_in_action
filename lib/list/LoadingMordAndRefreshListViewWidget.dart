@@ -60,85 +60,89 @@ class LoadingMordAndRefreshListViewState
                       ));
                     });
                   },
-                  child: ListView.separated(
-                      //当子组件太短而不能滚动的时候，需要添加physics: const AlwaysScrollableScrollPhysics(),否则下拉刷新和上拉加载更多都无效，无法触发了
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        if (words[index] == LOADING_FINISH) {
-                          if (index < 100) {
-                            retrieveData();
-                            return Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 20, horizontal: 50),
-                              alignment: Alignment.center,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Container(
-                                    padding: EdgeInsets.fromLTRB(10, 10, 5, 10),
-                                    child: CircularProgressIndicator(
-                                      backgroundColor: Colors.grey,
-                                      strokeWidth: 3,
+                  child: Scrollbar(
+                    child: ListView.separated(
+                        //当子组件太短而不能滚动的时候，需要添加physics: const AlwaysScrollableScrollPhysics(),否则下拉刷新和上拉加载更多都无效，无法触发了
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        itemBuilder: (BuildContext context, int index) {
+                          if (words[index] == LOADING_FINISH) {
+                            if (index < 100) {
+                              retrieveData();
+                              return Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 20, horizontal: 50),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      padding:
+                                          EdgeInsets.fromLTRB(10, 10, 5, 10),
+                                      child: CircularProgressIndicator(
+                                        backgroundColor: Colors.grey,
+                                        strokeWidth: 3,
+                                      ),
                                     ),
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.fromLTRB(5, 10, 10, 10),
-                                    child: Text(
-                                      "正在加载中...",
-                                      style: TextStyle(
-                                          fontSize: 16, color: Colors.blue),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            );
-                          } else {
-                            return Container(
-                              alignment: Alignment.center,
-                              child: Text("已经到底了 o(╯□╰)o",
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.blue)),
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 20, horizontal: 50),
-                            );
-                          }
-                        } else {
-                          return ListTile(
-                            leading: Image.asset("assets/images/conan.jpg"),
-                            title: Text("item $index"),
-                            subtitle: Text("subtitle $index"),
-                            contentPadding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                            onTap: () {
-                              Scaffold.of(context).showSnackBar(SnackBar(
-                                content: Text("点击了第 ($index) 项目"),
-                              ));
-                            },
-                            onLongPress: () {
-                              Scaffold.of(context).showSnackBar(SnackBar(
-                                content: Text("长按了第 ($index) 项目"),
-                              ));
-                            },
-                          );
-                        }
-                      },
-                      separatorBuilder: (BuildContext context, int index) {
-                        return index % 2 == 0
-                            ? Padding(
-                                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                                child: Divider(
-                                  height: 10,
-                                  color: Colors.blue,
-                                ),
-                              )
-                            : Padding(
-                                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                                child: Divider(
-                                  height: 10,
-                                  color: Colors.redAccent,
+                                    Container(
+                                      padding:
+                                          EdgeInsets.fromLTRB(5, 10, 10, 10),
+                                      child: Text(
+                                        "正在加载中...",
+                                        style: TextStyle(
+                                            fontSize: 16, color: Colors.blue),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               );
-                      },
-                      itemCount: words.length),
+                            } else {
+                              return Container(
+                                alignment: Alignment.center,
+                                child: Text("已经到底了 o(╯□╰)o",
+                                    style: TextStyle(
+                                        fontSize: 16, color: Colors.blue)),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 20, horizontal: 50),
+                              );
+                            }
+                          } else {
+                            return ListTile(
+                              leading: Image.asset("assets/images/conan.jpg"),
+                              title: Text("item $index"),
+                              subtitle: Text("subtitle $index"),
+                              contentPadding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                              onTap: () {
+                                Scaffold.of(context).showSnackBar(SnackBar(
+                                  content: Text("点击了第 ($index) 项目"),
+                                ));
+                              },
+                              onLongPress: () {
+                                Scaffold.of(context).showSnackBar(SnackBar(
+                                  content: Text("长按了第 ($index) 项目"),
+                                ));
+                              },
+                            );
+                          }
+                        },
+                        separatorBuilder: (BuildContext context, int index) {
+                          return index % 2 == 0
+                              ? Padding(
+                                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                  child: Divider(
+                                    height: 10,
+                                    color: Colors.blue,
+                                  ),
+                                )
+                              : Padding(
+                                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                  child: Divider(
+                                    height: 10,
+                                    color: Colors.redAccent,
+                                  ),
+                                );
+                        },
+                        itemCount: words.length),
+                  ),
                 );
               },
             ),

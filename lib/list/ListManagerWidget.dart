@@ -70,5 +70,8 @@ List<FlatButton> getFlatButtonList(BuildContext context) {
   flatButtonList.add(getFlatButton(context, "网格布局(GridView.extent)",
       "GridViewExtendWidget", "网格布局(GridView.extent)界面"));
 
+  flatButtonList.add(getFlatButton(context, "无限加载网格布局(GridView.builder)",
+      "UnLimitGridViewWidget", "无限加载网格布局(GridView.builder)界面"));
+
   return flatButtonList;
 }

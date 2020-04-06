@@ -50,10 +50,11 @@
   - [x] 众多列表项情况下使用ListView(ListView.builder)
   - [x] 带分割线的列表项情况下使用ListView(ListView.separated)
   - [x] **下拉刷新** 和 **上拉加载更多**(初始化加载数据、结束时的标记、根据index判断底部是绘制结束的Widget还是正在加载时的Widget、Widget的正常显示)
-  - [x] [GridView(GridView + SliverGridDelegateWithFixedCrossAxisCount)](lib/list/GridViewWidget.dart)
-  - [x] [GridView.count(效果完全等价于GridView + SliverGridDelegateWithFixedCrossAxisCount)](lib/list/GridViewCountWidget.dart)
-  - [x] [GridView(GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
-  - [x] [GridView.extent(效果完全等价于GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
+  - [x] [有限GridView(GridView + SliverGridDelegateWithFixedCrossAxisCount)](lib/list/GridViewWidget.dart)
+  - [x] [有限GridView.count(效果完全等价于GridView + SliverGridDelegateWithFixedCrossAxisCount)](lib/list/GridViewCountWidget.dart)
+  - [x] [有限GridView(GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
+  - [x] [有限GridView.extent(效果完全等价于GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
+  - [x] [无限加载(GridView.builder)](lib/list/UnLimitGridViewWidget.dart)
 
 ## 坑の顺位: ↓
 

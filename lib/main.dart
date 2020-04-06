@@ -17,6 +17,7 @@ import 'list/LimitListViewWidget.dart';
 import 'list/ListManagerWidget.dart';
 import 'list/LoadingMordAndRefreshListViewWidget.dart';
 import 'list/MultitudinousListViewWidget.dart';
+import 'list/UnLimitGridViewWidget.dart';
 import 'router/RouteManagerMain.dart';
 import 'state/StateManagerMain.dart';
 import 'widget/BaseWidgetMain.dart';
@@ -113,6 +114,7 @@ class MyApp extends StatelessWidget {
         "GridViewCountWidget": (context) => GridViewCountWidget(),
         "GridViewMaxExtendWidget": (context) => GridViewMaxExtendWidget(),
         "GridViewExtendWidget": (context) => GridViewExtendWidget(),
+        "UnLimitGridViewWidget": (context) => UnLimitGridViewWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
