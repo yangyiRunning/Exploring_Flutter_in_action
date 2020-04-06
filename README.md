@@ -50,6 +50,7 @@
   - [x] 众多列表项情况下使用ListView(ListView.builder)
   - [x] 带分割线的列表项情况下使用ListView(ListView.separated)
   - [x] **下拉刷新** 和 **上拉加载更多**(初始化加载数据、结束时的标记、根据index判断底部是绘制结束的Widget还是正在加载时的Widget、Widget的正常显示)
+  - [x] GridView(GridView + SliverGridDelegateWithFixedCrossAxisCount)
 
 ## 坑の顺位: ↓
 
