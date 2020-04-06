@@ -11,6 +11,7 @@ import 'container/TransformWidget.dart';
 import 'list/DividerListViewWidget.dart';
 import 'list/LimitListViewWidget.dart';
 import 'list/ListManagerWidget.dart';
+import 'list/LoadingMordAndRefreshListViewWidget.dart';
 import 'list/MultitudinousListViewWidget.dart';
 import 'router/RouteManagerMain.dart';
 import 'state/StateManagerMain.dart';
@@ -101,6 +102,7 @@ class MyApp extends StatelessWidget {
         "LimitListViewWidget": (context) => LimitListViewWidget(),
         "MultitudinousListViewWidget": (context) => MultitudinousListViewWidget(),
         "DividerListViewWidget": (context) => DividerListViewWidget(),
+        "LoadingMordAndRefreshListViewWidget": (context) => LoadingMordAndRefreshListViewWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
