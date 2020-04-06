@@ -10,6 +10,7 @@ import 'container/TabBarViewWidget.dart';
 import 'container/TransformWidget.dart';
 import 'list/DividerListViewWidget.dart';
 import 'list/GridViewCountWidget.dart';
+import 'list/GridViewExtendWidget.dart';
 import 'list/GridViewMaxExtendWidget.dart';
 import 'list/GridViewWidget.dart';
 import 'list/LimitListViewWidget.dart';
@@ -111,6 +112,7 @@ class MyApp extends StatelessWidget {
         "GridViewWidget": (context) => GridViewWidget(),
         "GridViewCountWidget": (context) => GridViewCountWidget(),
         "GridViewMaxExtendWidget": (context) => GridViewMaxExtendWidget(),
+        "GridViewExtendWidget": (context) => GridViewExtendWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

@@ -53,6 +53,7 @@
   - [x] [GridView(GridView + SliverGridDelegateWithFixedCrossAxisCount)](lib/list/GridViewWidget.dart)
   - [x] [GridView.count(效果完全等价于GridView + SliverGridDelegateWithFixedCrossAxisCount)](lib/list/GridViewCountWidget.dart)
   - [x] [GridView(GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
+  - [x] [GridView.extent(效果完全等价于GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
 
 ## 坑の顺位: ↓
 
