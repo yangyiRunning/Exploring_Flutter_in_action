@@ -56,6 +56,15 @@
   - [x] [有限GridView.extent(效果完全等价于GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
   - [x] [无限加载(GridView.builder)](lib/list/UnLimitGridViewWidget.dart)
 
+---
+
+## 整套效果的App下载链接
+
+- Android APK包下载(内测密码:123456) : ![Android APK包下载](https://www.pgyer.com/app/qrcode/yangyiRunning)
+- iOS 包下载( 虚位以待 )
+
+---
+
 ## 坑の顺位: ↓
 
 1. Waiting for another flutter command to release the startup lock...
