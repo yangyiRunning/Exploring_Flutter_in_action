@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 FlatButton getFlatButton(
     BuildContext context, String text, String clazz, String pagerName) {
   return FlatButton(

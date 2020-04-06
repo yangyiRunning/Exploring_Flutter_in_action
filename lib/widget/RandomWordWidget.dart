@@ -2,6 +2,8 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class RandomWord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

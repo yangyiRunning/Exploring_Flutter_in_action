@@ -1,6 +1,8 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class LoadingMordAndRefreshListViewWidget extends StatefulWidget {
   @override
   LoadingMordAndRefreshListViewState createState() {

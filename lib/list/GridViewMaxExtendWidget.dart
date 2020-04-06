@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/CommonShow.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class GridViewMaxExtendWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {

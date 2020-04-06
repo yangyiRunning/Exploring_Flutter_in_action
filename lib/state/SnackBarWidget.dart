@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class SnackBarWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {

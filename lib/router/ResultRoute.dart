@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class ResultRoute extends StatelessWidget {
 
   @override

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class ClipWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

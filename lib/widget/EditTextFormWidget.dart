@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class EditTextFormWidget extends StatefulWidget {
   @override
   EditTextFormState createState() {

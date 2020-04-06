@@ -43,6 +43,8 @@ import 'layout/WrapLayoutWidget.dart';
 import 'layout/LayoutManagerWidget.dart';
 import 'layout/LinearLayoutWidget.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 void main() {
   //是否开启布局边界
 //  debugPaintSizeEnabled = true;
