@@ -47,9 +47,17 @@ List<FlatButton> getFlatButtonList(BuildContext context) {
       "DividerListViewWidget", "有分割线列表项情况下使用ListView"));
   flatButtonList.add(getFlatButton(context, "下拉刷新和上拉加载更多",
       "LoadingMordAndRefreshListViewWidget", "下拉刷新和上拉加载更多"));
-  flatButtonList
-      .add(getFlatButton(context, "网格布局(一般写法)", "GridViewWidget", "网格布局界面"));
   flatButtonList.add(getFlatButton(
-      context, "网格布局(简化的等价写法)", "GridViewCountWidget", "网格布局(简化的等价写法)界面"));
+      context,
+      "网格布局(SliverGridDelegateWithFixedCrossAxisCount)",
+      "GridViewWidget",
+      "网格布局(SliverGridDelegateWithFixedCrossAxisCount)界面"));
+  flatButtonList.add(getFlatButton(context, "网格布局(GridView.count)",
+      "GridViewCountWidget", "网格布局(GridView.count)界面"));
+  flatButtonList.add(getFlatButton(
+      context,
+      "网格布局(GridView + SliverGridDelegateWithMaxCrossAxisExtent)",
+      "GridViewMaxExtendWidget",
+      "网格布局(GridView + SliverGridDelegateWithMaxCrossAxisExtent)界面"));
   return flatButtonList;
 }

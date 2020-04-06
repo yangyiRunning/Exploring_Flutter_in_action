@@ -33,16 +33,18 @@ class GridViewCountState extends State<GridViewCountWidget> {
             ),
           ),
           Expanded(
+              child: Scrollbar(
             child: GridView.count(
               crossAxisCount: 2,
               mainAxisSpacing: 5,
               crossAxisSpacing: 5,
-              childAspectRatio: 1.5,//宽高比
+              childAspectRatio: 1.5,
+              //宽高比
               children: getLimitListWidget(),
               shrinkWrap: true,
               padding: EdgeInsets.all(10),
             ),
-          )
+          ))
         ],
       ),
     );

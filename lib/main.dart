@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'common/CommonShow.dart';
 import 'container/BoxContainerWidget.dart';
 import 'container/ClipWidget.dart';
@@ -11,6 +10,7 @@ import 'container/TabBarViewWidget.dart';
 import 'container/TransformWidget.dart';
 import 'list/DividerListViewWidget.dart';
 import 'list/GridViewCountWidget.dart';
+import 'list/GridViewMaxExtendWidget.dart';
 import 'list/GridViewWidget.dart';
 import 'list/LimitListViewWidget.dart';
 import 'list/ListManagerWidget.dart';
@@ -110,6 +110,7 @@ class MyApp extends StatelessWidget {
             LoadingMordAndRefreshListViewWidget(),
         "GridViewWidget": (context) => GridViewWidget(),
         "GridViewCountWidget": (context) => GridViewCountWidget(),
+        "GridViewMaxExtendWidget": (context) => GridViewMaxExtendWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

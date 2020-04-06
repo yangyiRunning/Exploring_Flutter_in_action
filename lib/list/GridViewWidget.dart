@@ -25,7 +25,7 @@ class GridViewState extends State<GridViewWidget> {
           Container(
             alignment: Alignment.center,
             child: Text(
-              "GridView",
+              "GridView + SliverGridDelegateWithFixedCrossAxisCount",
               style: TextStyle(
                   fontSize: 30,
                   fontFamily: "HanyiSentySuciTablet",
