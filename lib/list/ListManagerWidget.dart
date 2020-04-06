@@ -39,13 +39,13 @@ class ListManagerWidget extends StatelessWidget {
 
 List<FlatButton> getFlatButtonList(BuildContext context) {
   List<FlatButton> flatButtonList = [];
-  flatButtonList
-      .add(getFlatButton(context, "有限列表项情况下使用ListView", "LimitListViewWidget"));
-  flatButtonList.add(getFlatButton(
-      context, "众多列表项情况下使用ListView", "MultitudinousListViewWidget"));
-  flatButtonList.add(
-      getFlatButton(context, "有分割线列表项情况下使用ListView", "DividerListViewWidget"));
-  flatButtonList.add(getFlatButton(
-      context, "下拉刷新和上拉加载更多", "LoadingMordAndRefreshListViewWidget"));
+  flatButtonList.add(getFlatButton(context, "有限列表项情况下使用ListView",
+      "LimitListViewWidget", "有限列表项情况下使用ListView"));
+  flatButtonList.add(getFlatButton(context, "众多列表项情况下使用ListView",
+      "MultitudinousListViewWidget", "众多列表项情况下使用ListView"));
+  flatButtonList.add(getFlatButton(context, "有分割线列表项情况下使用ListView",
+      "DividerListViewWidget", "有分割线列表项情况下使用ListView"));
+  flatButtonList.add(getFlatButton(context, "下拉刷新和上拉加载更多",
+      "LoadingMordAndRefreshListViewWidget", "下拉刷新和上拉加载更多"));
   return flatButtonList;
 }

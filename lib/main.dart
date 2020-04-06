@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'common/CommonShow.dart';
 import 'container/BoxContainerWidget.dart';
 import 'container/ClipWidget.dart';
 import 'container/ContainerManagerWidget.dart';
@@ -100,9 +101,11 @@ class MyApp extends StatelessWidget {
         "TabBarViewWidget": (context) => TabBarViewWidget(),
         "ListManagerWidget": (context) => ListManagerWidget(),
         "LimitListViewWidget": (context) => LimitListViewWidget(),
-        "MultitudinousListViewWidget": (context) => MultitudinousListViewWidget(),
+        "MultitudinousListViewWidget": (context) =>
+            MultitudinousListViewWidget(),
         "DividerListViewWidget": (context) => DividerListViewWidget(),
-        "LoadingMordAndRefreshListViewWidget": (context) => LoadingMordAndRefreshListViewWidget(),
+        "LoadingMordAndRefreshListViewWidget": (context) =>
+            LoadingMordAndRefreshListViewWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
@@ -167,81 +170,18 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: Column(
-            // Column is also a layout widget. It takes a list of children and
-            // arranges them vertically. By default, it sizes itself to fit its
-            // children horizontally, and tries to be as tall as its parent.
-            //
-            // Invoke "debug painting" (press "p" in the console, choose the
-            // "Toggle Debug Paint" action from the Flutter Inspector in Android
-            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-            // to see the wireframe for each widget.
-            //
-            // Column has various properties to control how it sizes itself and
-            // how it positions its children. Here we use mainAxisAlignment to
-            // center the children vertically; the main axis here is the vertical
-            // axis because Columns are vertical (the cross axis would be
-            // horizontal).
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(
-                height: 30,
-              ),
-              FlatButton(
-                child: Text("路由管理"),
-                textColor: Colors.blue,
-                onPressed: () {
-                  Navigator.pushNamed(context, "RouteManagerMain",
-                      arguments: "路由管理主界面");
-                },
-              ),
-              FlatButton(
-                child: Text("状态管理"),
-                textColor: Colors.blue,
-                onPressed: () {
-                  Navigator.pushNamed(context, "StateManagerMain",
-                      arguments: "状态管理主界面");
-                },
-              ),
-              FlatButton(
-                child: Text("基础控件"),
-                textColor: Colors.blue,
-                onPressed: () {
-                  Navigator.pushNamed(context, "BaseWidgetMain",
-                      arguments: "基础控件主界面");
-                },
-              ),
-              FlatButton(
-                child: Text("布局控件"),
-                textColor: Colors.blue,
-                onPressed: () {
-                  Navigator.pushNamed(context, "LayoutManagerWidget",
-                      arguments: "布局控件主界面");
-                },
-              ),
-              FlatButton(
-                child: Text("容器控件"),
-                textColor: Colors.blue,
-                onPressed: () {
-                  Navigator.pushNamed(context, "ContainerManagerWidget",
-                      arguments: "容器控件主界面");
-                },
-              ),
-              FlatButton(
-                child: Text("列表控件"),
-                textColor: Colors.blue,
-                onPressed: () {
-                  Navigator.pushNamed(context, "ListManagerWidget",
-                      arguments: "列表控件主界面");
-                },
-              ),
-            ],
+      body: ListView(
+        children: <Widget>[
+          SizedBox(
+            height: 30,
           ),
-        ),
+          getFlatButton(context, "路由管理", "RouteManagerMain", "路由管理主界面"),
+          getFlatButton(context, "状态管理", "StateManagerMain", "状态管理主界面"),
+          getFlatButton(context, "基础控件", "BaseWidgetMain", "基础控件主界面"),
+          getFlatButton(context, "布局控件", "LayoutManagerWidget", "布局控件主界面"),
+          getFlatButton(context, "容器控件", "ContainerManagerWidget", "容器控件主界面"),
+          getFlatButton(context, "列表控件", "ListManagerWidget", "列表控件主界面"),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,

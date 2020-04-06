@@ -49,9 +49,7 @@ class LoadingMordAndRefreshListViewState
                   onRefresh: () {
                     return Future.delayed(Duration(seconds: 2)).then((v) {
                       words = [LOADING_FINISH];
-                      setState(() {
-
-                      });
+                      setState(() {});
                     }).whenComplete(() {
                       Scaffold.of(context).showSnackBar(SnackBar(
                         content: Text(
@@ -109,7 +107,7 @@ class LoadingMordAndRefreshListViewState
                             leading: Image.asset("assets/images/conan.jpg"),
                             title: Text("item $index"),
                             subtitle: Text("subtitle $index"),
-                            contentPadding: EdgeInsets.all(20),
+                            contentPadding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                             onTap: () {
                               Scaffold.of(context).showSnackBar(SnackBar(
                                 content: Text("点击了第 ($index) 项目"),
