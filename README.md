@@ -46,7 +46,8 @@
   - [x] 通用类导航主界面(Scaffold/AppBar/TabBar/TabBarView/Drawer/FloatingActionButton)
 - [x] 列表控件
   - [x] 单child滚动控件(SingleChildScrollView/Scrollbar)
-  - [x] ListView
+  - [x] 有限列表项情况下使用ListView(ListView)
+  - [x] 众多列表项情况下使用ListView(ListView.builder)
 
 ## 坑の顺位: ↓
 

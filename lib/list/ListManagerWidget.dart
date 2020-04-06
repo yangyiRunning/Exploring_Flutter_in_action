@@ -15,11 +15,19 @@ class ListManagerWidget extends StatelessWidget{
           child: Column(
             children: <Widget>[
               FlatButton(
-                child: Text("有限列表项情况下的ListView"),
+                child: Text("有限列表项情况下使用ListView"),
                 textColor: Colors.blue,
                 onPressed: () {
                   Navigator.pushNamed(context, "LimitListViewWidget",
-                      arguments: "有限列表项情况下的ListView");
+                      arguments: "有限列表项情况下使用ListView");
+                },
+              ),
+              FlatButton(
+                child: Text("众多列表项情况下使用ListView"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, "MultitudinousListViewWidget",
+                      arguments: "众多列表项情况下使用ListView");
                 },
               ),
             ],
