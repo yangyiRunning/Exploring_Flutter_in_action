@@ -48,6 +48,7 @@
   - [x] 单child滚动控件(SingleChildScrollView/Scrollbar)
   - [x] 有限列表项情况下使用ListView(ListView)
   - [x] 众多列表项情况下使用ListView(ListView.builder)
+  - [x] 带分割线的列表项情况下使用ListView(ListView.separated)
 
 ## 坑の顺位: ↓
 

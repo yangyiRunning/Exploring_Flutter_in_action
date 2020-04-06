@@ -8,6 +8,7 @@ import 'container/DecoratedBoxWidget.dart';
 import 'container/PaddingContainerWidget.dart';
 import 'container/TabBarViewWidget.dart';
 import 'container/TransformWidget.dart';
+import 'list/DividerListViewWidget.dart';
 import 'list/LimitListViewWidget.dart';
 import 'list/ListManagerWidget.dart';
 import 'list/MultitudinousListViewWidget.dart';
@@ -99,6 +100,7 @@ class MyApp extends StatelessWidget {
         "ListManagerWidget": (context) => ListManagerWidget(),
         "LimitListViewWidget": (context) => LimitListViewWidget(),
         "MultitudinousListViewWidget": (context) => MultitudinousListViewWidget(),
+        "DividerListViewWidget": (context) => DividerListViewWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

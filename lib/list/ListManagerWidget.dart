@@ -30,6 +30,14 @@ class ListManagerWidget extends StatelessWidget{
                       arguments: "众多列表项情况下使用ListView");
                 },
               ),
+              FlatButton(
+                child: Text("有分割线列表项情况下使用ListView"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, "DividerListViewWidget",
+                      arguments: "有分割线列表项情况下使用ListView");
+                },
+              ),
             ],
           ),
         ),
