@@ -10,6 +10,7 @@ import 'container/PaddingContainerWidget.dart';
 import 'container/TabBarViewWidget.dart';
 import 'container/TransformWidget.dart';
 import 'list/DividerListViewWidget.dart';
+import 'list/GridViewCountWidget.dart';
 import 'list/GridViewWidget.dart';
 import 'list/LimitListViewWidget.dart';
 import 'list/ListManagerWidget.dart';
@@ -108,6 +109,7 @@ class MyApp extends StatelessWidget {
         "LoadingMordAndRefreshListViewWidget": (context) =>
             LoadingMordAndRefreshListViewWidget(),
         "GridViewWidget": (context) => GridViewWidget(),
+        "GridViewCountWidget": (context) => GridViewCountWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

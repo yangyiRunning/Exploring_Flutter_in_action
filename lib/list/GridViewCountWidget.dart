@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/CommonShow.dart';
 
-class GridViewWidget extends StatefulWidget {
+class GridViewCountWidget extends StatefulWidget {
   @override
-  GridViewState createState() {
+  GridViewCountState createState() {
     // TODO: implement createState
-    return GridViewState();
+    return GridViewCountState();
   }
 }
 
-class GridViewState extends State<GridViewWidget> {
+class GridViewCountState extends State<GridViewCountWidget> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -25,7 +25,7 @@ class GridViewState extends State<GridViewWidget> {
           Container(
             alignment: Alignment.center,
             child: Text(
-              "GridView",
+              "GridView.count",
               style: TextStyle(
                   fontSize: 30,
                   fontFamily: "HanyiSentySuciTablet",
@@ -33,18 +33,14 @@ class GridViewState extends State<GridViewWidget> {
             ),
           ),
           Expanded(
-            child: Scrollbar(
-              child: GridView(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 1.5, //宽高比
-                  mainAxisSpacing: 5,
-                  crossAxisSpacing: 5,
-                ),
-                shrinkWrap: true,
-                padding: EdgeInsets.all(10),
-                children: getLimitListWidget(),
-              ),
+            child: GridView.count(
+              crossAxisCount: 2,
+              mainAxisSpacing: 5,
+              crossAxisSpacing: 5,
+              childAspectRatio: 1.5,//宽高比
+              children: getLimitListWidget(),
+              shrinkWrap: true,
+              padding: EdgeInsets.all(10),
             ),
           )
         ],
