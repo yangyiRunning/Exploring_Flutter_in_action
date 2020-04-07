@@ -90,3 +90,28 @@ List<FlatButton> getStateList(BuildContext context) {
 
   return flatButtonList;
 }
+
+List<FlatButton> getBaseWidgetList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList.add(FlatButton(
+    child: Text("生成一串英文的随机字符串和加载一张图片"),
+    textColor: Colors.blue,
+    onPressed: () {
+      Navigator.pushNamed(context, "RandomWord");
+    },
+  ));
+  flatButtonList
+      .add(getFlatButton(context, "文本控件，字体样式", "TextStyleWidget", "文本控件，字体样式"));
+  flatButtonList.add(getFlatButton(context, "按钮系列", "ButtonWidget", "按钮系列"));
+  flatButtonList.add(getFlatButton(context, "图片系列", "IconWidget", "图片系列"));
+  flatButtonList.add(
+      getFlatButton(context, "单选开关和复选框", "SwitchCheckboxWidget", "单选开关和复选框"));
+  flatButtonList
+      .add(getFlatButton(context, "输入框和表单", "EditTextFormWidget", "输入框和表单"));
+  flatButtonList.add(getFlatButton(context, "登录表单", "LoginFormWidget", "登录表单"));
+  flatButtonList
+      .add(getFlatButton(context, "各种进度条", "ProgressBarWidget", "各种进度条"));
+
+  return flatButtonList;
+}
