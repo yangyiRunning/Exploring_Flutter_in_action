@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/common/CommonShow.dart';
+import 'package:flutter_app/common/CommonShowWrapper.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/common/CommonShow.dart';
+import 'package:flutter_app/common/CommonShowWrapper.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -9,11 +9,8 @@ class ListManagerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     final arg = ModalRoute.of(context).settings.arguments;
-    var count = getFlatButtonList(context).length;
     return Scaffold(
-        appBar: AppBar(
-          title: Text("$arg"),
-        ),
+        appBar: getAppBar(arg),
         body: ListView.separated(
             itemBuilder: (BuildContext context, int index) {
               return getFlatButtonList(context)[index];
@@ -35,45 +32,6 @@ class ListManagerWidget extends StatelessWidget {
                       ),
                     );
             },
-            itemCount: count));
+            itemCount: getFlatButtonList(context).length));
   }
-}
-
-List<FlatButton> getFlatButtonList(BuildContext context) {
-  List<FlatButton> flatButtonList = [];
-
-  flatButtonList.add(getFlatButton(context, "有限列表项情况下使用ListView",
-      "LimitListViewWidget", "有限列表项情况下使用ListView"));
-
-  flatButtonList.add(getFlatButton(context, "众多列表项情况下使用ListView",
-      "MultitudinousListViewWidget", "众多列表项情况下使用ListView"));
-
-  flatButtonList.add(getFlatButton(context, "有分割线列表项情况下使用ListView",
-      "DividerListViewWidget", "有分割线列表项情况下使用ListView"));
-
-  flatButtonList.add(getFlatButton(context, "下拉刷新和上拉加载更多",
-      "LoadingMordAndRefreshListViewWidget", "下拉刷新和上拉加载更多"));
-
-  flatButtonList.add(getFlatButton(
-      context,
-      "网格布局(SliverGridDelegateWithFixedCrossAxisCount)",
-      "GridViewWidget",
-      "网格布局(SliverGridDelegateWithFixedCrossAxisCount)界面"));
-
-  flatButtonList.add(getFlatButton(context, "网格布局(GridView.count)",
-      "GridViewCountWidget", "网格布局(GridView.count)界面"));
-
-  flatButtonList.add(getFlatButton(
-      context,
-      "网格布局(GridView + SliverGridDelegateWithMaxCrossAxisExtent)",
-      "GridViewMaxExtendWidget",
-      "网格布局(GridView + SliverGridDelegateWithMaxCrossAxisExtent)界面"));
-
-  flatButtonList.add(getFlatButton(context, "网格布局(GridView.extent)",
-      "GridViewExtendWidget", "网格布局(GridView.extent)界面"));
-
-  flatButtonList.add(getFlatButton(context, "无限加载网格布局(GridView.builder)",
-      "UnLimitGridViewWidget", "无限加载网格布局(GridView.builder)界面"));
-
-  return flatButtonList;
 }

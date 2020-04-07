@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
+
+AppBar getAppBar(String text) {
+  return AppBar(
+    title: Text(text),
+  );
+}
+
 FlatButton getFlatButton(
     BuildContext context, String text, String clazz, String pagerName) {
   return FlatButton(
@@ -112,6 +119,79 @@ List<FlatButton> getBaseWidgetList(BuildContext context) {
   flatButtonList.add(getFlatButton(context, "登录表单", "LoginFormWidget", "登录表单"));
   flatButtonList
       .add(getFlatButton(context, "各种进度条", "ProgressBarWidget", "各种进度条"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getLayoutWidgetList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList
+      .add(getFlatButton(context, "线性布局", "LinearLayoutWidget", "线性布局"));
+  flatButtonList
+      .add(getFlatButton(context, "弹性布局", "FlexLayoutWidget", "弹性布局"));
+  flatButtonList
+      .add(getFlatButton(context, "流式布局", "WrapLayoutWidget", "流式布局"));
+  flatButtonList
+      .add(getFlatButton(context, "层叠布局", "StackLayoutWidget", "层叠布局"));
+  flatButtonList
+      .add(getFlatButton(context, "对齐与相对定位", "AlignLayoutWidget", "对齐与相对定位"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getContainerWidgetList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList
+      .add(getFlatButton(context, "填充", "PaddingContainerWidget", "填充"));
+  flatButtonList
+      .add(getFlatButton(context, "尺寸限制", "BoxContainerWidget", "尺寸限制"));
+  flatButtonList.add(getFlatButton(context, "装饰", "DecoratedBoxWidget", "装饰"));
+  flatButtonList.add(getFlatButton(context, "变换", "TransformWidget", "变换"));
+  flatButtonList.add(getFlatButton(context, "容器", "ContainerWidget", "容器"));
+  flatButtonList.add(getFlatButton(context, "裁减", "ClipWidget", "裁减"));
+  flatButtonList.add(
+      getFlatButton(context, "通用新闻类的导航主界面", "TabBarViewWidget", "通用新闻类的导航主界面"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getFlatButtonList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList.add(getFlatButton(context, "有限列表项情况下使用ListView",
+      "LimitListViewWidget", "有限列表项情况下使用ListView"));
+
+  flatButtonList.add(getFlatButton(context, "众多列表项情况下使用ListView",
+      "MultitudinousListViewWidget", "众多列表项情况下使用ListView"));
+
+  flatButtonList.add(getFlatButton(context, "有分割线列表项情况下使用ListView",
+      "DividerListViewWidget", "有分割线列表项情况下使用ListView"));
+
+  flatButtonList.add(getFlatButton(context, "下拉刷新和上拉加载更多",
+      "LoadingMordAndRefreshListViewWidget", "下拉刷新和上拉加载更多"));
+
+  flatButtonList.add(getFlatButton(
+      context,
+      "网格布局(SliverGridDelegateWithFixedCrossAxisCount)",
+      "GridViewWidget",
+      "网格布局(SliverGridDelegateWithFixedCrossAxisCount)界面"));
+
+  flatButtonList.add(getFlatButton(context, "网格布局(GridView.count)",
+      "GridViewCountWidget", "网格布局(GridView.count)界面"));
+
+  flatButtonList.add(getFlatButton(
+      context,
+      "网格布局(GridView + SliverGridDelegateWithMaxCrossAxisExtent)",
+      "GridViewMaxExtendWidget",
+      "网格布局(GridView + SliverGridDelegateWithMaxCrossAxisExtent)界面"));
+
+  flatButtonList.add(getFlatButton(context, "网格布局(GridView.extent)",
+      "GridViewExtendWidget", "网格布局(GridView.extent)界面"));
+
+  flatButtonList.add(getFlatButton(context, "无限加载网格布局(GridView.builder)",
+      "UnLimitGridViewWidget", "无限加载网格布局(GridView.builder)界面"));
 
   return flatButtonList;
 }
