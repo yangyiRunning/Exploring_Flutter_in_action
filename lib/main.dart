@@ -181,24 +181,30 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: ListView(
-        children: <Widget>[
-          SizedBox(
-            height: 30,
-          ),
-          getFlatButton(context, "路由管理", "RouteManagerMain", "路由管理主界面"),
-          getFlatButton(context, "状态管理", "StateManagerMain", "状态管理主界面"),
-          getFlatButton(context, "基础控件", "BaseWidgetMain", "基础控件主界面"),
-          getFlatButton(context, "布局控件", "LayoutManagerWidget", "布局控件主界面"),
-          getFlatButton(context, "容器控件", "ContainerManagerWidget", "容器控件主界面"),
-          getFlatButton(context, "列表控件", "ListManagerWidget", "列表控件主界面"),
-        ],
+      body: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 5,
+          crossAxisSpacing: 5,
+          childAspectRatio: 1.5,
+        ),
+        shrinkWrap: true,
+        padding: EdgeInsets.all(10),
+        itemCount: getMainList(context).length,
+        itemBuilder: (BuildContext context, int index) {
+          if (index % 2 == 0) {
+            return Container(
+              color: Colors.amberAccent[100],
+              child: getMainList(context)[index],
+            );
+          } else {
+            return Container(
+              color: Colors.deepPurple[100],
+              child: getMainList(context)[index],
+            );
+          }
+        },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

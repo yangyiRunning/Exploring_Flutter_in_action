@@ -54,7 +54,7 @@
   - [x] [有限GridView.count(效果完全等价于GridView + SliverGridDelegateWithFixedCrossAxisCount)](lib/list/GridViewCountWidget.dart)
   - [x] [有限GridView(GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
   - [x] [有限GridView.extent(效果完全等价于GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
-  - [x] [无限加载(GridView.builder)](lib/list/UnLimitGridViewWidget.dart)
+  - [x] [无限GridView加载(GridView.builder)](lib/list/UnLimitGridViewWidget.dart)
 
 ---
 

@@ -40,3 +40,22 @@ List<Widget> getLimitListWidget() {
   }
   return items;
 }
+
+List<FlatButton> getMainList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList
+      .add(getFlatButton(context, "路由管理", "RouteManagerMain", "路由管理主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "状态管理", "StateManagerMain", "状态管理主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "基础控件", "BaseWidgetMain", "基础控件主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "布局控件", "LayoutManagerWidget", "布局控件主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "容器控件", "ContainerManagerWidget", "容器控件主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "列表控件", "ListManagerWidget", "列表控件主界面"));
+
+  return flatButtonList;
+}
