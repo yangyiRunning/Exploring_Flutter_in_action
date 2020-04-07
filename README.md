@@ -1,20 +1,5 @@
 # Flutter学(cai)习(keng)之路(Flutter in Action)
 
-## 正片前叨叨两句
-
-- 本人学(cai)习(keng)中的一些小体会(主观居多︿(￣︶￣)︿)
-  - 先说Dart
-    - Dart语言是基于Java、JavaScript的部分语法，还糅合了Kotlin的部分语法糖的一门语言，本身是融合的产物，估计Google的初衷是想"博采众长"
-    - Dart语言本身比Java更加简练，也加入了一些Java中没有的语法糖。比如async和await，本质其实还是个Future
-    - 对于已经习惯了Rx系列链式编程的人来说，Dart天然自带。如果觉得链式书写的"链"太长"影响市容"的话，还可以采用类似Kotlin中协程的写法非常舒服的书写异步任务，基本上在Dart语言中不会出现callback hell
-    - 对于掌握上述任何一种语言的人来说，近乎可以以极小成本上手Dart
-  - 再说Flutter
-    - Flutter本质上其实算一个UI框架，一套代码到处跑。UI框架+原生引擎渲染
-    - 一套优秀的Flutter代码，理论上可以在Android/iOS/Web/Fuchsia各种环境和操作系统上运行，并且保证UI界面的高度一致性
-    - Flutter的数据结构体系，本质上与其他技术栈对于UI层控件的处理类似，都是一颗多叉树，创建并渲染UI的过程本质上就是建树和走树的过程
-    - 在写Flutter的过程中，有时候甚至觉得自己不是在"写代码"，更像是在一棵"树"上画画
-    - 对于有任何一端移动开发经验尤其是Android开发经验的同学来说，Flutter的上手门槛是0
-    
 ---
 
 ## 主要Cover到的点
@@ -56,6 +41,8 @@
   - [x] [有限GridView.extent(效果完全等价于GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
   - [x] [无限GridView加载(GridView.builder)](lib/list/UnLimitGridViewWidget.dart)
   - [x] [滚动监听(ScrollController/ScrollPosition)](lib/list/ListViewScrollControllerWidget.dart)
+- [x] 事件处理
+  - [x] [原始指针(触摸事件)(撸一个触摸板)(Listener)](lib/touch/TouchPadWidget.dart)
 
 ---
 
@@ -101,6 +88,23 @@
   - width的计算会基于left和right进行， 当指定left和width后，right会自动算出(left+width)，如果同时指定width/left/right属性则会报错
   - height的计算会基于top和bottom进行，当指定top和height后，bottom会自动算出(top+height)，如果同时指定height/top/bottom属性则会报错
   
+---
+
+## 最后我再叨叨两句
+
+- 本人学(cai)习(keng)中的一些小体会(主观居多︿(￣︶￣)︿)
+  - 先说Dart
+    - Dart语言是基于Java、JavaScript的部分语法，还糅合了Kotlin的部分语法糖的一门语言，本身是融合的产物，估计Google的初衷是想"博采众长"
+    - Dart语言本身比Java更加简练，也加入了一些Java中没有的语法糖。比如async和await，本质其实还是个Future
+    - 对于已经习惯了Rx系列链式编程的人来说，Dart天然自带。如果觉得链式书写的"链"太长"影响市容"的话，还可以采用类似Kotlin中协程的写法非常舒服的书写异步任务，基本上在Dart语言中不会出现callback hell
+    - 对于掌握上述任何一种语言的人来说，近乎可以以极小成本上手Dart
+  - 再说Flutter
+    - Flutter本质上其实算一个UI框架，一套代码到处跑。UI框架+原生引擎渲染
+    - 一套优秀的Flutter代码，理论上可以在Android/iOS/Web/Fuchsia各种环境和操作系统上运行，并且保证UI界面的高度一致性
+    - Flutter的数据结构体系，本质上与其他技术栈对于UI层控件的处理类似，都是一颗多叉树，创建并渲染UI的过程本质上就是建树和走树的过程
+    - 在写Flutter的过程中，有时候甚至觉得自己不是在"写代码"，更像是在一棵"树"上画画
+    - 对于有任何一端移动开发经验尤其是Android开发经验的同学来说，Flutter的上手门槛是0
+
 ---
 
 巨人的肩膀: [Flutter官方示例](https://github.com/flutter/flutter)、[Flutter中文网](https://flutterchina.club)

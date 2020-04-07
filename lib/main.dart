@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/touch/TouchManagerWidget.dart';
+import 'package:flutter_app/touch/TouchPadWidget.dart';
 import 'common/CommonShowWrapper.dart';
 import 'container/BoxContainerWidget.dart';
 import 'container/ClipWidget.dart';
@@ -119,6 +121,8 @@ class MyApp extends StatelessWidget {
         "GridViewExtendWidget": (context) => GridViewExtendWidget(),
         "UnLimitGridViewWidget": (context) => UnLimitGridViewWidget(),
         "ListViewScrollControllerWidget": (context) => ListViewScrollControllerWidget(),
+        "TouchPadWidget": (context) => TouchPadWidget(),
+        "TouchManagerWidget": (context) => TouchManagerWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

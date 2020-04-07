@@ -63,6 +63,8 @@ List<FlatButton> getMainList(BuildContext context) {
       .add(getFlatButton(context, "容器控件", "ContainerManagerWidget", "容器控件主界面"));
   flatButtonList
       .add(getFlatButton(context, "列表控件", "ListManagerWidget", "列表控件主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "事件处理", "TouchManagerWidget", "事件处理主界面"));
 
   return flatButtonList;
 }
@@ -195,6 +197,15 @@ List<FlatButton> getFlatButtonList(BuildContext context) {
 
   flatButtonList.add(getFlatButton(context, "列表滚动监听(以ListView为例)",
       "ListViewScrollControllerWidget", "列表滚动监听(以ListView为例)"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getTouchWidgetList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList
+      .add(getFlatButton(context, "触摸板", "TouchPadWidget", "触摸板"));
 
   return flatButtonList;
 }
