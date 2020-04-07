@@ -181,29 +181,31 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: 5,
-          crossAxisSpacing: 5,
-          childAspectRatio: 1.5,
+      body: Scrollbar(
+        child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 5,
+            crossAxisSpacing: 5,
+            childAspectRatio: 1.5,
+          ),
+          shrinkWrap: true,
+          padding: EdgeInsets.all(10),
+          itemCount: getMainList(context).length,
+          itemBuilder: (BuildContext context, int index) {
+            if (index % 2 == 0) {
+              return Container(
+                color: Colors.amberAccent[100],
+                child: getMainList(context)[index],
+              );
+            } else {
+              return Container(
+                color: Colors.deepPurple[100],
+                child: getMainList(context)[index],
+              );
+            }
+          },
         ),
-        shrinkWrap: true,
-        padding: EdgeInsets.all(10),
-        itemCount: getMainList(context).length,
-        itemBuilder: (BuildContext context, int index) {
-          if (index % 2 == 0) {
-            return Container(
-              color: Colors.amberAccent[100],
-              child: getMainList(context)[index],
-            );
-          } else {
-            return Container(
-              color: Colors.deepPurple[100],
-              child: getMainList(context)[index],
-            );
-          }
-        },
       ),
     );
   }

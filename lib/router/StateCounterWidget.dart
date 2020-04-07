@@ -28,7 +28,7 @@ class CounterState extends State<StateCounterWidget> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("带状态的计数器"),
+        title: Text("$arg"),
       ),
       body: Center(
         child: Column(

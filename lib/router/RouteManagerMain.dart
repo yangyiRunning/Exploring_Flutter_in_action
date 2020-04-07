@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShow.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
-class RouteManagerMain extends StatelessWidget{
+class RouteManagerMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -12,50 +13,14 @@ class RouteManagerMain extends StatelessWidget{
       appBar: AppBar(
         title: Text("$arg"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FlatButton(
-              child: Text("跳转至带状态的计数器界面"),
-              textColor: Colors.blue,
-              onPressed: () {
-                Navigator.pushNamed(context, "StateCounter", arguments: "到此一游");
-              },
-            ),
-            FlatButton(
-              child: Text("跳转至路由界面 NewRoute"),
-              textColor: Colors.blue,
-              onPressed: () {
-//                Navigator.push(context,
-//                    new MaterialPageRoute(builder: (context) {
-//                  return NewRoute();
-//                }));
-                Navigator.pushNamed(context, "NewRoute");
-              },
-            ),
-            FlatButton(
-              child: Text("携带参数跳转界面 ResultRoute"),
-              textColor: Colors.blue,
-              onPressed: () {
-//                Navigator.push(context, MaterialPageRoute(builder: (context) {
-//                  return ResultRoute();
-//                }));
-                Navigator.pushNamed(context, "ResultRoute");
-              },
-            ),
-            FlatButton(
-              child: Text("跳转至一个苹果风格的界面"),
-              textColor: Colors.blue,
-              onPressed: () {
-                Navigator.pushNamed(
-                    context, "CupertinoRoute", arguments: "苹果风格的界面");
-              },
-            )
-          ],
-        ),
+      body: ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          return getRouterList(context)[index];
+        },
+        shrinkWrap: true,
+        itemCount: getRouterList(context).length,
+        padding: EdgeInsets.all(10),
       ),
     );
   }
-
 }

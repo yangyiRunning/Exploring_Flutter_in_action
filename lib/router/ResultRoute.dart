@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 ///author: yang yi
 ///email: yangyirunning@163.com
 class ResultRoute extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("$arg"),
+      ),
       body: Center(
         child: RaisedButton(
           onPressed: () async {
