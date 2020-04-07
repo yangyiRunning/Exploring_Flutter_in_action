@@ -42,7 +42,7 @@ class GridViewCountState extends State<GridViewCountWidget> {
               crossAxisSpacing: 5,
               childAspectRatio: 1.5,
               //宽高比
-              children: getLimitListWidget(),
+              children: getLimitListWidget(20),
               shrinkWrap: true,
               padding: EdgeInsets.all(10),
             ),

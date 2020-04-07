@@ -43,7 +43,7 @@ class GridViewExtendState extends State<GridViewExtendWidget> {
                   mainAxisSpacing: 5,
                   crossAxisSpacing: 5,
                   childAspectRatio: 1.5,
-              children: getLimitListWidget()),
+              children: getLimitListWidget(20)),
             ),
           )
         ],

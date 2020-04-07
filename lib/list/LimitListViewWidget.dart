@@ -27,7 +27,7 @@ class LimitListViewState extends State<LimitListViewWidget> {
           padding: EdgeInsets.all(10),
           //列表的item长度即为总长度
           shrinkWrap: true,
-          children: getLimitListWidget(),
+          children: getLimitListWidget(20),
         ),
       ),
     );

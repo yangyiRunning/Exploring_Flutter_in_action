@@ -23,9 +23,9 @@ FlatButton getFlatButton(
   );
 }
 
-List<Widget> getLimitListWidget() {
+List<Widget> getLimitListWidget(int count) {
   List<Widget> items = [];
-  for (int i = 1; i <= 20; i++) {
+  for (int i = 1; i <= count; i++) {
     items.add(Container(
       alignment: Alignment.center,
       padding: EdgeInsets.all(20),
@@ -192,6 +192,9 @@ List<FlatButton> getFlatButtonList(BuildContext context) {
 
   flatButtonList.add(getFlatButton(context, "无限加载网格布局(GridView.builder)",
       "UnLimitGridViewWidget", "无限加载网格布局(GridView.builder)界面"));
+
+  flatButtonList.add(getFlatButton(context, "列表滚动监听(以ListView为例)",
+      "ListViewScrollControllerWidget", "列表滚动监听(以ListView为例)"));
 
   return flatButtonList;
 }

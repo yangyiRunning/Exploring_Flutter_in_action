@@ -45,7 +45,7 @@ class GridViewMaxState extends State<GridViewMaxExtendWidget> {
                   crossAxisSpacing: 5,
                   childAspectRatio: 1.5,
                 ),
-                children: getLimitListWidget(),
+                children: getLimitListWidget(20),
               ),
             )
           ],

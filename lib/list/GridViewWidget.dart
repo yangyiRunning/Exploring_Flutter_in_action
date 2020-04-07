@@ -45,7 +45,7 @@ class GridViewState extends State<GridViewWidget> {
                 ),
                 shrinkWrap: true,
                 padding: EdgeInsets.all(10),
-                children: getLimitListWidget(),
+                children: getLimitListWidget(20),
               ),
             ),
           )
