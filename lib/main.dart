@@ -200,14 +200,20 @@ class _MyHomePageState extends State<MyHomePage> {
           itemCount: getMainList(context).length,
           itemBuilder: (BuildContext context, int index) {
             if (index % 2 == 0) {
-              return Container(
-                color: Colors.amberAccent[100],
-                child: getMainList(context)[index],
+              return ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  color: Colors.amberAccent[100],
+                  child: getMainList(context)[index],
+                ),
               );
             } else {
-              return Container(
-                color: Colors.deepPurple[100],
-                child: getMainList(context)[index],
+              return ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  color: Colors.deepPurple[100],
+                  child: getMainList(context)[index],
+                ),
               );
             }
           },

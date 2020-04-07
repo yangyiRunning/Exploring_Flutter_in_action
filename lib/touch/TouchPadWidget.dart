@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/CommonShowWrapper.dart';
 
+/// author: yang yi
+/// email: yangyirunning@163.com
 class TouchPadWidget extends StatefulWidget {
   @override
   TouchPadState createState() {
@@ -43,6 +45,14 @@ class TouchPadState extends State<TouchPadWidget> {
                     ),
                     Text(
                       "变化量:" + event?.delta.toString(),
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    Text(
+                      "按压力度:" + event?.pressure.toString(),
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    Text(
+                      "指针移动方向:" + event?.orientation.toString(),
                       style: TextStyle(color: Colors.grey),
                     ),
                   ],
