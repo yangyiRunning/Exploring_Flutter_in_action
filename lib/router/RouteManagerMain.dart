@@ -13,13 +13,15 @@ class RouteManagerMain extends StatelessWidget {
       appBar: AppBar(
         title: Text("$arg"),
       ),
-      body: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          return getRouterList(context)[index];
-        },
-        shrinkWrap: true,
-        itemCount: getRouterList(context).length,
-        padding: EdgeInsets.all(10),
+      body: Scrollbar(
+        child: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return getRouterList(context)[index];
+          },
+          shrinkWrap: true,
+          itemCount: getRouterList(context).length,
+          padding: EdgeInsets.all(10),
+        ),
       ),
     );
   }

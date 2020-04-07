@@ -63,14 +63,30 @@ List<FlatButton> getMainList(BuildContext context) {
 List<FlatButton> getRouterList(BuildContext context) {
   List<FlatButton> flatButtonList = [];
 
-  flatButtonList
-      .add(getFlatButton(context, "跳转至带状态的计数器界面", "StateCounter", "跳转至带状态的计数器界面"));
+  flatButtonList.add(
+      getFlatButton(context, "跳转至带状态的计数器界面", "StateCounter", "跳转至带状态的计数器界面"));
   flatButtonList
       .add(getFlatButton(context, "跳转至路由界面 NewRoute", "NewRoute", "跳转至路由界面"));
   flatButtonList.add(getFlatButton(
       context, "携带参数跳转界面 ResultRoute", "ResultRoute", "携带参数跳转界面"));
   flatButtonList.add(
       getFlatButton(context, "跳转至一个苹果风格的界面", "CupertinoRoute", "跳转至一个苹果风格的界面"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getStateList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList.add(getFlatButton(context,
+      "子Widget树获取父级StatefulWidget的State对象", "SnackBarWidget", "传个参证明我来过"));
+  flatButtonList.add(FlatButton(
+    child: Text("Dump App"),
+    textColor: Colors.blue,
+    onPressed: () {
+      debugDumpApp();
+    },
+  ));
 
   return flatButtonList;
 }

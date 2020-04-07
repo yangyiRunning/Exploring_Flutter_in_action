@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShow.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -9,31 +10,18 @@ class StateManagerMain extends StatelessWidget {
     // TODO: implement build
     final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("$arg"),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FlatButton(
-              child: Text("子Widget树获取父级StatefulWidget的State对象"),
-              textColor: Colors.blue,
-              onPressed: () {
-                Navigator.pushNamed(context, "SnackBarWidget",
-                    arguments: "传个参证明我来过");
-              },
-            ),
-            FlatButton(
-              child: Text("Dump App"),
-              textColor: Colors.blue,
-              onPressed: () {
-                debugDumpApp();
-              },
-            )
-          ],
+        appBar: AppBar(
+          title: Text("$arg"),
         ),
-      ),
-    );
+        body: Scrollbar(
+          child: ListView.builder(
+            itemBuilder: (BuildContext context, int index) {
+              return getStateList(context)[index];
+            },
+            shrinkWrap: true,
+            itemCount: getStateList(context).length,
+            padding: EdgeInsets.all(10),
+          ),
+        ));
   }
 }
