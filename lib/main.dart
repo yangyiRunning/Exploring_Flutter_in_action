@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/touch/TouchManagerWidget.dart';
-import 'package:flutter_app/touch/TouchPadWidget.dart';
+import 'touch/TouchManagerWidget.dart';
+import 'touch/TouchPadWidget.dart';
+import 'touch/TouchBubbleWidget.dart';
 import 'common/CommonShowModel.dart';
 import 'container/BoxContainerWidget.dart';
 import 'container/ClipWidget.dart';
@@ -120,9 +121,11 @@ class MyApp extends StatelessWidget {
         "GridViewMaxExtendWidget": (context) => GridViewMaxExtendWidget(),
         "GridViewExtendWidget": (context) => GridViewExtendWidget(),
         "UnLimitGridViewWidget": (context) => UnLimitGridViewWidget(),
-        "ListViewScrollControllerWidget": (context) => ListViewScrollControllerWidget(),
+        "ListViewScrollControllerWidget": (context) =>
+            ListViewScrollControllerWidget(),
         "TouchPadWidget": (context) => TouchPadWidget(),
         "TouchManagerWidget": (context) => TouchManagerWidget(),
+        "TouchBubbleWidget": (context) => TouchBubbleWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

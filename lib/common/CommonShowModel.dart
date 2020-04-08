@@ -204,8 +204,9 @@ List<FlatButton> getFlatButtonList(BuildContext context) {
 List<FlatButton> getTouchWidgetList(BuildContext context) {
   List<FlatButton> flatButtonList = [];
 
-  flatButtonList
-      .add(getFlatButton(context, "触摸板", "TouchPadWidget", "触摸板"));
+  flatButtonList.add(getFlatButton(context, "触摸板", "TouchPadWidget", "触摸板"));
+  flatButtonList.add(getFlatButton(
+      context, "不同事件冒泡行为之比较", "TouchBubbleWidget", "不同事件冒泡行为之比较"));
 
   return flatButtonList;
 }

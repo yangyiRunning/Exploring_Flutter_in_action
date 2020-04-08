@@ -47,6 +47,8 @@
   - [x] [滚动监听(ScrollController/ScrollPosition)](lib/list/ListViewScrollControllerWidget.dart)
 - [x] 事件处理
   - [x] [原始指针(触摸事件)(撸一个触摸板)(Listener)](lib/touch/TouchPadWidget.dart)
+- [x] 事件冒泡
+  - [x] [不同事件冒泡行为之比较(HitTestBehavior.deferToChild/HitTestBehavior.opaque/HitTestBehavior.translucent/IgnorePointer)](lib/touch/TouchBubbleWidget.dart)
 
 ---
 
@@ -91,6 +93,9 @@
 
   - width的计算会基于left和right进行， 当指定left和width后，right会自动算出(left+width)，如果同时指定width/left/right属性则会报错
   - height的计算会基于top和bottom进行，当指定top和height后，bottom会自动算出(top+height)，如果同时指定height/top/bottom属性则会报错
+  
+8. 在事件冒泡过程中
+  - **深坑: 当给底部Container控件设置color后，任何behavior(opaque/translucent/deferToChild)将会失效**
   
 ---
 
