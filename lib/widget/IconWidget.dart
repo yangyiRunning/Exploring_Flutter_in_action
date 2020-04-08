@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -12,9 +13,7 @@ class IconWidget extends StatelessWidget {
         "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585073276237&di=7e595c59519294214d1b1e1d83a78b18&imgtype=0&src=http%3A%2F%2Fwww.17qq.com%2Fimg_qqtouxiang%2F76699903.jpeg";
     final double imgWidth = 80;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("$arg"),
-      ),
+      appBar: getAppBar(arg),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

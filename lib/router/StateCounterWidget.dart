@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -17,19 +18,15 @@ class StateCounterWidget extends StatefulWidget {
 
 class CounterState extends State<StateCounterWidget> {
   int count;
-  var arg;
 
   //构建Widget子树时调用
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     print("build");
-    arg = ModalRoute.of(context).settings.arguments;
-
+    final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("$arg"),
-      ),
+      appBar: getAppBar(arg),
       body: Center(
         child: Column(
           children: <Widget>[

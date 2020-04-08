@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -19,7 +20,7 @@ class SwitchCheckboxState extends State<SwitchCheckboxWidget> {
     // TODO: implement build
     final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-      appBar: AppBar(title: Text("$arg")),
+      appBar: getAppBar(arg),
       body: Center(
         child: Column(
           children: <Widget>[

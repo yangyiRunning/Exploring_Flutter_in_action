@@ -18,9 +18,7 @@ class GridViewMaxState extends State<GridViewMaxExtendWidget> {
     // TODO: implement build
     final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-        appBar: AppBar(
-          title: Text("$arg"),
-        ),
+        appBar: getAppBar(arg),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[

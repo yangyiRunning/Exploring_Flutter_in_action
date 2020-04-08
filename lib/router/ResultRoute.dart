@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -8,9 +9,7 @@ class ResultRoute extends StatelessWidget {
     // TODO: implement build
     final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("$arg"),
-      ),
+      appBar: getAppBar(arg),
       body: Center(
         child: RaisedButton(
           onPressed: () async {

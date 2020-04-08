@@ -18,9 +18,7 @@ class LimitListViewState extends State<LimitListViewWidget> {
     // TODO: implement build
     final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("$arg"),
-      ),
+      appBar: getAppBar(arg),
       //不启用sliver延迟构建机制，即一次性将所有item绘制出来，本质上与SingleChildScrollView相同，只适用于少量item时
       body: Scrollbar(
         child: ListView(

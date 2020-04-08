@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -17,9 +18,7 @@ class MultitudinousListViewState extends State<MultitudinousListViewWidget> {
     // TODO: implement build
     final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("$arg"),
-      ),
+      appBar: getAppBar(arg),
       //启用sliver延迟加载模式，即第一次时只加载一部分item(具体加载多少根据开发者的设定而定)，伴随着手指的上滑，当item真正别显示的时候再创建
       //适用于item数比较多的情况
       body: Scrollbar(

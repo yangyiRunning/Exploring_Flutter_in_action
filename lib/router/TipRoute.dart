@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -13,9 +14,7 @@ class TipRoute extends StatelessWidget {
 
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text("带参数的路由页面 TipRoute"),
-      ),
+      appBar: getAppBar(text),
       body: Padding(
         padding: EdgeInsets.all(18),
         child: Column(

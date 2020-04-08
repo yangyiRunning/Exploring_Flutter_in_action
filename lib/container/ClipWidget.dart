@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -14,9 +15,7 @@ class ClipWidget extends StatelessWidget {
       height: 100,
     );
     return Scaffold(
-      appBar: AppBar(
-        title: Text("$arg"),
-      ),
+      appBar: getAppBar(arg),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 50, vertical: 50),
         child: Center(

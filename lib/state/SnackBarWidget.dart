@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -12,16 +13,13 @@ class SnackBarWidget extends StatefulWidget {
 }
 
 class SnackBarState extends State<SnackBarWidget> {
-  var arg;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    arg = ModalRoute.of(context).settings.arguments;
+    final arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-        appBar: AppBar(
-          title: Text("$arg"),
-        ),
+        appBar: getAppBar(arg),
         //注意此处一定得有个Builder包装，且通过命名参数显式的传递一个上下文参数，否则会报"does not contain a Scaffold"
         //https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-that-does-not-contain-a-scaffold
         body: Builder(

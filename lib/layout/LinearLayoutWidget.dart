@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
@@ -17,9 +18,7 @@ class LinearLayoutState extends State<LinearLayoutWidget> {
     final arg = ModalRoute.of(context).settings.arguments;
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text("$arg"),
-      ),
+      appBar: getAppBar(arg),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
