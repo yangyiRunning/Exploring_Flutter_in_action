@@ -4,12 +4,13 @@
 
 ## 创世宣言
 
-- Google造的这个轮子还是很有价值的，尽情踩坑吧 ⤵️
+- 尽情踩坑吧 ⤵️
 
 ## 主要Cover到的点
 
 - [x] 路由界面
 - [x] 状态传递
+  - [x] [子Widget树获取父级StatefulWidget的State对象](lib/state/SnackBarWidget.dart)
 - [x] 基础控件
   - [x] [随机字符串(package:english_words/english_words.dart)](lib/widget/RandomWordWidget.dart)
   - [x] [文本控件，字体样式(Text/TextStyle/Text.rich/TextSpan)](lib/widget/TextStyleWidget.dart)
