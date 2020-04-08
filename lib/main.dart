@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/touch/TouchManagerWidget.dart';
 import 'package:flutter_app/touch/TouchPadWidget.dart';
-import 'common/CommonShowWrapper.dart';
+import 'common/CommonShowModel.dart';
 import 'container/BoxContainerWidget.dart';
 import 'container/ClipWidget.dart';
 import 'container/ContainerManagerWidget.dart';

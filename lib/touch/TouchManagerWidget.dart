@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/common/CommonShowWrapper.dart';
-import 'package:flutter_app/common/ListViewWrapper.dart';
+import 'package:flutter_app/common/CommonShowModel.dart';
+import 'package:flutter_app/common/ListViewModel.dart';
 
 /// author: yang yi
 /// email: yangyirunning@163.com
