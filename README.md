@@ -80,6 +80,10 @@
 | Android APK包下载(内测密码:123456) | ![Android APK包下载](https://www.pgyer.com/app/qrcode/yangyiRunning)
 | iOS 包下载( 虚位以待 ) | |
 
+### 不想扫码了直接点这里
+
+- [Android APK包下载](apk/Flutter_learning_in_action.apk)
+
 ---
 
 ## 坑の顺位: ↓
