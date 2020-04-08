@@ -65,9 +65,8 @@
 
 ## 正片(Action)
 
-|  |  |  | |
-| :---:  | :---: | :---: | :---: |
 | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdmryrmlz5j30u01t0abl.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdmsdeily1j30u01t078v.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms27cfs8j30u01t0mzn.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms2mvb8rj30u01t0tab.jpg) |
+| :---:  | :---: | :---: | :---: |
 | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms2zmrnjj30u01t0my3.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms395nsuj30u01t0ad9.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms3s5dnaj30u01t0gq7.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms43few5j30u01t0n1o.jpg) |
 | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms7mfimij30u01t0q4b.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms7x7kwkj30u01t0mxy.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdmsng1wahj30u01t0q5q.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms8mcoomj30u01t00ut.jpg) |
 | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdms8y1uxpj30u01t0whs.jpg) | ![](https://tva1.sinaimg.cn/large/00831rSTly1gdmsl8d4iej30u01t0grq.jpg) |  |  |
@@ -76,8 +75,10 @@
 
 ## 整套效果的App下载链接
 
-- Android APK包下载(内测密码:123456) : ![Android APK包下载](https://www.pgyer.com/app/qrcode/yangyiRunning)
-- iOS 包下载( 虚位以待 )
+| OS平台应用包 | QRCode |
+| :---:  | :---: |
+| Android APK包下载(内测密码:123456) | ![Android APK包下载](https://www.pgyer.com/app/qrcode/yangyiRunning)
+| iOS 包下载( 虚位以待 ) | |
 
 ---
 
