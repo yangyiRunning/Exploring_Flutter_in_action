@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'gesture/GestureDetectorManagerWidget.dart';
 import 'gesture/GestureDetectorWidget.dart';
+import 'gesture/ScaleGestureDetectorWidget.dart';
 import 'touch/TouchManagerWidget.dart';
 import 'touch/TouchPadWidget.dart';
 import 'touch/TouchBubbleWidget.dart';
@@ -130,6 +131,7 @@ class MyApp extends StatelessWidget {
         "TouchBubbleWidget": (context) => TouchBubbleWidget(),
         "GestureDetectorWidget": (context) => GestureDetectorWidget(),
         "GestureDetectorManagerWidget": (context) => GestureDetectorManagerWidget(),
+        "ScaleGestureDetectorWidget": (context) => ScaleGestureDetectorWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

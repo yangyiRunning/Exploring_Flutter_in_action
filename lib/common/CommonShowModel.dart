@@ -217,6 +217,7 @@ List<FlatButton> getGestureDetectorWidgetList(BuildContext context) {
   List<FlatButton> flatButtonList = [];
 
   flatButtonList.add(getFlatButton(context, "手势识别演示", "GestureDetectorWidget", "手势识别演示"));
+  flatButtonList.add(getFlatButton(context, "缩放演示", "ScaleGestureDetectorWidget", "缩放演示"));
 
   return flatButtonList;
 }

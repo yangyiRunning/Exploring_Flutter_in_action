@@ -4,7 +4,7 @@
 
 ## 创世宣言
 
-- 尽情踩坑吧 ⤵️
+- Google造的这个轮子还是很有价值的，尽情踩坑吧 ⤵️
 
 ## 主要Cover到的点
 
@@ -51,6 +51,7 @@
   - [x] [不同事件冒泡行为之比较(HitTestBehavior.deferToChild/HitTestBehavior.opaque/HitTestBehavior.translucent/IgnorePointer)](lib/touch/TouchBubbleWidget.dart)
 - [x] 手势识别
   - [x] [点击/双击/长按/拖动/滑动(GestureDetector)](lib/gesture/GestureDetectorWidget.dart)
+  - [x] [缩放(GestureDetector)](lib/gesture/ScaleGestureDetectorWidget.dart)
 
 ---
 
