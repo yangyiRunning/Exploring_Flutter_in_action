@@ -52,6 +52,13 @@
 - [x] 手势识别
   - [x] [点击/双击/长按/拖动/滑动(GestureDetector)](lib/gesture/GestureDetectorWidget.dart)
   - [x] [缩放(GestureDetector)](lib/gesture/ScaleGestureDetectorWidget.dart)
+- [ ] 动画
+- [ ] 自定义控件
+- [ ] 与原生互调
+- [ ] 数据及状态共享
+- [ ] 网络编程
+- [ ] 多主题切换
+- [ ] 国际化
 
 ---
 
