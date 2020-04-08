@@ -49,6 +49,8 @@
   - [x] [原始指针(触摸事件)(撸一个触摸板)(Listener)](lib/touch/TouchPadWidget.dart)
 - [x] 事件冒泡
   - [x] [不同事件冒泡行为之比较(HitTestBehavior.deferToChild/HitTestBehavior.opaque/HitTestBehavior.translucent/IgnorePointer)](lib/touch/TouchBubbleWidget.dart)
+- [x] 手势识别
+  - [x] [点击/双击/长按/拖动/滑动(GestureDetector)](lib/gesture/GestureDetectorWidget.dart)
 
 ---
 

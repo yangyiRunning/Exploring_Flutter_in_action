@@ -65,6 +65,8 @@ List<FlatButton> getMainList(BuildContext context) {
       .add(getFlatButton(context, "列表控件", "ListManagerWidget", "列表控件主界面"));
   flatButtonList
       .add(getFlatButton(context, "事件处理", "TouchManagerWidget", "事件处理主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "手势识别", "GestureDetectorManagerWidget", "手势识别主界面"));
 
   return flatButtonList;
 }
@@ -207,6 +209,14 @@ List<FlatButton> getTouchWidgetList(BuildContext context) {
   flatButtonList.add(getFlatButton(context, "触摸板", "TouchPadWidget", "触摸板"));
   flatButtonList.add(getFlatButton(
       context, "不同事件冒泡行为之比较", "TouchBubbleWidget", "不同事件冒泡行为之比较"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getGestureDetectorWidgetList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList.add(getFlatButton(context, "手势识别演示", "GestureDetectorWidget", "手势识别演示"));
 
   return flatButtonList;
 }
