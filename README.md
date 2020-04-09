@@ -128,6 +128,17 @@
   
 8. 在事件冒泡过程中
   - **深坑: 当给底部Container控件设置color后，任何behavior(opaque/translucent/deferToChild)将会失效**
+
+9. Flutter如何更改App包名?
+  ```
+  1.) src/profile/AndroidManifest.xml
+  2.) src/debug/AndroidManifest.xml
+  3.) src/main/AdroidManifest.xml
+  4.) build.gradle .
+      defaultConfig {
+      applicationId
+  5.) MainActivity.java on "package"
+  ```
   
 ---
 
