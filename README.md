@@ -86,7 +86,7 @@
 
 | OS平台应用包 | QRCode |
 | :---:  | :---: |
-| Android APK包下载(内测密码:123456) | ![Android APK包下载](https://www.pgyer.com/app/qrcode/yangyiRunning)
+| Android APK包下载(内测密码:123456) | ![Android APK包下载](https://www.pgyer.com/app/qrcode/IHPE?sign=&auSign=&code=)
 | iOS 包下载( 虚位以待 ) | |
 
 ---
