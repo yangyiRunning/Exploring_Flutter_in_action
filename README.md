@@ -8,10 +8,10 @@
 
 ## 主要Cover到的点
 
-- [x] 路由界面
-- [x] 状态传递
+- [x] **路由界面**
+- [x] **状态传递**
   - [x] [子Widget树获取父级StatefulWidget的State对象](lib/state/SnackBarWidget.dart)
-- [x] 基础控件
+- [x] **基础控件**
   - [x] [随机字符串(package:english_words/english_words.dart)](lib/widget/RandomWordWidget.dart)
   - [x] [文本控件，字体样式(Text/TextStyle/Text.rich/TextSpan)](lib/widget/TextStyleWidget.dart)
   - [x] [按钮系列(RaisedButton/FlatButton/OutlineButton/IconButton/FlatButton.icon/shape)](lib/widget/ButtonWidget.dart)
@@ -20,13 +20,13 @@
   - [x] [输入框和表单(TextField/Form/TextFormField/FormState)](lib/widget/EditTextFormWidget.dart)
   - [x] [登录表单(TextField/Form/TextFormField/FormState)](lib/widget/LoginFormWidget.dart)
   - [x] [各种样式的进度条(LinearProgressIndicator/CircularProgressIndicator)](lib/widget/ProgressBarWidget.dart)
-- [x] 布局控件
+- [x] **布局控件**
   - [x] [线性布局(Row/Column)](lib/layout/LinearLayoutWidget.dart)
   - [x] [弹性布局(Flex/Expanded/Spacer)](lib/layout/FlexLayoutWidget.dart)
   - [x] [流式布局(Wrap/Flow)](lib/layout/WrapLayoutWidget.dart)
   - [x] [层叠布局(Stack/Positioned)](lib/layout/StackLayoutWidget.dart)
   - [x] [对齐与相对定位(Align/Alignment/FractionalOffset/Center)](lib/layout/AlignLayoutWidget.dart)
-- [x] 容器控件
+- [x] **容器控件**
   - [x] [填充(Padding/EdgeInsets)](lib/container/PaddingContainerWidget.dart)
   - [x] [尺寸限制(ConstrainedBox/BoxConstraints/SizedBox/UnconstrainedBox)](lib/container/BoxContainerWidget.dart)
   - [x] [装饰(DecoratedBox)](lib/container/DecoratedBoxWidget.dart)
@@ -34,7 +34,7 @@
   - [x] [容器(Container(多种装饰和填充等组件的组合)/Padding/Margin)](lib/container/ContainerWidget.dart)
   - [x] [裁减(Clip/CustomClipper(裁减动作的作用时期与Transform相同，都作用于绘制阶段))](lib/container/ClipWidget.dart)
   - [x] [通用类导航主界面(Scaffold/AppBar/TabBar/TabBarView/Drawer/FloatingActionButton)](lib/container/TabBarViewWidget.dart)
-- [x] 列表控件
+- [x] **列表控件**
   - [x] 单child滚动控件(SingleChildScrollView/Scrollbar)
   - [x] [有限列表项情况下使用ListView(ListView)](lib/list/LimitListViewWidget.dart)
   - [x] [众多列表项情况下使用ListView(ListView.builder)](lib/list/MultitudinousListViewWidget.dart)
@@ -46,13 +46,15 @@
   - [x] [有限GridView.extent(效果完全等价于GridView + SliverGridDelegateWithMaxCrossAxisExtent)](lib/list/GridViewMaxExtendWidget.dart)
   - [x] [无限GridView加载(GridView.builder)](lib/list/UnLimitGridViewWidget.dart)
   - [x] [滚动监听(ScrollController/ScrollPosition)](lib/list/ListViewScrollControllerWidget.dart)
-- [x] 事件处理
-  - [x] [原始指针(触摸事件)(撸一个触摸板)(Listener)](lib/touch/TouchPadWidget.dart)
-- [x] 事件冒泡
-  - [x] [不同事件冒泡行为之比较(HitTestBehavior.deferToChild/HitTestBehavior.opaque/HitTestBehavior.translucent/IgnorePointer)](lib/touch/TouchBubbleWidget.dart)
-- [x] 手势识别
-  - [x] [点击/双击/长按/拖动/滑动(GestureDetector)](lib/gesture/GestureDetectorWidget.dart)
-  - [x] [缩放(GestureDetector)](lib/gesture/ScaleGestureDetectorWidget.dart)
+- [x] **触摸反馈**
+  - [x] 事件处理
+    - [x] [原始指针(触摸事件)(撸一个触摸板)(Listener)](lib/touch/TouchPadWidget.dart)
+  - [x] 事件冒泡
+    - [x] [不同事件冒泡行为之比较(HitTestBehavior.deferToChild/HitTestBehavior.opaque/HitTestBehavior.translucent/IgnorePointer)](lib/touch/TouchBubbleWidget.dart)
+  - [x] 手势识别
+    - [x] [点击/双击/长按/拖动/滑动(GestureDetector)](lib/gesture/GestureDetectorWidget.dart)
+    - [x] [缩放(GestureDetector)](lib/gesture/ScaleGestureDetectorWidget.dart)
+    - [x] [GestureRecognizer(**当所修饰的对象不为widget且具有recognizer节点时可用**)](lib/gesture/GestureRecognizerTextWidget.dart)
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调
@@ -79,10 +81,6 @@
 | :---:  | :---: |
 | Android APK包下载(内测密码:123456) | ![Android APK包下载](https://www.pgyer.com/app/qrcode/yangyiRunning)
 | iOS 包下载( 虚位以待 ) | |
-
-### 不想扫码了直接点这里
-
-- [Android APK包下载](apk/Flutter_learning_in_action.apk)
 
 ---
 
