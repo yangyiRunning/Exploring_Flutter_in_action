@@ -67,6 +67,8 @@ List<FlatButton> getMainList(BuildContext context) {
       .add(getFlatButton(context, "事件处理", "TouchManagerWidget", "事件处理主界面"));
   flatButtonList.add(getFlatButton(
       context, "手势识别", "GestureDetectorManagerWidget", "手势识别主界面"));
+  flatButtonList.add(getFlatButton(
+      context, "事件总线", "EventBusWidget", "事件总线演示主界面"));
 
   return flatButtonList;
 }

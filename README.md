@@ -55,6 +55,9 @@
     - [x] [点击/双击/长按/拖动/滑动(GestureDetector)](lib/gesture/GestureDetectorWidget.dart)
     - [x] [缩放(GestureDetector)](lib/gesture/ScaleGestureDetectorWidget.dart)
     - [x] [GestureRecognizer(**当所修饰的对象不为widget且具有recognizer节点时可用**)](lib/gesture/GestureRecognizerTextWidget.dart)
+- [x] **事件总线**
+  - [x] [EventBus(Dart实现)](lib/event/EventBus.dart)
+  - [x] [EventBus界面演示](lib/event/EventBusWidget.dart)
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调

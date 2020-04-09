@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'event/EventBusWidget.dart';
 import 'gesture/GestureDetectorManagerWidget.dart';
 import 'gesture/GestureDetectorWidget.dart';
 import 'gesture/GestureRecognizerTextWidget.dart';
@@ -134,6 +135,7 @@ class MyApp extends StatelessWidget {
         "GestureDetectorManagerWidget": (context) => GestureDetectorManagerWidget(),
         "ScaleGestureDetectorWidget": (context) => ScaleGestureDetectorWidget(),
         "GestureRecognizerTextWidget": (context) => GestureRecognizerTextWidget(),
+        "EventBusWidget": (context) => EventBusWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
