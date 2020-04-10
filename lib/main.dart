@@ -5,6 +5,7 @@ import 'gesture/GestureDetectorManagerWidget.dart';
 import 'gesture/GestureDetectorWidget.dart';
 import 'gesture/GestureRecognizerTextWidget.dart';
 import 'gesture/ScaleGestureDetectorWidget.dart';
+import 'notification/CustomScrollNotificationWidget.dart';
 import 'notification/ScrollNotificationManagerWidget.dart';
 import 'notification/ScrollNotificationWidget.dart';
 import 'touch/TouchManagerWidget.dart';
@@ -145,6 +146,8 @@ class MyApp extends StatelessWidget {
         "ScrollNotificationManagerWidget": (context) =>
             ScrollNotificationManagerWidget(),
         "ScrollNotificationWidget": (context) => ScrollNotificationWidget(),
+        "CustomScrollNotificationWidget": (context) =>
+            CustomScrollNotificationWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

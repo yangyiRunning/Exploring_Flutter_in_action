@@ -60,6 +60,7 @@
   - [x] [EventBus界面演示](lib/event/EventBusWidget.dart)
 - [x] **通知**
   - [x] [通知事件名称(NotificationListener.onNotification)](lib/notification/ScrollNotificationWidget.dart)
+  - [x] [自定义通知](lib/notification/CustomScrollNotificationWidget.dart)
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调

@@ -235,6 +235,8 @@ List<FlatButton> getNotificationWidgetList(BuildContext context) {
 
   flatButtonList.add(
       getFlatButton(context, "通知事件名称", "ScrollNotificationWidget", "通知事件名称演示"));
+  flatButtonList.add(
+      getFlatButton(context, "自定义通知", "CustomScrollNotificationWidget", "自定义通知演示"));
 
   return flatButtonList;
 }
