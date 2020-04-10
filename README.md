@@ -56,12 +56,14 @@
     - [x] [缩放(GestureDetector)](lib/gesture/ScaleGestureDetectorWidget.dart)
     - [x] [GestureRecognizer(**当所修饰的对象不为widget且具有recognizer节点时可用**)](lib/gesture/GestureRecognizerTextWidget.dart)
 - [x] **事件总线**
-  - [x] [EventBus(Dart实现)](lib/event/EventBus.dart)
+  - [x] [简易EventBus(Dart实现)](lib/event/EventBus.dart)
   - [x] [EventBus界面演示](lib/event/EventBusWidget.dart)
 - [x] **通知**
   - [x] [通知事件名称(NotificationListener.onNotification)](lib/notification/ScrollNotificationWidget.dart)
   - [x] [自定义通知(覆写Notification + NotificationListener<T>)](lib/notification/CustomScrollNotificationWidget.dart)
   - [x] [通知冒泡(onNotification回调中的return value)](/lib/notification/NotificationBubblingWidget.dart)
+- [x] **存储路径访问和文件操作**
+  - [x] [存储路径访问(访问缓存/访问包路径/访问SD卡)(PathProvider)](lib/io/FileIOWidget.dart)
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调

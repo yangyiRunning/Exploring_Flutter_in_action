@@ -71,6 +71,8 @@ List<FlatButton> getMainList(BuildContext context) {
       .add(getFlatButton(context, "事件总线", "EventBusWidget", "事件总线主界面"));
   flatButtonList.add(
       getFlatButton(context, "通知", "ScrollNotificationManagerWidget", "通知主界面"));
+  flatButtonList.add(
+      getFlatButton(context, "IO", "FileIOWidget", "IO"));
 
   return flatButtonList;
 }
@@ -235,8 +237,8 @@ List<FlatButton> getNotificationWidgetList(BuildContext context) {
 
   flatButtonList.add(
       getFlatButton(context, "通知事件名称", "ScrollNotificationWidget", "通知事件名称演示"));
-  flatButtonList.add(
-      getFlatButton(context, "自定义通知", "CustomScrollNotificationWidget", "自定义通知演示"));
+  flatButtonList.add(getFlatButton(
+      context, "自定义通知", "CustomScrollNotificationWidget", "自定义通知演示"));
   flatButtonList.add(
       getFlatButton(context, "通知冒泡", "NotificationBubblingWidget", "通知冒泡演示"));
 
