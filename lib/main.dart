@@ -5,6 +5,8 @@ import 'gesture/GestureDetectorManagerWidget.dart';
 import 'gesture/GestureDetectorWidget.dart';
 import 'gesture/GestureRecognizerTextWidget.dart';
 import 'gesture/ScaleGestureDetectorWidget.dart';
+import 'notification/ScrollNotificationManagerWidget.dart';
+import 'notification/ScrollNotificationWidget.dart';
 import 'touch/TouchManagerWidget.dart';
 import 'touch/TouchPadWidget.dart';
 import 'touch/TouchBubbleWidget.dart';
@@ -133,11 +135,16 @@ class MyApp extends StatelessWidget {
         "TouchManagerWidget": (context) => TouchManagerWidget(),
         "TouchBubbleWidget": (context) => TouchBubbleWidget(),
         "GestureDetectorWidget": (context) => GestureDetectorWidget(),
-        "GestureDetectorManagerWidget": (context) => GestureDetectorManagerWidget(),
+        "GestureDetectorManagerWidget": (context) =>
+            GestureDetectorManagerWidget(),
         "ScaleGestureDetectorWidget": (context) => ScaleGestureDetectorWidget(),
-        "GestureRecognizerTextWidget": (context) => GestureRecognizerTextWidget(),
+        "GestureRecognizerTextWidget": (context) =>
+            GestureRecognizerTextWidget(),
         "EventBusWidget": (context) => EventBusWidget(),
         "EventBusSecondWidget": (context) => EventBusSecondWidget(),
+        "ScrollNotificationManagerWidget": (context) =>
+            ScrollNotificationManagerWidget(),
+        "ScrollNotificationWidget": (context) => ScrollNotificationWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

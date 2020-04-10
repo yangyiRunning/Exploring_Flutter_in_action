@@ -67,8 +67,10 @@ List<FlatButton> getMainList(BuildContext context) {
       .add(getFlatButton(context, "事件处理", "TouchManagerWidget", "事件处理主界面"));
   flatButtonList.add(getFlatButton(
       context, "手势识别", "GestureDetectorManagerWidget", "手势识别主界面"));
-  flatButtonList.add(getFlatButton(
-      context, "事件总线", "EventBusWidget", "事件总线演示主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "事件总线", "EventBusWidget", "事件总线主界面"));
+  flatButtonList.add(
+      getFlatButton(context, "通知", "ScrollNotificationManagerWidget", "通知主界面"));
 
   return flatButtonList;
 }
@@ -224,6 +226,15 @@ List<FlatButton> getGestureDetectorWidgetList(BuildContext context) {
       getFlatButton(context, "缩放演示", "ScaleGestureDetectorWidget", "缩放演示"));
   flatButtonList.add(getFlatButton(
       context, "GestureRecognizer演示", "GestureRecognizerTextWidget", "缩放演示"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getNotificationWidgetList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList.add(
+      getFlatButton(context, "通知事件名称", "ScrollNotificationWidget", "通知事件名称演示"));
 
   return flatButtonList;
 }
