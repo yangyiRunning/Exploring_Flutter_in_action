@@ -17,7 +17,7 @@ class FileIOState extends State<FileIOWidget> {
   String cacheDir = "";
   String packageDir = "";
   String sdCardDir = "";
-  String content = "路径为: ";
+  String content = "";
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +109,7 @@ class FileIOState extends State<FileIOWidget> {
       onPressed: () {
         setState(() {
           //相当于Android的getExternalStorageDirectory()
-          getExternalStorageDir().then((v){
+          getExternalStorageDir().then((v) {
             sdCardDir = v;
           });
           content = sdCardDir;
@@ -118,9 +118,89 @@ class FileIOState extends State<FileIOWidget> {
       },
     );
 
+    RaisedButton writeToApplicationDirButton = RaisedButton(
+      child: Text(
+        '将"踩坑Fultter"写入应用包路径下(也可用SP)',
+        style: TextStyle(fontSize: 16),
+      ),
+      color: Colors.blue,
+      textColor: Colors.white,
+      onPressed: () {
+        setState(() {
+          getApplicationDocumentsDir().then((v) {
+            packageDir = v;
+            return packageDir;
+          }).then((v) {
+            return new File(packageDir + "/踩坑Flutter.txt");
+          }).then((v) {
+            setState(() {
+              content = "将内容写入 $v 中";
+            });
+            return v.writeAsString("踩坑Flutter " * 10);
+          }).whenComplete(() {
+            print("写入文件完成");
+          });
+        });
+      },
+    );
+
+    RaisedButton readFromApplicationDirButton = RaisedButton(
+      child: Text(
+        '从应用包路径下读取写入的内容',
+        style: TextStyle(fontSize: 16),
+      ),
+      color: Colors.blue,
+      textColor: Colors.white,
+      onPressed: () {
+        setState(() {
+          getApplicationDocumentsDir().then((v) {
+            packageDir = v;
+            return packageDir;
+          }).then((v) {
+            return new File(packageDir + "/踩坑Flutter.txt");
+          }).then((v) {
+            return v.readAsString();
+          }).then((v) {
+            content = "读取的内容为: $v";
+          }).whenComplete(() {
+            print("读取文件完成");
+          });
+        });
+      },
+    );
+
+    RaisedButton clearFileButton = RaisedButton(
+      child: Text(
+        '清除文件',
+        style: TextStyle(fontSize: 16),
+      ),
+      color: Colors.blue,
+      textColor: Colors.white,
+      onPressed: () {
+        setState(() {
+          getApplicationDocumentsDir().then((v) {
+            packageDir = v;
+            return packageDir;
+          }).then((v) {
+            return new File(packageDir + "/踩坑Flutter.txt");
+          }).then((v) {
+            setState(() {
+              content = "清除 $v 文件";
+            });
+            return v.delete();
+          }).whenComplete(() {
+            print("清除文件完成");
+          });
+        });
+      },
+    );
+
     raisedButtonList.add(cacheButton);
     raisedButtonList.add(packageButton);
     raisedButtonList.add(sdCardButton);
+    raisedButtonList.add(writeToApplicationDirButton);
+    raisedButtonList.add(readFromApplicationDirButton);
+    raisedButtonList.add(clearFileButton);
 
     return raisedButtonList;
   }
@@ -133,7 +213,11 @@ class FileIOState extends State<FileIOWidget> {
     return (await getApplicationDocumentsDirectory()).path;
   }
 
-  Future<String> getExternalStorageDir() async{
+  Future<String> getExternalStorageDir() async {
     return (await getExternalStorageDirectory()).path;
+  }
+
+  File getFile(String fileName) {
+    return new File(fileName);
   }
 }
