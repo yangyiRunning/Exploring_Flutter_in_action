@@ -6,6 +6,8 @@ import 'gesture/GestureDetectorWidget.dart';
 import 'gesture/GestureRecognizerTextWidget.dart';
 import 'gesture/ScaleGestureDetectorWidget.dart';
 import 'io/FileIOWidget.dart';
+import 'network/HttpClientWidget.dart';
+import 'network/NetworkManagerWidget.dart';
 import 'notification/CustomScrollNotificationWidget.dart';
 import 'notification/NotificationBubblingWidget.dart';
 import 'notification/ScrollNotificationManagerWidget.dart';
@@ -152,6 +154,8 @@ class MyApp extends StatelessWidget {
             CustomScrollNotificationWidget(),
         "NotificationBubblingWidget": (context) => NotificationBubblingWidget(),
         "FileIOWidget": (context) => FileIOWidget(),
+        "NetworkManagerWidget": (context) => NetworkManagerWidget(),
+        "HttpClientWidget": (context) => HttpClientWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
