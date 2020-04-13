@@ -252,6 +252,8 @@ List<FlatButton> getNetworkList(BuildContext context) {
 
   flatButtonList.add(
       getFlatButton(context, "HttpClient", "HttpClientWidget", "HttpClient"));
+  flatButtonList.add(
+      getFlatButton(context, "Dio", "DioWidget", "Dio"));
 
   return flatButtonList;
 }

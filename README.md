@@ -66,6 +66,8 @@
   - [x] [存储路径访问(访问缓存/访问包路径/访问SD卡)(PathProvider)](lib/io/FileIOWidget.dart)
 - [x] **网络编程**
   - [x] [HttpClient](lib/network/HttpClientWidget.dart)
+  - [x] [Dio(本质是基于HttpClient封装的上层API)](lib/network/DioWidget.dart)
+    - [更多Dio版本信息及API(官方地址)](https://github.com/flutterchina/dio/blob/master/README.md)
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调
