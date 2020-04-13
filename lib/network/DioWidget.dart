@@ -23,26 +23,33 @@ class DioState extends State<DioWidget> {
       body: new Container(
         alignment: Alignment.center,
         child: FutureBuilder(
-            future: dio.get("https://api.github.com/orgs/yangyirunning/repos"),
+            future: getGithubRepositories(),
             builder: (BuildContext context, AsyncSnapshot snapshot) {
-              //请求完成
               if (snapshot.connectionState == ConnectionState.done) {
                 Response response = snapshot.data;
-                //发生错误
                 if (snapshot.hasError) {
                   return Text(snapshot.error.toString());
                 }
-                //请求成功，通过项目信息构建用于显示项目名称的ListView
-                return ListView(
-                  children: response.data
-                      .map<Widget>((e) => ListTile(title: Text(e["full_name"])))
-                      .toList(),
-                );
+                return getListView(response);
               }
               //请求未完成时弹出loading
               return CircularProgressIndicator();
             }),
       ),
+    );
+  }
+
+  Future<Response> getGithubRepositories() async {
+    Response response = await dio.get("https://api.github.com/repositories");
+    print(response.data.toString());
+    return response;
+  }
+
+  ListView getListView(Response response) {
+    return ListView(
+      children: response.data
+          .map<Widget>((e) => ListTile(title: Text(e["full_name"])))
+          .toList(),
     );
   }
 }
