@@ -74,7 +74,7 @@ List<FlatButton> getMainList(BuildContext context) {
   flatButtonList.add(
       getFlatButton(context, "IO", "FileIOWidget", "IO"));
   flatButtonList.add(
-      getFlatButton(context, "网络编程", "FileIOWidget", "网络编程主界面"));
+      getFlatButton(context, "网络编程", "NetworkManagerWidget", "网络编程主界面"));
 
   return flatButtonList;
 }
