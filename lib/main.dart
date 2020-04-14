@@ -3,6 +3,7 @@ import 'event/EventBusSecondWidget.dart';
 import 'event/EventBusWidget.dart';
 import 'function/CheckExitWidget.dart';
 import 'function/FunctionWidgetManager.dart';
+import 'function/ShareDataInheritedWidget.dart';
 import 'gesture/GestureDetectorManagerWidget.dart';
 import 'gesture/GestureDetectorWidget.dart';
 import 'gesture/GestureRecognizerTextWidget.dart';
@@ -162,6 +163,7 @@ class MyApp extends StatelessWidget {
         "DioWidget": (context) => DioWidget(),
         "CheckExitWidget": (context) => CheckExitWidget(),
         "FunctionWidgetManager": (context) => FunctionWidgetManager(),
+        "ShareDataInheritedWidget": (context) => ShareDataInheritedWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
