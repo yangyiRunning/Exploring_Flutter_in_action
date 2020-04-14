@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/common/CommonShowModel.dart';
 import 'package:flutter_app/notification/CustomScrollNotificationWidget.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class NotificationBubblingWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {

@@ -3,6 +3,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/CommonShowModel.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class GestureRecognizerTextWidget extends StatefulWidget {
   @override
   GestureRecognizerTextState createState() {

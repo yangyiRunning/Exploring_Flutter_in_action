@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/common/CommonShowModel.dart';
 import 'package:flutter_app/common/ListViewModel.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class FunctionWidgetManager extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
