@@ -68,10 +68,11 @@
   - [x] [HttpClient](lib/network/HttpClientWidget.dart)
   - [x] [Dio(本质是基于HttpClient封装的上层API)](lib/network/DioWidget.dart)
     - [更多Dio版本信息及API(官方地址)](https://github.com/flutterchina/dio/blob/master/README.md)
+- [x] **功能控件及数据状态共享**
+  - [x] [导航返回键和实体返回键拦截(再按一次确认退出)(WillPopScope)](lib/function/CheckExitWidget.dart)
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调
-- [ ] 数据及状态共享
 - [ ] 多主题切换
 - [ ] 国际化
 
@@ -104,9 +105,11 @@
 
 1. Waiting for another flutter command to release the startup lock...
 
-  - 删除SDK中的flutter/bin/cache/lockfile文件
+  - 因为已经有一个Flutter命令正在运行，删除SDK中的flutter/bin/cache/lockfile文件重新运行即可
 
 2. [pubspec.yaml修改后点击packages get后长时间无反应，提示: Running "flutter pub get" in flutter_app](https://blog.csdn.net/unique_Even/article/details/104995111)
+
+  - 因为GFW的封锁，强烈建议使用国内高校镜像网站: [清华大学开源软件镜像站](https://mirror.tuna.tsinghua.edu.cn/help/dart-pub/)
 
 3. XXX called with a context that does not contain a Scaffold...
 
