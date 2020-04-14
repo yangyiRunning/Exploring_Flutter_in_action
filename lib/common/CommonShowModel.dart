@@ -71,10 +71,11 @@ List<FlatButton> getMainList(BuildContext context) {
       .add(getFlatButton(context, "事件总线", "EventBusWidget", "事件总线主界面"));
   flatButtonList.add(
       getFlatButton(context, "通知", "ScrollNotificationManagerWidget", "通知主界面"));
-  flatButtonList.add(
-      getFlatButton(context, "IO", "FileIOWidget", "IO"));
-  flatButtonList.add(
-      getFlatButton(context, "网络编程", "NetworkManagerWidget", "网络编程主界面"));
+  flatButtonList.add(getFlatButton(context, "IO", "FileIOWidget", "IO"));
+  flatButtonList
+      .add(getFlatButton(context, "网络编程", "NetworkManagerWidget", "网络编程主界面"));
+  flatButtonList.add(getFlatButton(
+      context, "功能控件及数据状态共享", "FunctionWidgetManager", "功能控件及数据状态共享主界面"));
 
   return flatButtonList;
 }
@@ -252,8 +253,16 @@ List<FlatButton> getNetworkList(BuildContext context) {
 
   flatButtonList.add(
       getFlatButton(context, "HttpClient", "HttpClientWidget", "HttpClient"));
-  flatButtonList.add(
-      getFlatButton(context, "Dio", "DioWidget", "Dio"));
+  flatButtonList.add(getFlatButton(context, "Dio", "DioWidget", "Dio"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getFunctionList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList
+      .add(getFlatButton(context, "返回键拦截", "CheckExitWidget", "返回键拦截演示"));
 
   return flatButtonList;
 }
