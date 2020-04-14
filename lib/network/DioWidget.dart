@@ -13,7 +13,7 @@ class DioWidget extends StatefulWidget {
 
 class DioState extends State<DioWidget> {
   Dio dio = new Dio();
-  final TextStyle textStyle = TextStyle(fontSize: 20, color: Colors.grey);
+  final TextStyle textStyle = TextStyle(fontSize: 20, color: Colors.grey[850]);
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +109,11 @@ class DioState extends State<DioWidget> {
   ListView getListView(Response response) {
     return ListView(
       children: response.data
-          .map<Widget>((e) => ListTile(title: Text(e["full_name"])))
+          .map<Widget>((e) => ListTile(
+                  title: Text(
+                e["full_name"],
+                style: textStyle,
+              )))
           .toList(),
     );
   }
