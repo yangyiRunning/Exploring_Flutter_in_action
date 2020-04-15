@@ -168,6 +168,9 @@
 10. Flutter更改versionCode及versionName
 - [pubspec.yaml](pubspec.yaml)文件中默认有version:
   1.0.0+1，其中+之前的"1.0.0"对应versionName，+后边的"1"对应versionCode.
+
+11. 打release包
+- [Android release包](https://flutterchina.club/android-release/)
   
 ---
 
