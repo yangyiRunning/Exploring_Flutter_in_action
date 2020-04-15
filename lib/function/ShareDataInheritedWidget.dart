@@ -83,7 +83,7 @@ class ShareDataWidget extends InheritedWidget {
 
   //获得一个子控件不可依赖的共享控件(getElementForInheritedWidgetOfExactType为获得一个没有注册子Widget的依赖关系的Widget)
   static ShareDataWidget getUnDependOnShareDataWidget(BuildContext context) {
-    return context.getElementForInheritedWidgetOfExactType<ShareDataWidget>().widget ??
+    return context.findAncestorWidgetOfExactType<ShareDataWidget>() ??
         Text("虚位以待");
   }
 

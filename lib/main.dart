@@ -4,6 +4,7 @@ import 'event/EventBusWidget.dart';
 import 'function/CheckExitWidget.dart';
 import 'function/FunctionWidgetManager.dart';
 import 'function/ShareDataInheritedWidget.dart';
+import 'function/provider/ProviderMainWidget.dart';
 import 'gesture/GestureDetectorManagerWidget.dart';
 import 'gesture/GestureDetectorWidget.dart';
 import 'gesture/GestureRecognizerTextWidget.dart';
@@ -164,6 +165,7 @@ class MyApp extends StatelessWidget {
         "CheckExitWidget": (context) => CheckExitWidget(),
         "FunctionWidgetManager": (context) => FunctionWidgetManager(),
         "ShareDataInheritedWidget": (context) => ShareDataInheritedWidget(),
+        "ProviderMainWidget": (context) => ProviderMainWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

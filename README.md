@@ -70,10 +70,11 @@
   - [x] [HttpClient](lib/network/HttpClientWidget.dart)
   - [x] [Dio(本质是基于HttpClient封装的上层API)](lib/network/DioWidget.dart)
     - [更多Dio版本信息及API(官方地址)](https://github.com/flutterchina/dio/blob/master/README.md)
-- [x] **功能控件及数据状态共享(InheritedWidget)**
+- [x] **功能控件及数据状态管理(InheritedWidget)**
   - [x] [导航返回键和实体返回键拦截(再按一次确认退出)(WillPopScope)](lib/function/CheckExitWidget.dart)
-  - [x] [控件跨级传递数据(InheritedWidget/dependOnInheritedWidgetOfExactType/getElementForInheritedWidgetOfExactType/updateShouldNotify/didChangeDependencies)](lib/function/ShareDataInheritedWidget.dart)
-  - [x] [跨控件状态共享(Provider)]()
+  - [x] [**控件跨级传递数据(InheritedWidget/dependOnInheritedWidgetOfExactType/getElementForInheritedWidgetOfExactType/updateShouldNotify/didChangeDependencies)**](lib/function/ShareDataInheritedWidget.dart)
+  - [x] [**跨控件状态管理(手动实现Provider)**](lib/function/provider/ProviderMainWidget.dart)
+    - [第三方Provider实现](https://pub.flutter-io.cn/packages/provider)
   - [x] [异步更新UI(FutureBuilder/StreamBuilder)](lib/network/DioWidget.dart)
 - [ ] 动画
 - [ ] 自定义控件

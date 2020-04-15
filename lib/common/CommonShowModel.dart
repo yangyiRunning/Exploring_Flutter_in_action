@@ -267,6 +267,8 @@ List<FlatButton> getFunctionList(BuildContext context) {
       .add(getFlatButton(context, "控件跨级传递数据", "ShareDataInheritedWidget", "控件跨级传递数据演示"));
   flatButtonList
       .add(getFlatButton(context, "异步更新UI", "DioWidget", "异步更新UI演示"));
+  flatButtonList
+      .add(getFlatButton(context, "跨控件状态管理", "ProviderMainWidget", "跨控件状态管理演示"));
 
   return flatButtonList;
 }
