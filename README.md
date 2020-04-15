@@ -76,10 +76,12 @@
   - [x] [**跨控件状态管理(手动实现Provider)**](lib/function/provider/ProviderMainWidget.dart)
     - [第三方Provider实现](https://pub.flutter-io.cn/packages/provider)
   - [x] [异步更新UI(FutureBuilder/StreamBuilder)](lib/network/DioWidget.dart)
+- [x] **应用主题切换(Theme/ThemeData(内部通过InheritedWidget实现))**
+  - [x] [局部界面主题切换]()
+  - [x] [全局应用主题切换]()
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调
-- [ ] 多主题切换
 - [ ] 国际化
 
 ---
