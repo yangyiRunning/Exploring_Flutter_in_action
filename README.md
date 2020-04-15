@@ -104,10 +104,21 @@
 
 ## 整套效果的App下载链接
 
+### for Android
+
 | OS平台应用包 | QRCode |
 | :---:  | :---: |
 | [Android APK包下载(内测密码:123456)](https://www.pgyer.com/IHPE) | ![Android APK包下载](https://www.pgyer.com/app/qrcode/IHPE?sign=&auSign=&code=)
+
+### for iOS
+
+| OS平台应用包 | QRCode |
+| :---:  | :---: |
 | iOS 包下载( 虚位以待 ) | |
+
+### for Web
+
+- web地址: 虚位以待
 
 ---
 
