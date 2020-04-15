@@ -171,6 +171,13 @@
 
 11. 打release包
 - [Android release包](https://flutterchina.club/android-release/)
+
+12. Flutter command not found
+- 打开终端
+- open .bash_profile
+- export PATH=${PATH}:**/Users/yangyi/developer/flutter**/bin:$PATH
+- 上述加粗部分为你的Flutter SDK路径
+- 保存
   
 ---
 
