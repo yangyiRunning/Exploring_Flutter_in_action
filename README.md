@@ -77,8 +77,8 @@
     - [第三方Provider实现](https://pub.flutter-io.cn/packages/provider)
   - [x] [异步更新UI(FutureBuilder/StreamBuilder)](lib/network/DioWidget.dart)
 - [x] **应用主题切换(Theme/ThemeData(内部通过InheritedWidget实现))**
-  - [x] [局部界面主题切换]()
-  - [x] [全局应用主题切换]()
+  - [x] [单个界面主题切换](lib/theme/LocalThemeSwitchWidget.dart)
+  - [x] [全局界面主题切换]()
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调

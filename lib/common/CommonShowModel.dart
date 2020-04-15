@@ -76,6 +76,8 @@ List<FlatButton> getMainList(BuildContext context) {
       .add(getFlatButton(context, "网络编程", "NetworkManagerWidget", "网络编程主界面"));
   flatButtonList.add(getFlatButton(
       context, "功能控件及数据状态共享", "FunctionWidgetManager", "功能控件及数据状态共享主界面"));
+  flatButtonList
+      .add(getFlatButton(context, "主题切换", "ThemeSwitchManagerWidget", "主题切换"));
 
   return flatButtonList;
 }
@@ -263,12 +265,20 @@ List<FlatButton> getFunctionList(BuildContext context) {
 
   flatButtonList
       .add(getFlatButton(context, "返回键拦截", "CheckExitWidget", "返回键拦截演示"));
-  flatButtonList
-      .add(getFlatButton(context, "控件跨级传递数据", "ShareDataInheritedWidget", "控件跨级传递数据演示"));
-  flatButtonList
-      .add(getFlatButton(context, "异步更新UI", "DioWidget", "异步更新UI演示"));
-  flatButtonList
-      .add(getFlatButton(context, "跨控件状态管理", "ProviderMainWidget", "跨控件状态管理演示"));
+  flatButtonList.add(getFlatButton(
+      context, "控件跨级传递数据", "ShareDataInheritedWidget", "控件跨级传递数据演示"));
+  flatButtonList.add(getFlatButton(context, "异步更新UI", "DioWidget", "异步更新UI演示"));
+  flatButtonList.add(
+      getFlatButton(context, "跨控件状态管理", "ProviderMainWidget", "跨控件状态管理演示"));
+
+  return flatButtonList;
+}
+
+List<FlatButton> getThemeList(BuildContext context) {
+  List<FlatButton> flatButtonList = [];
+
+  flatButtonList.add(
+      getFlatButton(context, "单页面主题切换", "LocalThemeSwitchWidget", "单页面主题切换"));
 
   return flatButtonList;
 }

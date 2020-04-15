@@ -17,6 +17,8 @@ import 'notification/CustomScrollNotificationWidget.dart';
 import 'notification/NotificationBubblingWidget.dart';
 import 'notification/ScrollNotificationManagerWidget.dart';
 import 'notification/ScrollNotificationWidget.dart';
+import 'theme/LocalThemeSwitchWidget.dart';
+import 'theme/ThemeSwitchManagerWidget.dart';
 import 'touch/TouchManagerWidget.dart';
 import 'touch/TouchPadWidget.dart';
 import 'touch/TouchBubbleWidget.dart';
@@ -166,6 +168,8 @@ class MyApp extends StatelessWidget {
         "FunctionWidgetManager": (context) => FunctionWidgetManager(),
         "ShareDataInheritedWidget": (context) => ShareDataInheritedWidget(),
         "ProviderMainWidget": (context) => ProviderMainWidget(),
+        "LocalThemeSwitchWidget": (context) => LocalThemeSwitchWidget(),
+        "ThemeSwitchManagerWidget": (context) => ThemeSwitchManagerWidget(),
       },
       //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
