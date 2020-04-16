@@ -116,6 +116,12 @@ class MyAppState extends State<MyApp> {
         return false;
       },
       child: MaterialApp(
+        debugShowMaterialGrid: false,
+        showPerformanceOverlay: false,
+        checkerboardRasterCacheImages: false,
+        checkerboardOffscreenLayers: false,
+        debugShowCheckedModeBanner: false,
+        showSemanticsDebugger: false,
         //应用名称
         title: "$appName",
         //应用主题

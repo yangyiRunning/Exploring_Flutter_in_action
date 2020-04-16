@@ -79,6 +79,13 @@
 - [x] **应用主题切换(Theme/ThemeData(内部通过InheritedWidget实现))**
   - [x] [单个界面主题切换](lib/theme/LocalThemeSwitchWidget.dart)
   - [x] [全局界面主题切换](lib/main.dart)
+- [x] **开发者通用设置(MaterialApp)**
+  - 是否显示界面布局网格(debugShowMaterialGrid)
+  - 是否打开性能监控，覆盖在屏幕最上面(showPerformanceOverlay)
+  - 是否打开栅格缓存图像的检查板(checkerboardRasterCacheImages)
+  - 是否打开显示到屏幕外位图的图层的检查面板(checkerboardOffscreenLayers)
+  - 是否打开覆盖图，显示框架报告的可访问性信息，显示边框(showSemanticsDebugger)
+  - 是否显示右上角的Debug标签(debugShowCheckedModeBanner)
 - [ ] 动画
 - [ ] 自定义控件
 - [ ] 与原生互调
