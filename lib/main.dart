@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'common/CommonNotification.dart';
 import 'event/EventBusSecondWidget.dart';
 import 'event/EventBusWidget.dart';
 import 'function/CheckExitWidget.dart';
@@ -75,103 +76,125 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends StatefulWidget {
+  @override
+  MyAppState createState() {
+    // TODO: implement createState
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
+  ThemeData themeDateLight = new ThemeData(
+    brightness: Brightness.light,
+  );
+
+  ThemeData themeDateDark = new ThemeData(
+    brightness: Brightness.dark,
+  );
+
+  var themeData;
+
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     final appName = "Flutter踩坑之旅";
-    return MaterialApp(
-      //应用名称
-      title: "$appName",
-      //应用主题
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      //注册路由表
-      routes: {
-        "NewRoute": (context) => NewRoute(),
-        "ResultRoute": (context) => ResultRoute(),
-        "TipRoute": (context) => TipRoute(),
-        "RandomWord": (context) => RandomWord(),
-        "StateCounter": (context) => StateCounterWidget(),
-        "SnackBarWidget": (context) => SnackBarWidget(),
-        "CupertinoRoute": (context) => CupertinoRoute(),
-        "RouteManagerMain": (context) => RouteManagerMain(),
-        "StateManagerMain": (context) => StateManagerMain(),
-        "BaseWidgetMain": (context) => BaseWidgetMain(),
-        "TextStyleWidget": (context) => TextStyleWidget(),
-        "ButtonWidget": (context) => ButtonWidget(),
-        "IconWidget": (context) => IconWidget(),
-        "SwitchCheckboxWidget": (context) => SwitchCheckboxWidget(),
-        "EditTextFormWidget": (context) => EditTextFormWidget(),
-        "LoginFormWidget": (context) => LoginFormWidget(),
-        "ProgressBarWidget": (context) => ProgressBarWidget(),
-        "LayoutManagerWidget": (context) => LayoutManagerWidget(),
-        "LinearLayoutWidget": (context) => LinearLayoutWidget(),
-        "FlexLayoutWidget": (context) => FlexLayoutWidget(),
-        "WrapLayoutWidget": (context) => WrapLayoutWidget(),
-        "StackLayoutWidget": (context) => StackLayoutWidget(),
-        "AlignLayoutWidget": (context) => AlignLayoutWidget(),
-        "ContainerManagerWidget": (context) => ContainerManagerWidget(),
-        "PaddingContainerWidget": (context) => PaddingContainerWidget(),
-        "BoxContainerWidget": (context) => BoxContainerWidget(),
-        "DecoratedBoxWidget": (context) => DecoratedBoxWidget(),
-        "TransformWidget": (context) => TransformWidget(),
-        "ContainerWidget": (context) => ContainerWidget(),
-        "ClipWidget": (context) => ClipWidget(),
-        "TabBarViewWidget": (context) => TabBarViewWidget(),
-        "ListManagerWidget": (context) => ListManagerWidget(),
-        "LimitListViewWidget": (context) => LimitListViewWidget(),
-        "MultitudinousListViewWidget": (context) =>
-            MultitudinousListViewWidget(),
-        "DividerListViewWidget": (context) => DividerListViewWidget(),
-        "LoadingMordAndRefreshListViewWidget": (context) =>
-            LoadingMordAndRefreshListViewWidget(),
-        "GridViewWidget": (context) => GridViewWidget(),
-        "GridViewCountWidget": (context) => GridViewCountWidget(),
-        "GridViewMaxExtendWidget": (context) => GridViewMaxExtendWidget(),
-        "GridViewExtendWidget": (context) => GridViewExtendWidget(),
-        "UnLimitGridViewWidget": (context) => UnLimitGridViewWidget(),
-        "ListViewScrollControllerWidget": (context) =>
-            ListViewScrollControllerWidget(),
-        "TouchPadWidget": (context) => TouchPadWidget(),
-        "TouchManagerWidget": (context) => TouchManagerWidget(),
-        "TouchBubbleWidget": (context) => TouchBubbleWidget(),
-        "GestureDetectorWidget": (context) => GestureDetectorWidget(),
-        "GestureDetectorManagerWidget": (context) =>
-            GestureDetectorManagerWidget(),
-        "ScaleGestureDetectorWidget": (context) => ScaleGestureDetectorWidget(),
-        "GestureRecognizerTextWidget": (context) =>
-            GestureRecognizerTextWidget(),
-        "EventBusWidget": (context) => EventBusWidget(),
-        "EventBusSecondWidget": (context) => EventBusSecondWidget(),
-        "ScrollNotificationManagerWidget": (context) =>
-            ScrollNotificationManagerWidget(),
-        "ScrollNotificationWidget": (context) => ScrollNotificationWidget(),
-        "CustomScrollNotificationWidget": (context) =>
-            CustomScrollNotificationWidget(),
-        "NotificationBubblingWidget": (context) => NotificationBubblingWidget(),
-        "FileIOWidget": (context) => FileIOWidget(),
-        "NetworkManagerWidget": (context) => NetworkManagerWidget(),
-        "HttpClientWidget": (context) => HttpClientWidget(),
-        "DioWidget": (context) => DioWidget(),
-        "CheckExitWidget": (context) => CheckExitWidget(),
-        "FunctionWidgetManager": (context) => FunctionWidgetManager(),
-        "ShareDataInheritedWidget": (context) => ShareDataInheritedWidget(),
-        "ProviderMainWidget": (context) => ProviderMainWidget(),
-        "LocalThemeSwitchWidget": (context) => LocalThemeSwitchWidget(),
-        "ThemeSwitchManagerWidget": (context) => ThemeSwitchManagerWidget(),
+    return NotificationListener<AppThemeNotification>(
+      onNotification: (notification) {
+        if (notification.isLight) {
+          setState(() {
+            themeData = themeDateLight;
+          });
+        } else {
+          setState(() {
+            themeData = themeDateDark;
+          });
+        }
+        return false;
       },
-      //路由生成的钩子
+      child: MaterialApp(
+        //应用名称
+        title: "$appName",
+        //应用主题
+        theme: themeData,
+        //注册路由表
+        routes: {
+          "NewRoute": (context) => NewRoute(),
+          "ResultRoute": (context) => ResultRoute(),
+          "TipRoute": (context) => TipRoute(),
+          "RandomWord": (context) => RandomWord(),
+          "StateCounter": (context) => StateCounterWidget(),
+          "SnackBarWidget": (context) => SnackBarWidget(),
+          "CupertinoRoute": (context) => CupertinoRoute(),
+          "RouteManagerMain": (context) => RouteManagerMain(),
+          "StateManagerMain": (context) => StateManagerMain(),
+          "BaseWidgetMain": (context) => BaseWidgetMain(),
+          "TextStyleWidget": (context) => TextStyleWidget(),
+          "ButtonWidget": (context) => ButtonWidget(),
+          "IconWidget": (context) => IconWidget(),
+          "SwitchCheckboxWidget": (context) => SwitchCheckboxWidget(),
+          "EditTextFormWidget": (context) => EditTextFormWidget(),
+          "LoginFormWidget": (context) => LoginFormWidget(),
+          "ProgressBarWidget": (context) => ProgressBarWidget(),
+          "LayoutManagerWidget": (context) => LayoutManagerWidget(),
+          "LinearLayoutWidget": (context) => LinearLayoutWidget(),
+          "FlexLayoutWidget": (context) => FlexLayoutWidget(),
+          "WrapLayoutWidget": (context) => WrapLayoutWidget(),
+          "StackLayoutWidget": (context) => StackLayoutWidget(),
+          "AlignLayoutWidget": (context) => AlignLayoutWidget(),
+          "ContainerManagerWidget": (context) => ContainerManagerWidget(),
+          "PaddingContainerWidget": (context) => PaddingContainerWidget(),
+          "BoxContainerWidget": (context) => BoxContainerWidget(),
+          "DecoratedBoxWidget": (context) => DecoratedBoxWidget(),
+          "TransformWidget": (context) => TransformWidget(),
+          "ContainerWidget": (context) => ContainerWidget(),
+          "ClipWidget": (context) => ClipWidget(),
+          "TabBarViewWidget": (context) => TabBarViewWidget(),
+          "ListManagerWidget": (context) => ListManagerWidget(),
+          "LimitListViewWidget": (context) => LimitListViewWidget(),
+          "MultitudinousListViewWidget": (context) =>
+              MultitudinousListViewWidget(),
+          "DividerListViewWidget": (context) => DividerListViewWidget(),
+          "LoadingMordAndRefreshListViewWidget": (context) =>
+              LoadingMordAndRefreshListViewWidget(),
+          "GridViewWidget": (context) => GridViewWidget(),
+          "GridViewCountWidget": (context) => GridViewCountWidget(),
+          "GridViewMaxExtendWidget": (context) => GridViewMaxExtendWidget(),
+          "GridViewExtendWidget": (context) => GridViewExtendWidget(),
+          "UnLimitGridViewWidget": (context) => UnLimitGridViewWidget(),
+          "ListViewScrollControllerWidget": (context) =>
+              ListViewScrollControllerWidget(),
+          "TouchPadWidget": (context) => TouchPadWidget(),
+          "TouchManagerWidget": (context) => TouchManagerWidget(),
+          "TouchBubbleWidget": (context) => TouchBubbleWidget(),
+          "GestureDetectorWidget": (context) => GestureDetectorWidget(),
+          "GestureDetectorManagerWidget": (context) =>
+              GestureDetectorManagerWidget(),
+          "ScaleGestureDetectorWidget": (context) =>
+              ScaleGestureDetectorWidget(),
+          "GestureRecognizerTextWidget": (context) =>
+              GestureRecognizerTextWidget(),
+          "EventBusWidget": (context) => EventBusWidget(),
+          "EventBusSecondWidget": (context) => EventBusSecondWidget(),
+          "ScrollNotificationManagerWidget": (context) =>
+              ScrollNotificationManagerWidget(),
+          "ScrollNotificationWidget": (context) => ScrollNotificationWidget(),
+          "CustomScrollNotificationWidget": (context) =>
+              CustomScrollNotificationWidget(),
+          "NotificationBubblingWidget": (context) =>
+              NotificationBubblingWidget(),
+          "FileIOWidget": (context) => FileIOWidget(),
+          "NetworkManagerWidget": (context) => NetworkManagerWidget(),
+          "HttpClientWidget": (context) => HttpClientWidget(),
+          "DioWidget": (context) => DioWidget(),
+          "CheckExitWidget": (context) => CheckExitWidget(),
+          "FunctionWidgetManager": (context) => FunctionWidgetManager(),
+          "ShareDataInheritedWidget": (context) => ShareDataInheritedWidget(),
+          "ProviderMainWidget": (context) => ProviderMainWidget(),
+          "LocalThemeSwitchWidget": (context) => LocalThemeSwitchWidget(),
+          "ThemeSwitchManagerWidget": (context) => ThemeSwitchManagerWidget(),
+        },
+        //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
 //        return MaterialPageRoute(builder: (context) {
 //          String routeName = settings.name;
@@ -180,8 +203,9 @@ class MyApp extends StatelessWidget {
 //
 //        });
 //      },
-      //应用首页面
-      home: MyHomePage(title: "$appName"),
+        //应用首页面
+        home: MyHomePage(title: "$appName"),
+      ),
     );
   }
 }
@@ -201,24 +225,12 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  //状态自增函数
-  void _incrementCounter() {
-    //通知flutter框架，有状态发生了改变，flutter框架收到通知后，会执行build方法根据新的状态重新构建界面
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+class MyHomePageState extends State<MyHomePage> {
+  AppThemeNotification appThemeNotification = new AppThemeNotification(true);
+  bool isFABShow = true;
 
   @override
   Widget build(BuildContext context) {
@@ -229,41 +241,66 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      floatingActionButton: isFABShow
+          ? FloatingActionButton(
+              child: Icon(Icons.format_paint),
+              onPressed: () {
+                appThemeNotification.isLight = !appThemeNotification.isLight;
+                appThemeNotification.dispatch(context);
+              },
+            )
+          : null,
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Scrollbar(
-        child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisSpacing: 5,
-            crossAxisSpacing: 5,
-            childAspectRatio: 1.5,
+      body: NotificationListener(
+        onNotification: (notification) {
+          if (notification.runtimeType == ScrollUpdateNotification ||
+              notification.runtimeType == ScrollStartNotification) {
+            setState(() {
+              isFABShow = false;
+            });
+          }
+          if (notification.runtimeType == ScrollEndNotification) {
+            setState(() {
+              isFABShow = true;
+            });
+          }
+          return true;
+        },
+        child: Scrollbar(
+          child: GridView.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisSpacing: 5,
+              crossAxisSpacing: 5,
+              childAspectRatio: 1.5,
+            ),
+            shrinkWrap: true,
+            padding: EdgeInsets.all(10),
+            itemCount: getMainList(context).length,
+            itemBuilder: (BuildContext context, int index) {
+              if (index % 2 == 0) {
+                return ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    color: Colors.amberAccent[100],
+                    child: getMainList(context)[index],
+                  ),
+                );
+              } else {
+                return ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    color: Colors.deepPurple[100],
+                    child: getMainList(context)[index],
+                  ),
+                );
+              }
+            },
           ),
-          shrinkWrap: true,
-          padding: EdgeInsets.all(10),
-          itemCount: getMainList(context).length,
-          itemBuilder: (BuildContext context, int index) {
-            if (index % 2 == 0) {
-              return ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Container(
-                  color: Colors.amberAccent[100],
-                  child: getMainList(context)[index],
-                ),
-              );
-            } else {
-              return ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Container(
-                  color: Colors.deepPurple[100],
-                  child: getMainList(context)[index],
-                ),
-              );
-            }
-          },
         ),
       ),
     );
