@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'MyHomePage.dart';
 import 'common/CommonNotification.dart';
@@ -74,8 +73,6 @@ import 'layout/LinearLayoutWidget.dart';
 void main() {
   //是否开启布局边界
 //  debugPaintSizeEnabled = true;
-  debugDefaultTargetPlatformOverride = TargetPlatform.android;
-  print(defaultTargetPlatform);
   runApp(MyApp());
 }
 

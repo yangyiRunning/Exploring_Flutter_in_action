@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'common/CommonNotification.dart';
 import 'common/CommonShowModel.dart';
@@ -44,9 +47,32 @@ class MyHomePageState extends State<MyHomePage> {
             )
           : null,
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        actions: <Widget>[
+          Container(
+            child: IconButton(
+              icon: Icon(
+                Icons.android,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                switchOS(TargetPlatform.android);
+                SystemNavigator.pop(animated:true);
+              },
+            ),
+          ),
+          Container(
+              child: IconButton(
+            icon: Icon(
+              Icons.phone_iphone,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              switchOS(TargetPlatform.iOS);
+              SystemNavigator.pop(animated:true);
+            },
+          ))
+        ],
       ),
       body: NotificationListener(
         onNotification: (notification) {

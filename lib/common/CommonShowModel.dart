@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 ///author: yang yi
@@ -7,6 +8,11 @@ AppBar getAppBar(String text) {
   return AppBar(
     title: Text(text),
   );
+}
+
+void switchOS(TargetPlatform targetPlatform) {
+  debugDefaultTargetPlatformOverride = targetPlatform;
+  print("当前操作系统为: $defaultTargetPlatform");
 }
 
 FlatButton getFlatButton(
