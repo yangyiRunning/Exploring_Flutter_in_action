@@ -188,6 +188,9 @@
 - export PATH=${PATH}:**/Users/yangyi/developer/flutter**/bin:$PATH
 - 上述加粗部分为你的Flutter SDK路径
 - 保存
+
+13. AppBar设置actions节点后，debugDefaultTargetPlatformOverride =
+    TargetPlatform.iOS切换iOS效果不起作用
   
 ---
 
