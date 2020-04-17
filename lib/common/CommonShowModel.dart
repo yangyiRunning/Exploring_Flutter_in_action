@@ -82,7 +82,7 @@ List<FlatButton> getMainList(BuildContext context) {
   flatButtonList
       .add(getFlatButton(context, "主题切换", "ThemeSwitchManagerWidget", "主题切换"));
   flatButtonList
-      .add(getFlatButton(context, "应用设置", "SettingWidget", "应用设置"));
+      .add(getFlatButton(context, "系统调试信息", "SettingWidget", "系统调试信息"));
 
   return flatButtonList;
 }

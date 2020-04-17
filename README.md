@@ -79,6 +79,8 @@
 - [x] **应用主题切换(Theme/ThemeData(内部通过InheritedWidget实现))**
   - [x] [单个界面主题切换](lib/theme/LocalThemeSwitchWidget.dart)
   - [x] [全局界面主题切换](lib/main.dart)
+- [x] **与原生互调**
+  - [x] [Flutter调用Android Native代码](lib/setting/SettingWidget.dart)
 - [x] **开发者通用设置(MaterialApp)**
   - [x] 是否显示界面布局网格(debugShowMaterialGrid)
   - [x] 是否打开性能监控，覆盖在屏幕最上面(showPerformanceOverlay)
@@ -88,10 +90,10 @@
   - [x] 是否显示右上角的Debug标签(debugShowCheckedModeBanner)
 - [x] **切换操作系统平台(Android/iOS)**
   - [x] 切换为Android应用: debugDefaultTargetPlatformOverride = TargetPlatform.android
-  - [x] 切换为iOS应用: debugDefaultTargetPlatformOverride = TargetPlatform.iOS
+  - [x] 切换为iOS应用: debugDefaultTargetPlatformOverride =
+        TargetPlatform.iOS
 - [ ] 动画
 - [ ] 自定义控件
-- [ ] 与原生互调
 - [ ] 国际化
 
 ---
