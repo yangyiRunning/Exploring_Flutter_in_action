@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'MyHomePage.dart';
 import 'common/CommonNotification.dart';
@@ -19,6 +20,7 @@ import 'notification/CustomScrollNotificationWidget.dart';
 import 'notification/NotificationBubblingWidget.dart';
 import 'notification/ScrollNotificationManagerWidget.dart';
 import 'notification/ScrollNotificationWidget.dart';
+import 'setting/SettingWidget.dart';
 import 'theme/LocalThemeSwitchWidget.dart';
 import 'theme/ThemeSwitchManagerWidget.dart';
 import 'touch/TouchManagerWidget.dart';
@@ -70,9 +72,8 @@ import 'layout/LinearLayoutWidget.dart';
 
 ///author: yang yi
 ///email: yangyirunning@163.com
-void main() {
-  //是否开启布局边界
-//  debugPaintSizeEnabled = true;
+void main(){
+  print("当前操作系统为: $defaultTargetPlatform");
   runApp(MyApp());
 }
 
@@ -199,6 +200,7 @@ class MyAppState extends State<MyApp> {
           "ProviderMainWidget": (context) => ProviderMainWidget(),
           "LocalThemeSwitchWidget": (context) => LocalThemeSwitchWidget(),
           "ThemeSwitchManagerWidget": (context) => ThemeSwitchManagerWidget(),
+          "SettingWidget": (context) => SettingWidget(),
         },
         //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

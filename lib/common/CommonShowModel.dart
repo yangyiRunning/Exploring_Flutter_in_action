@@ -10,10 +10,7 @@ AppBar getAppBar(String text) {
   );
 }
 
-void switchOS(TargetPlatform targetPlatform) {
-  debugDefaultTargetPlatformOverride = targetPlatform;
-  print("当前操作系统为: $defaultTargetPlatform");
-}
+bool isDebugPaintSizeEnabled = false;
 
 FlatButton getFlatButton(
     BuildContext context, String text, String clazz, String pagerName) {
@@ -84,6 +81,8 @@ List<FlatButton> getMainList(BuildContext context) {
       context, "功能控件及数据状态共享", "FunctionWidgetManager", "功能控件及数据状态共享主界面"));
   flatButtonList
       .add(getFlatButton(context, "主题切换", "ThemeSwitchManagerWidget", "主题切换"));
+  flatButtonList
+      .add(getFlatButton(context, "应用设置", "SettingWidget", "应用设置"));
 
   return flatButtonList;
 }

@@ -26,6 +26,7 @@ dependencies:
   english_words: ^3.1.5
   path_provider: ^0.4.1
   dio: ^3.0.9
+  shared_preferences: ^0.5.6+3
 
 dev_dependencies:
   flutter_test:

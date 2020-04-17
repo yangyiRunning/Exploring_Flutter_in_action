@@ -185,8 +185,8 @@
 12. Flutter command not found
 - 打开终端
 - open .bash_profile
-- export PATH=${PATH}:**/Users/yangyi/developer/flutter**/bin:$PATH
-- 上述加粗部分为你的Flutter SDK路径
+- export PATH=/Users/yangyi/developer/flutter/bin:$PATH
+- 上述PATH后的部分为你的Flutter SDK路径
 - 保存
 
 13. AppBar设置actions节点后，debugDefaultTargetPlatformOverride =
