@@ -98,6 +98,18 @@ class SettingState extends State<SettingWidget> {
             margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
             child: getCenterText(deviceManufacturer),
           ),
+          Divider(
+            height: 5,
+            color: Colors.grey,
+          ),
+          Container(
+            child: RaisedButton(
+              child: Text("跳转至一个原生Android界面"),
+              onPressed: () {
+                goToAndroidAboutActivity();
+              },
+            ),
+          ),
         ],
       ),
     );
@@ -233,5 +245,9 @@ class SettingState extends State<SettingWidget> {
     setState(() {
       this.systemDevice = systemDevice;
     });
+  }
+
+  void goToAndroidAboutActivity() {
+    methodChannel.invokeMethod("goToAndroidAboutActivity");
   }
 }

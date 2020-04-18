@@ -7,6 +7,7 @@ import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 
+import com.exploring.flutter.activity.AboutActivity;
 import com.exploring.flutter.util.DeviceUtil;
 
 import io.flutter.app.FlutterActivity;
@@ -28,6 +29,7 @@ public class MainActivity extends FlutterActivity {
     private static final String GET_DEVICE_BRAND = "getDeviceBrand";
     private static final String GET_DEVICE_BOARD = "getDeviceBoard";
     private static final String GET_DEVICE_MANUFACTURER = "getDeviceManufacturer";
+    private static final String GO_TO_ANDROID_ABOUT_ACTIVITY = "goToAndroidAboutActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,9 @@ public class MainActivity extends FlutterActivity {
                         result.success(DeviceUtil.getDeviceBoard());
                     } else if (GET_DEVICE_MANUFACTURER.equals(call.method)) {
                         result.success(DeviceUtil.getDeviceManufacturer());
+                    } else if (GO_TO_ANDROID_ABOUT_ACTIVITY.equals(call.method)) {
+                        Intent intent = new Intent(this, AboutActivity.class);
+                        startActivity(intent);
                     } else {
                         result.notImplemented();
                     }
