@@ -4,6 +4,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app/common/CommonShowModel.dart';
 
+///author: yang yi
+///email: yangyirunning@163.com
 class SettingWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -60,15 +62,42 @@ class SettingState extends State<SettingWidget> {
               },
             ),
           ),
-          Text(batteryLevel),
-          Text(systemVersion),
-          Text(systemLanguage),
-          Text(systemLanguageList),
-          Text(systemModel),
-          Text(systemDevice),
-          Text(deviceBrand),
-          Text(deviceBoard),
-          Text(deviceManufacturer),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(batteryLevel),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(systemVersion),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(systemLanguage),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(systemLanguageList),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(systemModel),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(systemDevice),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(deviceBrand),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(deviceBoard),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: getCenterText(deviceManufacturer),
+          ),
         ],
       ),
     );
@@ -182,7 +211,8 @@ class SettingState extends State<SettingWidget> {
   Future<Null> getDeviceManufacturer() async {
     String deviceManufacturer;
     try {
-      final String result = await methodChannel.invokeMethod("getDeviceManufacturer");
+      final String result =
+          await methodChannel.invokeMethod("getDeviceManufacturer");
       deviceManufacturer = "手机厂商名$result";
     } on PlatformException catch (e) {
       deviceManufacturer = "获取手机厂商名失败'${e.message}'";

@@ -10,7 +10,6 @@ import android.os.Bundle;
 import com.exploring.flutter.util.DeviceUtil;
 
 import io.flutter.app.FlutterActivity;
-import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 
 /**

@@ -12,6 +12,14 @@ AppBar getAppBar(String text) {
 
 bool isDebugPaintSizeEnabled = false;
 
+Text getCenterText(String content) {
+  return Text(
+    content,
+    textAlign: TextAlign.center,
+    style: TextStyle(fontSize: 18, color: Colors.blue, wordSpacing: 10),
+  );
+}
+
 FlatButton getFlatButton(
     BuildContext context, String text, String clazz, String pagerName) {
   return FlatButton(

@@ -79,7 +79,7 @@
 - [x] **应用主题切换(Theme/ThemeData(内部通过InheritedWidget实现))**
   - [x] [单个界面主题切换](lib/theme/LocalThemeSwitchWidget.dart)
   - [x] [全局界面主题切换](lib/main.dart)
-- [x] **与原生互调**
+- [x] **与原生互调(MethodChannel.invokeMethod)**
   - [x] [Flutter调用Android Native代码](lib/setting/SettingWidget.dart)
 - [x] **开发者通用设置(MaterialApp)**
   - [x] 是否显示界面布局网格(debugShowMaterialGrid)
