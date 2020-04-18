@@ -90,7 +90,9 @@ List<FlatButton> getMainList(BuildContext context) {
   flatButtonList
       .add(getFlatButton(context, "主题切换", "ThemeSwitchManagerWidget", "主题切换"));
   flatButtonList
-      .add(getFlatButton(context, "系统调试信息", "SettingWidget", "系统调试信息"));
+      .add(getFlatButton(context, "与原生互调和相互集成", "SettingWidget", "与原生互调和相互集成"));
+  flatButtonList
+      .add(getFlatButton(context, "WebView", "AndroidWebViewWidget", "WebView"));
 
   return flatButtonList;
 }

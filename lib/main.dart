@@ -20,6 +20,7 @@ import 'notification/CustomScrollNotificationWidget.dart';
 import 'notification/NotificationBubblingWidget.dart';
 import 'notification/ScrollNotificationManagerWidget.dart';
 import 'notification/ScrollNotificationWidget.dart';
+import 'platform/AndroidWebViewWidget.dart';
 import 'setting/SettingWidget.dart';
 import 'theme/LocalThemeSwitchWidget.dart';
 import 'theme/ThemeSwitchManagerWidget.dart';
@@ -201,6 +202,7 @@ class MyAppState extends State<MyApp> {
           "LocalThemeSwitchWidget": (context) => LocalThemeSwitchWidget(),
           "ThemeSwitchManagerWidget": (context) => ThemeSwitchManagerWidget(),
           "SettingWidget": (context) => SettingWidget(),
+          "AndroidWebViewWidget": (context) => AndroidWebViewWidget(),
         },
         //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {
