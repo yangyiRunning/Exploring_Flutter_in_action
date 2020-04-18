@@ -24,7 +24,7 @@ class MyHomePage extends StatefulWidget {
 
 class MyHomePageState extends State<MyHomePage> {
   AppThemeNotification appThemeNotification = new AppThemeNotification(true);
-  bool isFABShow = true;
+  bool isLight = true;
 
   @override
   Widget build(BuildContext context) {
@@ -35,64 +35,67 @@ class MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      floatingActionButton: isFABShow
-          ? FloatingActionButton(
-              child: Icon(Icons.format_paint),
-              onPressed: () {
-                appThemeNotification.isLight = !appThemeNotification.isLight;
-                appThemeNotification.dispatch(context);
-              },
-            )
-          : null,
       appBar: AppBar(
         title: Text(widget.title),
-      ),
-      body: NotificationListener(
-        onNotification: (notification) {
-          if (notification.runtimeType == ScrollUpdateNotification) {
-            setState(() {
-              isFABShow = false;
-            });
-          }
-          if (notification.runtimeType == ScrollEndNotification ||
-              notification.runtimeType == ScrollStartNotification) {
-            setState(() {
-              isFABShow = true;
-            });
-          }
-          return true;
-        },
-        child: Scrollbar(
-          child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 5,
-              crossAxisSpacing: 5,
-              childAspectRatio: 1.5,
-            ),
-            shrinkWrap: true,
-            padding: EdgeInsets.all(10),
-            itemCount: getMainList(context).length,
-            itemBuilder: (BuildContext context, int index) {
-              if (index % 2 == 0) {
-                return ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    color: Colors.amberAccent[100],
-                    child: getMainList(context)[index],
-                  ),
-                );
-              } else {
-                return ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    color: Colors.deepPurple[100],
-                    child: getMainList(context)[index],
-                  ),
-                );
-              }
-            },
+        actions: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              FlatButton.icon(
+                onPressed: () {
+                  appThemeNotification.isLight =
+                  !appThemeNotification.isLight;
+                  appThemeNotification.dispatch(context);
+                  setState(() {
+                    isLight = !isLight;
+                  });
+                },
+                icon: Icon(
+                  Icons.format_paint,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  isLight ? "正常模式" : "夜间模式",
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
+                ),
+              )
+            ],
           ),
+        ],
+      ),
+      body: Scrollbar(
+        child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 5,
+            crossAxisSpacing: 5,
+            childAspectRatio: 1.5,
+          ),
+          shrinkWrap: true,
+          padding: EdgeInsets.all(10),
+          itemCount: getMainList(context).length,
+          itemBuilder: (BuildContext context, int index) {
+            if (index % 2 == 0) {
+              return ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  color: Colors.amberAccent[100],
+                  child: getMainList(context)[index],
+                ),
+              );
+            } else {
+              return ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  color: Colors.deepPurple[100],
+                  child: getMainList(context)[index],
+                ),
+              );
+            }
+          },
         ),
       ),
     );
