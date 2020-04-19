@@ -12,9 +12,8 @@ import com.exploring.flutter.util.DeviceUtil;
 
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.embedding.engine.dart.DartExecutor;
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugins.GeneratedPluginRegistrant;
-import io.flutter.view.FlutterView;
 
 /**
  * @author yangyi
@@ -33,16 +32,17 @@ public class MainActivity extends FlutterActivity {
     private static final String GET_DEVICE_BOARD = "getDeviceBoard";
     private static final String GET_DEVICE_MANUFACTURER = "getDeviceManufacturer";
     private static final String GO_TO_ANDROID_ABOUT_ACTIVITY = "goToAndroidAboutActivity";
+    private DartExecutor dartExecutor;
 
     @Override
     public void configureFlutterEngine(FlutterEngine flutterEngine) {
-        GeneratedPluginRegistrant.registerWith(flutterEngine);
+        dartExecutor = flutterEngine.getDartExecutor();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MethodChannel methodChannel = new MethodChannel(new FlutterView(getContext()), CHANNEL);
+        MethodChannel methodChannel = new MethodChannel(dartExecutor, CHANNEL);
         methodChannel.setMethodCallHandler(
                 (call, result) -> {
                     if (GET_BATTERY_LEVEL.equals(call.method)) {

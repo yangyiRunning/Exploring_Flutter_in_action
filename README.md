@@ -193,9 +193,15 @@
 - 上述PATH后的部分为你的Flutter SDK路径
 - 保存
 
-13. AppBar设置actions节点后，debugDefaultTargetPlatformOverride =
-    TargetPlatform.iOS切换iOS效果不起作用
-  
+13. 设置当前操作系统平台
+- AppBar设置actions节点后，debugDefaultTargetPlatformOverride = TargetPlatform.iOS切换iOS效果不起作用
+
+14. **迁移FlutterActivity以兼容WebView和MethodChannel**
+- io.flutter.app.FlutterActivity类已过时，官方推荐需要迁移到io.flutter.embedding.android.FlutterActivity
+- 但是迁移至io.flutter.embedding.android.FlutterActivity后会找不到FlutterView，需要用flutterEngine.getDartExecutor()代替
+- flutterEngine在configureFlutterEngine回调中可以拿到，通过flutterEngine.getDartExecutor()获取最终传入MethodChannel的值
+
+
 ---
 
 ## 最后我再叨叨两句
