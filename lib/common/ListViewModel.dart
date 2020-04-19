@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-///author: yangyi
+///author: yang yi
 ///email: yangyirunning@163.com
 
 Scrollbar getScrollBar(List<FlatButton> flatButtonList) {

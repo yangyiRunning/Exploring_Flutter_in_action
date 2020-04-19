@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'common/CommonNotification.dart';
 import 'common/CommonShowModel.dart';
 
+/// author: yang yi
+/// email: yangyirunning@163.com
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
