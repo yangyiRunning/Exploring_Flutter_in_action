@@ -48,7 +48,7 @@ class SettingState extends State<SettingWidget> {
           ),
           Container(
             child: RaisedButton(
-              child: Text("获取当前设备信息"),
+              child: Text("调用原生方法获取当前设备信息"),
               onPressed: () {
                 getBatteryLevel();
                 getSystemVersion();
