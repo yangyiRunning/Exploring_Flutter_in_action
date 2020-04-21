@@ -76,6 +76,9 @@
   - [x] [**跨控件状态管理(手动实现Provider)**](lib/function/provider/ProviderMainWidget.dart)
     - [第三方Provider实现](https://pub.flutter-io.cn/packages/provider)
   - [x] [异步更新UI(FutureBuilder/StreamBuilder)](lib/network/DioWidget.dart)
+- [x] [**Dialog**](lib/dialog/DialogManagerWidget.dart)
+  - [x] AlertDialog
+  - [x] SimpleDialog
 - [x] **应用主题切换(Theme/ThemeData(内部通过InheritedWidget实现))**
   - [x] [单个界面主题切换](lib/theme/LocalThemeSwitchWidget.dart)
   - [x] [全局界面主题切换](lib/main.dart)

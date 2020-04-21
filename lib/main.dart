@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'MyHomePage.dart';
 import 'common/CommonNotification.dart';
+import 'dialog/DialogManagerWidget.dart';
 import 'event/EventBusSecondWidget.dart';
 import 'event/EventBusWidget.dart';
 import 'function/CheckExitWidget.dart';
@@ -203,6 +204,7 @@ class MyAppState extends State<MyApp> {
           "ThemeSwitchManagerWidget": (context) => ThemeSwitchManagerWidget(),
           "SettingWidget": (context) => SettingWidget(),
           "AndroidWebViewWidget": (context) => AndroidWebViewWidget(),
+          "DialogManagerWidget": (context) => DialogManagerWidget(),
         },
         //路由生成的钩子
 //      onGenerateRoute: (RouteSettings settings) {

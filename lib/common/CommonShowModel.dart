@@ -20,6 +20,13 @@ Text getCenterText(String content) {
   );
 }
 
+Text getNormalBlueText(String text) {
+  return Text(
+    text,
+    style: TextStyle(color: Colors.blue),
+  );
+}
+
 FlatButton getFlatButton(
     BuildContext context, String text, String clazz, String pagerName) {
   return FlatButton(
@@ -91,8 +98,10 @@ List<FlatButton> getMainList(BuildContext context) {
       .add(getFlatButton(context, "主题切换", "ThemeSwitchManagerWidget", "主题切换"));
   flatButtonList
       .add(getFlatButton(context, "与原生互调和相互集成", "SettingWidget", "与原生互调和相互集成"));
+  flatButtonList.add(
+      getFlatButton(context, "WebView", "AndroidWebViewWidget", "WebView"));
   flatButtonList
-      .add(getFlatButton(context, "WebView", "AndroidWebViewWidget", "WebView"));
+      .add(getFlatButton(context, "对话框", "DialogManagerWidget", "对话框"));
 
   return flatButtonList;
 }
