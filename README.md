@@ -80,6 +80,7 @@
   - [x] AlertDialog
   - [x] SimpleDialog
   - [x] ListDialog
+  - [x] StateDialog(StatefulBuilder)
 - [x] **应用主题切换(Theme/ThemeData(内部通过InheritedWidget实现))**
   - [x] [单个界面主题切换](lib/theme/LocalThemeSwitchWidget.dart)
   - [x] [全局界面主题切换](lib/main.dart)

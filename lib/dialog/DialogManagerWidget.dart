@@ -56,6 +56,20 @@ class DialogManagerState extends State<DialogManagerWidget> {
                   }
                 },
               )),
+          Container(
+              margin: EdgeInsets.only(top: 10),
+              alignment: Alignment.center,
+              child: RaisedButton(
+                child: getNormalBlueText("对话框的状态管理(StatefulBuilder)"),
+                onPressed: () async {
+                  bool isDelete = await getStateDialogByStatefulBuilder();
+                  if (isDelete == null) {
+                    Fluttertoast.showToast(msg: "取消删除");
+                  }else{
+                    Fluttertoast.showToast(msg: "已删除");
+                  }
+                },
+              )),
         ],
       ),
     );
@@ -87,7 +101,7 @@ class DialogManagerState extends State<DialogManagerWidget> {
                   //第二个pop为关闭当前页面
                   Navigator.of(context).pop();
                 },
-              )
+              ),
             ],
           );
         });
@@ -163,6 +177,57 @@ class DialogManagerState extends State<DialogManagerWidget> {
               shrinkWrap: true,
               itemCount: 40,
             ),
+          );
+        });
+  }
+
+  bool isRecursiveDelete = false;
+
+  Future<bool> getStateDialogByStatefulBuilder() {
+    return showDialog<bool>(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text("提示"),
+            content: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text("是否删除当前文件?"),
+                //给复选框传递正确的上下文context
+                StatefulBuilder(
+                  builder: (BuildContext context, StateSetter setState){
+                    return Row(
+                      children: <Widget>[
+                        Text("是否连带删除子文件夹"),
+                        Checkbox(
+                          value: isRecursiveDelete,
+                          onChanged: (bool value) {
+                            setState(() {
+                              isRecursiveDelete = !isRecursiveDelete;
+                            });
+                          },
+                        ),
+                      ],
+                    );
+                  },
+                )
+              ],
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: Text("取消"),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              ),
+              FlatButton(
+                child: Text("删除"),
+                onPressed: (){
+                  Navigator.of(context).pop(isRecursiveDelete);
+                },
+              ),
+            ],
           );
         });
   }
