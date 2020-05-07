@@ -82,6 +82,7 @@
   - [x] ListDialog
   - [x] 对话框状态管理(StatefulBuilder实现)
   - [x] 对话框状态管理(markNeedsBuild实现)
+  - [x] 底部sheet(showModalBottomSheet)
 - [x] **应用主题切换(Theme/ThemeData(内部通过InheritedWidget实现))**
   - [x] [单个界面主题切换](lib/theme/LocalThemeSwitchWidget.dart)
   - [x] [全局界面主题切换](lib/main.dart)

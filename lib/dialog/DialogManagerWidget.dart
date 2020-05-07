@@ -11,6 +11,9 @@ class DialogManagerWidget extends StatefulWidget {
 }
 
 class DialogManagerState extends State<DialogManagerWidget> {
+
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -65,7 +68,7 @@ class DialogManagerState extends State<DialogManagerWidget> {
                   bool isDelete = await getStateDialogByStatefulBuilder();
                   if (isDelete == null) {
                     Fluttertoast.showToast(msg: "取消删除");
-                  }else{
+                  } else {
                     Fluttertoast.showToast(msg: "已删除");
                   }
                 },
@@ -79,9 +82,19 @@ class DialogManagerState extends State<DialogManagerWidget> {
                   bool isDelete = await getStateDialogByMarkNeedsBuild();
                   if (isDelete == null) {
                     Fluttertoast.showToast(msg: "取消删除");
-                  }else{
+                  } else {
                     Fluttertoast.showToast(msg: "已删除");
                   }
+                },
+              )),
+          Container(
+              margin: EdgeInsets.only(top: 10),
+              alignment: Alignment.center,
+              child: RaisedButton(
+                child: getNormalBlueText("底部sheet"),
+                onPressed: () async {
+                  int index = await getModalBottomSheet();
+                  Fluttertoast.showToast(msg: "$index");
                 },
               )),
         ],
@@ -210,7 +223,7 @@ class DialogManagerState extends State<DialogManagerWidget> {
                 Text("是否删除当前文件?"),
                 //给复选框传递正确的上下文context
                 StatefulBuilder(
-                  builder: (BuildContext context, StateSetter setState){
+                  builder: (BuildContext context, StateSetter setState) {
                     return Row(
                       children: <Widget>[
                         Text("是否连带删除子文件夹"),
@@ -231,13 +244,13 @@ class DialogManagerState extends State<DialogManagerWidget> {
             actions: <Widget>[
               FlatButton(
                 child: Text("取消"),
-                onPressed: (){
+                onPressed: () {
                   Navigator.of(context).pop();
                 },
               ),
               FlatButton(
                 child: Text("删除"),
-                onPressed: (){
+                onPressed: () {
                   Navigator.of(context).pop(isRecursiveDelete);
                 },
               ),
@@ -259,7 +272,7 @@ class DialogManagerState extends State<DialogManagerWidget> {
                 Text("是否删除当前文件?"),
                 //给复选框传递正确的上下文context
                 Builder(
-                  builder: (context){
+                  builder: (context) {
                     return Row(
                       children: <Widget>[
                         Text("是否连带删除子文件夹"),
@@ -281,17 +294,41 @@ class DialogManagerState extends State<DialogManagerWidget> {
             actions: <Widget>[
               FlatButton(
                 child: Text("取消"),
-                onPressed: (){
+                onPressed: () {
                   Navigator.of(context).pop();
                 },
               ),
               FlatButton(
                 child: Text("删除"),
-                onPressed: (){
+                onPressed: () {
                   Navigator.of(context).pop(isRecursiveDelete);
                 },
               ),
             ],
+          );
+        });
+  }
+
+  Future<int> getModalBottomSheet() {
+    return showModalBottomSheet<int>(
+        context: context,
+        builder: (context) {
+          return ListView.builder(
+            itemBuilder: (BuildContext context, int index) {
+              if (index == 0) {
+                return ListTile(
+                  title: Text("点击下列列表项"),
+                );
+              }
+              return ListTile(
+                title: Text("$index"),
+                onTap: () {
+                  Navigator.of(context).pop(index);
+                },
+              );
+            },
+            shrinkWrap: true,
+            itemCount: 40,
           );
         });
   }
