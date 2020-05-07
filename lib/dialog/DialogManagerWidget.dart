@@ -40,10 +40,22 @@ class DialogManagerState extends State<DialogManagerWidget> {
               alignment: Alignment.center,
               child: RaisedButton(
                 child: getNormalBlueText("SimpleDialog"),
-                onPressed: ()  {
+                onPressed: () {
                   getSimpleDialog();
                 },
-              ))
+              )),
+          Container(
+              margin: EdgeInsets.only(top: 10),
+              alignment: Alignment.center,
+              child: RaisedButton(
+                child: getNormalBlueText("ListDialog"),
+                onPressed: () async {
+                  int index = await getListDialog();
+                  if (index != null) {
+                    Fluttertoast.showToast(msg: "$index");
+                  }
+                },
+              )),
         ],
       ),
     );
@@ -124,6 +136,33 @@ class DialogManagerState extends State<DialogManagerWidget> {
                 },
               ),
             ],
+          );
+        });
+  }
+
+  Future<int> getListDialog() {
+    return showDialog<int>(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            elevation: 10,
+            child: ListView.builder(
+              itemBuilder: (BuildContext context, int index) {
+                if (index == 0) {
+                  return ListTile(
+                    title: Text("点击下列列表项"),
+                  );
+                }
+                return ListTile(
+                  title: Text("$index"),
+                  onTap: () {
+                    Navigator.of(context).pop(index);
+                  },
+                );
+              },
+              shrinkWrap: true,
+              itemCount: 40,
+            ),
           );
         });
   }
