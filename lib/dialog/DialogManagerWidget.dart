@@ -110,6 +110,20 @@ class DialogManagerState extends State<DialogManagerWidget> {
                   }
                 },
               )),
+          Container(
+              margin: EdgeInsets.only(top: 10),
+              alignment: Alignment.center,
+              child: RaisedButton(
+                child: getNormalBlueText("日历选择"),
+                onPressed: () async {
+                  var date = await getDataPicker();
+                  if (date == null) {
+                    Fluttertoast.showToast(msg: "选择日期失败");
+                  } else {
+                    Fluttertoast.showToast(msg: "选择的日期为: $date");
+                  }
+                },
+              )),
         ],
       ),
     );
@@ -365,4 +379,15 @@ class DialogManagerState extends State<DialogManagerWidget> {
           );
         });
   }
+
+  Future<DateTime> getDataPicker() {
+    var date = DateTime.now();
+    return showDatePicker(
+        context: context,
+        initialDate: date,
+        firstDate: date,
+        lastDate: date.add(Duration(days: 100)));
+  }
+
+
 }
