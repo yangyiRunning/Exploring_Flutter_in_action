@@ -11,7 +11,6 @@ class DialogManagerWidget extends StatefulWidget {
 }
 
 class DialogManagerState extends State<DialogManagerWidget> {
-
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -95,6 +94,20 @@ class DialogManagerState extends State<DialogManagerWidget> {
                 onPressed: () async {
                   int index = await getModalBottomSheet();
                   Fluttertoast.showToast(msg: "$index");
+                },
+              )),
+          Container(
+              margin: EdgeInsets.only(top: 10),
+              alignment: Alignment.center,
+              child: RaisedButton(
+                child: getNormalBlueText("加载框"),
+                onPressed: () async {
+                  bool isLoading = await getLoadingDialog();
+                  if (isLoading == null) {
+                    Fluttertoast.showToast(msg: "加载失败");
+                  } else {
+                    Fluttertoast.showToast(msg: "正在加载");
+                  }
                 },
               )),
         ],
@@ -329,6 +342,26 @@ class DialogManagerState extends State<DialogManagerWidget> {
             },
             shrinkWrap: true,
             itemCount: 40,
+          );
+        });
+  }
+
+  Future<bool> getLoadingDialog() {
+    return showDialog<bool>(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) {
+          return AlertDialog(
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                CircularProgressIndicator(),
+                Container(
+                  margin: EdgeInsets.only(top: 30),
+                  child: Text("正在加载..."),
+                ),
+              ],
+            ),
           );
         });
   }
