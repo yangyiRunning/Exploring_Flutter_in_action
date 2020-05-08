@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/CommonShowModel.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -116,7 +117,21 @@ class DialogManagerState extends State<DialogManagerWidget> {
               child: RaisedButton(
                 child: getNormalBlueText("日历选择"),
                 onPressed: () async {
-                  var date = await getDataPicker();
+                  var date = await getDatePicker();
+                  if (date == null) {
+                    Fluttertoast.showToast(msg: "选择日期失败");
+                  } else {
+                    Fluttertoast.showToast(msg: "选择的日期为: $date");
+                  }
+                },
+              )),
+          Container(
+              margin: EdgeInsets.only(top: 10),
+              alignment: Alignment.center,
+              child: RaisedButton(
+                child: getNormalBlueText("iOS风格日历选择"),
+                onPressed: () async {
+                  var date = await getIOSDatePicker();
                   if (date == null) {
                     Fluttertoast.showToast(msg: "选择日期失败");
                   } else {
@@ -380,7 +395,7 @@ class DialogManagerState extends State<DialogManagerWidget> {
         });
   }
 
-  Future<DateTime> getDataPicker() {
+  Future<DateTime> getDatePicker() {
     var date = DateTime.now();
     return showDatePicker(
         context: context,
@@ -389,5 +404,23 @@ class DialogManagerState extends State<DialogManagerWidget> {
         lastDate: date.add(Duration(days: 100)));
   }
 
-
+  Future<DateTime> getIOSDatePicker() {
+    var date = DateTime.now();
+    return showCupertinoModalPopup(
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+            height: MediaQuery.of(context).size.height / 2,
+            child: CupertinoDatePicker(
+              onDateTimeChanged: (DateTime time) {
+                Fluttertoast.showToast(msg: "$time");
+              },
+              mode: CupertinoDatePickerMode.dateAndTime,
+              minimumDate: date,
+              maximumDate: date.add(Duration(days: 100)),
+              maximumYear: date.year + 1,
+            ),
+          );
+        });
+  }
 }
