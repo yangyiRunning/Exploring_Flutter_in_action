@@ -4,11 +4,59 @@
 
 ---
 
+## 大纲
+
+- [创世宣言](#创世宣言)
+  - [背景](#背景)
+    - [何为Flutter? Flutter能做何?](#何为flutter-flutter能做何)
+    - [Exploring Flutter in action的由来](#exploring-flutter-in-action的由来)
+	- [Exploring Flutter in action想做什么](#exploring-flutter-in-action想做什么)
+- [运行前准备](#运行前准备)
+- [主要涵盖的控件和部分常见场景](#主要涵盖的控件和部分常见场景)
+- [App部分界面实景预览](#App部分界面实景预览)
+- [整套效果的App下载链接](#整套效果的App下载链接)
+	- [for Android](#for-android)
+
+---
+
 ## 创世宣言
 
-- 尽情踩坑吧 ⤵️
+### 背景
 
-## 主要Cover到的点
+#### 何为Flutter? Flutter能做何?
+
+1. Flutter是一个由Google开发的开源移动应用软件开发工具包，用于为Android、iOS、 Windows、Mac、Linux、Google Fuchsia跨平台开发应用。作为一个UI框架，可以快速的基于上述操作系统构建高质量的原生用户界面。
+2. Flutter的主要组成部分包括:
+	- Dart平台
+	- Flutter引擎
+	- 基础库
+	- 定制化设计风格的组件
+3. Flutter相比其他跨平台技术的优点:
+	- 自绘UI + 原生渲染，调用系统API渲染，UI运行体验与原生应用相差无几，性能好且开发效率高
+	- Google提供了符合各个操作系统UI风格的控件，且可以自由组合构建自己想要的界面
+	- 多平台移植成本很低，无需为某个特定的操作系统添加额外的适配代码
+	- 开发生态日趋完善，可以在[pub.dev](https://pub.dev)找到近乎所有的类原生开发包
+
+### Exploring Flutter in action的由来
+
+- Flutter 1.0版本于北京时间2018年12月5日发布以来，对于国内的很多开发者，直接阅读Google官方英文文档相对来说比较困难，而等待国内公开出版的Flutter相关书籍又显得太慢
+- 官网上的示例代码稍显零碎，不太直观
+- 想要运行起来零距离"触摸"下各种widget，体验下各种属性，往往得几经折腾
+- 对于追一门偏向于实践且比较新的技术，往往抄起键盘来一边写一边看是相对比较快速的上手方法
+
+### Exploring Flutter in action想做什么
+
+- 基于上述现状，本项目旨在提供一个App形式的demo，将各路常用的控件"揣"在一起供大家把玩，部分场景甚至可以直接移植使用
+- 相应的关键部位，在代码当中有相应的注释
+- 力图一个App搞定所有Flutter常见控件的使用
+- 不定期更新控件使用方式和pub依赖版本
+
+## 运行前准备
+
+- [Mac平台上Flutter环境搭建](https://flutterchina.club/setup-macos/)
+- [Windows平台上Flutter环境搭建](https://flutterchina.club/setup-windows/)
+
+## 主要涵盖的控件和部分常见场景
 
 - [x] **路由界面**
 - [x] **状态传递**
@@ -110,7 +158,7 @@
 
 ---
 
-## 正片(Action)
+## App部分界面实景预览
 
 - 内含大量gif图，loading可能会比较耗时，依自身网速而定
 
